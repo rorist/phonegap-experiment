@@ -168,7 +168,7 @@ app.Map = function(options) {
     map.addControl(geolocateControl);
    
 // PhoneGap
-    var watchId = null;
+    var geolocWatchId = null;
     var geolocOptions = { frequency: 1000 };
     var geolocOnSuccess = function(position){
         geolocateControl.geolocate(position);
@@ -204,13 +204,13 @@ app.Map = function(options) {
      * {Boolean} State of the control (activated or not).
      */
     this.toggleGeolocate = function() {
-        if (watchId == null) {
-            watchId = navigator.geolocation.watchPosition(geolocOnSuccess, geolocOnError, geolocOptions);
+        if (geolocWatchId == null) {
+            geolocWatchId = navigator.geolocation.watchPosition(geolocOnSuccess, geolocOnError, geolocOptions);
             return false;
         } else {
             navigator.geolocation.clearWatch(watchId);
             vector.destroyFeatures();
-            watchId = null;
+            geolocWatchId = null;
             return true;
         }
     };
