@@ -166,6 +166,18 @@ app.Map = function(options) {
         }
     });
     map.addControl(geolocateControl);
+   
+// PhoneGap
+    var watchId = null;
+    var geolocOptions = { frequency: 1000 };
+    var geolocOnSuccess = function(position){
+        geolocateControl.geolocate(position);
+    };
+    var geolocOnError = function(error){
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    };
+// END PhoneGap
 
     // map is ready, display it
     map.zoomToExtent(
@@ -192,12 +204,13 @@ app.Map = function(options) {
      * {Boolean} State of the control (activated or not).
      */
     this.toggleGeolocate = function() {
-        if (geolocateControl.active) {
-            geolocateControl.deactivate();
-            vector.destroyFeatures();
+        if (watchId == null) {
+            watchId = navigator.geolocation.watchPosition(geolocOnSuccess, geolocOnError, geolocOptions);
             return false;
         } else {
-            geolocateControl.activate();
+            navigator.geolocation.clearWatch(watchId);
+            vector.destroyFeatures();
+            watchId = null;
             return true;
         }
     };
