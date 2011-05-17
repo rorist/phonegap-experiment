@@ -1,0 +1,315 @@
+.icon {
+    background-image : url(../images/icons_map.png);
+    width            : 19px;
+    height           : 19px;
+    margin-right     : 0.6em;
+    display          : inline-block;
+    vertical-align   : middle;
+}
+
+.information.icon {
+    background-position: -0px -72px;
+}
+.entree.icon {
+    background-position: -19px -72px;
+}
+.horodateur.icon {
+    background-position: -38px -72px;
+}
+.parking.icon {
+    background-position: -57px -72px;
+}
+.handipark.icon {
+    background-position: -76px -72px;
+}
+.prive.icon {
+    background-position: -95px -72px;
+}
+.pse.icon {
+    background-position: -114px -72px;
+}
+.mobility.icon {
+    background-position: -133px -72px;
+}
+.greenmotion.icon {
+    background-position: -475px -72px;
+}
+.metro.icon {
+    background-position: -152px -72px;
+}
+.transportpublic.icon {
+    background-position: -171px -72px;
+}
+.bus.icon {
+    background-position: -190px -72px;
+}
+.tl.icon {
+    background-position: -209px -72px;
+}
+.cff.icon {
+    background-position: -228px -72px;
+}
+.velo.icon {
+    background-position: -247px -72px;
+}
+.parking_velo.icon {
+    background-position: -266px -72px;
+}
+.prise_velo.icon {
+    background-position: -285px -72px;
+}
+.point_velo.icon {
+    background-position: -304px -72px;
+}
+.velos_libres.icon {
+    background-position: -247px -72px;
+}
+.route.icon {
+    background-position: -323px -72px;
+}
+.autoroute.icon {
+    background-position: -342px -72px;
+}
+.livraisons.icon {
+    background-position: -361px -72px;
+}
+.handicap.icon {
+    background-position: -380px -72px;
+}
+.porteauto.icon {
+    background-position: -399px -72px;
+}
+.handiobstacle.icon {
+    background-position: -418px -72px;
+}
+.handiwc.icon {
+    background-position: -437px -72px;
+}
+.rassemblement.icon {
+    background-position: -456px -72px;
+}
+.faculte.icon {
+    background-position: -0px -110px;
+}
+.auditoire.icon {
+    background-position: -19px -110px;
+}
+.bibliotheque.icon {
+    background-position: -38px -110px;
+}
+.restauration.icon {
+    background-position: -0px -148px;
+}
+.restaurant.icon {
+    background-position: -19px -148px;
+}
+.snackbar.icon {
+    background-position: -38px -148px;
+}
+.distributeur.icon {
+    background-position: -57px -148px;
+}
+.commerce.icon {
+    background-position: -76px -148px;
+}
+.librairie.icon {
+    background-position: -95px -148px;
+}
+.negoce.icon {
+    background-position: -114px -148px;
+}
+.banque.icon {
+    background-position: -133px -148px;
+}
+.poste.icon {
+    background-position: -152px -148px;
+}
+.voyage.icon {
+    background-position: -171px -148px;
+}
+.concierge.icon {
+    background-position: -190px -148px;
+}
+.association.icon {
+    background-position: -209px -148px;
+}
+.a3.icon {
+    background-position: -228px -148px;
+}
+.agepoly.icon {
+    background-position: -247px -148px;
+}
+.apc.icon {
+    background-position: -266px -148px;
+}
+.aumc.icon {
+    background-position: -285px -148px;
+}
+.balelec.icon {
+    background-position: -304px -148px;
+}
+.callista.icon {
+    background-position: -323px -148px;
+}
+.banane.icon {
+    background-position: -342px -148px;
+}
+.idm.icon {
+    background-position: -361px -148px;
+}
+.junior.icon {
+    background-position: -380px -148px;
+}
+.exposition.icon {
+    background-position: -399px -148px;
+}
+.soc.icon {
+    background-position: -418px -148px;
+}
+.sos.icon {
+    background-position: -437px -148px;
+}
+.sae.icon {
+    background-position: -456px -148px;
+}
+.langues.icon {
+    background-position: -475px -148px;
+}
+.craft.icon {
+    background-position: -494px -148px;
+}
+.poseidon.icon {
+    background-position: -513px -148px;
+}
+.camipro.icon {
+    background-position: -532px -148px;
+}
+.reprographie.icon {
+    background-position: -551px -148px;
+}
+.ppur.icon {
+    background-position: -570px -148px;
+}
+.save.icon {
+    background-position: -589px -148px;
+}
+.spi.icon {
+    background-position: -608px -148px;
+}
+.voyage.icon {
+    background-position: -627px -148px;
+}
+.aumonerie.icon {
+    background-position: -646px -148px;
+}
+.polykids.icon {
+    background-position: -665px -148px;
+}
+.garderie.icon {
+    background-position: -684px -148px;
+}
+.secretariat.icon {
+    background-position: -703px -148px;
+}
+.atelier.icon {
+    background-position: -722px -148px;
+}
+.mecanique.icon {
+    background-position: -741px -148px;
+}
+.menuiserie.icon {
+    background-position: -760px -148px;
+}
+.at_plastique.icon {
+    background-position: -779px -148px;
+}
+.electro.icon {
+    background-position: -798px -148px;
+}
+.tolerie.icon {
+    background-position: -817px -148px;
+}
+.chimie.icon {
+    background-position: -836px -148px;
+}
+.maquette.icon {
+    background-position: -855px -148px;
+}
+.hotel.icon {
+    background-position: -874px -148px;
+}
+.logements_etudiants.icon {
+    background-position: -893px -148px;
+}
+.lettre.icon {
+    background-position: -0px -186px;
+}
+.bornecamipro.icon {
+    background-position: -342px -186px;
+}
+.chargeur.icon {
+    background-position: -19px -186px;
+}
+.bancomat.icon {
+    background-position: -38px -186px;
+}
+.photocopieuse.icon {
+    background-position: -57px -186px;
+}
+.printer.icon {
+    background-position: -76px -186px;
+}
+.telephone.icon {
+    background-position: -95px -186px;
+}
+.wifi.icon {
+    background-position: -114px -186px;
+}
+.douche.icon {
+    background-position: -133px -186px;
+}
+.recyclage.icon {
+    background-position: -152px -186px;
+}
+.papier.icon {
+    background-position: -171px -186px;
+}
+.carton.icon {
+    background-position: -190px -186px;
+}
+.plastique.icon {
+    background-position: -209px -186px;
+}
+.alu.icon {
+    background-position: -228px -186px;
+}
+.pet.icon {
+    background-position: -247px -186px;
+}
+.verre.icon {
+    background-position: -266px -186px;
+}
+.piles.icon {
+    background-position: -285px -186px;
+}
+.bois.icon {
+    background-position: -304px -186px;
+}
+.compost.icon {
+    background-position: -323px -186px;
+}
+.cablage.icon {
+    background-position: -0px -224px;
+}
+.cablage_yellow.icon {
+    background-position: -19px -224px;
+}
+.cablage_802.icon {
+    background-position: -38px -224px;
+}
+.prisecamipro.icon {
+    background-position: -57px -224px;
+}
+.anti_feu.icon {
+    background-position: -76px -224px;
+}

@@ -1,0 +1,141 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.ui-content {
+    padding: 0;
+}
+.ui-footer {
+    text-align: center;
+    padding: 5px 0;
+}
+.portrait, .portrait #mappage {
+    min-height: 0;
+}
+/*.portrait, .portrait .ui-page{*/
+    /*min-height: 0;*/
+/*}*/
+#mappage, #mappage .ui-content, #map {
+    width: 100%;
+    height: 100%;
+}
+.olControlAttribution {
+    font-size: 10px;
+    bottom: 5px;
+    right: 5px;
+}
+/* enable 3d acceleration when operating on tiles, this is
+   known to yield better performance on IOS Safari.
+   http://osgeo-org.1803224.n2.nabble.com/Harware-accelerated-CSS3-animations-for-iOS-td6255560.html
+*/
+img.olTileImage {
+    -webkit-transform: translate3d(0, 0, 0);
+}
+#layergroup {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 1000;
+}
+#navigation {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    z-index: 1000;
+}
+#navigation .ui-btn-icon-notext {
+    display: block;
+    padding: 7px 6px 7px 8px;
+}
+.ui-icon-check {
+    opacity: 0.3;
+}
+.checked .ui-icon-check {
+    opacity: 1;
+}
+.ui-icon-locate {
+    background-image: url(../images/locate.png);
+}
+.ui-icon-routing {
+    background-image: url(../images/routing.png);
+}
+.ui-icon-layers {
+    background-image: url(../images/openlayers.png);
+}
+.ui-content .ui-listview-inset, #search_results, #zones-list {
+    margin: 1em;
+}
+.ui-content .ui-listview {
+    margin: 0px;
+}
+#details-list li{
+	padding:15px 10px;
+}
+#search_results .ui-btn-text a {
+    white-space : normal;
+    word-wrap   : break-word;
+}
+#search_results b {
+    color: #81A8CE;
+}
+#search_results i {
+    font-style: normal;
+}
+#search_alert div {
+    border        : 2px solid #FF0000;
+    border-radius : 1em;
+    font-weight   : bold;
+    margin        : 30px 5px;
+    padding       : 1.4em 0.7em;
+    text-align    : center;
+}
+#popup ul li span {
+    float : left;
+    clear : both;
+    width : 33%;
+    color : #777;
+}
+#layergroup .ui-select {
+    width: auto;
+    display: inline-block;
+}
+#poiselector label, #poiselector img {
+    vertical-align: middle;
+}
+#poiselector .ui-btn-text a.ui-link {
+    float:right;
+}
+.ui-collapsible-heading-toggle{
+    padding-left: 0.7em;
+}
+#poiselector p {
+    display     : none;
+    line-height : 1.5em;
+    margin-left : 1em;
+}
+#poiselector fieldset{
+    padding: 0 1em;
+}
+#poiselector .ui-checkbox .ui-btn-active {
+    background  : -moz-linear-gradient(center top , #FEFEFE, #EEEEEE) repeat scroll 0 0 #EEEEEE;
+    background  : -webkit-gradient(linear,left top,left bottom,color-stop(0,#EEE),color-stop(1,#FDFDFD));
+    border      : 1px solid #CCCCCC;
+    color       : #000;
+    text-shadow : none;
+}
+#mappage form[data-role=footer] .ui-input-search {
+    display : inline-block;
+    width   : 50%;
+}
+.ui-loader {
+    z-index: 1050;
+}
+#search_form a[data-role=button] {
+    line-height: 1.8em;
+}
+#search_form .ui-btn-right {
+    position : absolute;
+    right    : 10px;
+    bottom   : 10px;
+}

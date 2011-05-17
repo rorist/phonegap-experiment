@@ -1,0 +1,425 @@
+
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+        <meta name="content-language" content="fr" /> 
+        <meta name="Generator" content="MapFish / Camptocamp - 2011" /> 
+        <title>EPFL - Outil d'orientation mobile</title> 
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0;"> 
+        <meta name="apple-mobile-web-app-capable" content="yes"> 
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/> 
+ 
+        <link rel="stylesheet" href="build/jquery.mobile-1.0a4.1.min.css" /> 
+        <link rel="stylesheet" href="css/app.css" /> 
+        <link rel="stylesheet" href="css/icons.css" /> 
+        <link rel="stylesheet" href="epfl.css" /> 
+ 
+        <script> 
+            window.app = {};
+            window.app.lang = "fr";
+            window.app.markerURL = "img/marker.png";
+            window.app.blankImageURL = "img/blank.gif";
+            window.app.infoURL = "/mobile/search/info";
+        </script> 
+            <script src="build/app.js"></script> 
+            <script src="js/Lang/fr.js"></script> 
+        </script> 
+    </head> 
+ 
+    <body data-theme="l"> 
+        
+        <div data-role="dialog" id="tools"> 
+            <div data-position="inline" data-role="header"> 
+                <h1>Tools</h1> 
+            </div> 
+ 
+            <div data-theme="c" data-role="content"> 
+                <a href="#poipage" data-icon="layers" data-role="button">Layers</a> 
+                <a href="#zones" data-icon="zones" data-role="button" data-transition="pop">Zones</a> 
+            </div> 
+        </div> 
+       
+        <div data-role="page" id="mappage" data-fullscreen="true"> 
+            <div data-role="content"> 
+                <div id="map"></div> 
+            </div> 
+            <div id="navigation" data-role="controlgroup" data-type="vertical"> 
+                <a href="#" data-role="button" data-icon="plus" id="plus"
+                    data-iconpos="notext"></a> 
+                <a href="#" data-role="button" data-icon="minus" id="minus"
+                    data-iconpos="notext"></a> 
+                <a href="#" id="locate" data-icon="locate" data-role="button"
+                    data-iconpos="notext"></a> 
+                <a href="#tools" data-role="button" data-icon="gear" id="more"
+                    data-iconpos="notext" data-transition="pop"></a> 
+            </div> 
+            <div data-role="controlgroup" data-type="horizontal" id="layergroup"> 
+                <select name="select-choice-1" id="floorselector"> 
+                    <option value="-4">-4</option> 
+                    <option value="-3">-3</option> 
+                    <option value="-2">-2</option> 
+                    <option value="-1">-1</option> 
+                    <option value="0">0</option> 
+                    <option value="1">1</option> 
+                    <option value="2">2</option> 
+                    <option value="3">3</option> 
+                    <option value="4">4</option> 
+                    <option value="5">5</option> 
+                    <option value="6">6</option> 
+                    <option value="7">7</option> 
+                    <option value="8">8</option> 
+                    <option value="all" selected="selected">all</option> 
+                </select> 
+                <a href="ortho" data-role="button" id="layerselector"> 
+                    ortho
+                </a> 
+            </div> 
+ 
+                
+            <form action="http://plan-dev.epfl.ch/mobile/search"
+                data-role="footer" data-position="fixed" id="search_form" data-theme="c"> 
+                <input type="hidden" name="lang" value="fr"/> 
+                <input type="search" name="keyword" id="keyword"
+                    value="" placeholder="address, people…"
+                    autocomplete="off"/> 
+                <button type="submit" data-role="button">Go</button> 
+                <span class="toggle ui-btn">Get directions: </span> 
+                <a data-role="button" class="toggle">from here</a> 
+                <a data-role="button" class="toggle">to here</a> 
+                <a data-role="button" data-icon="delete" data-iconpos="notext"
+                    class="ui-btn-right toggle"></a> 
+            </form> 
+        </div> 
+ 
+        <div data-role="page" id="searchpage" data-theme="l"> 
+            <div data-role="header"> 
+                <h1>Search</h1> 
+            </div> 
+ 
+            <div data-role="content" data-theme="c"> 
+                <!--<form action="http://plan-dev.epfl.ch/mobile/search"--> 
+                    <!--id="search_form" method="get">--> 
+                    <!--<div data-role="fieldcontain">--> 
+                        <!--<input type="search" name="keyword" id="keyword"--> 
+                            <!--value="" placeholder="address, places, coordinates…"--> 
+                            <!--autocomplete="off"/>--> 
+                        <!--<input type="hidden" name="lang" value="en"/>--> 
+                        <!--<input type="hidden" name="ref" value="geoadmin"/>--> 
+                    <!--</div>--> 
+                    <!--<button type="submit" data-theme="a">Go</button>--> 
+                <!--</form>--> 
+                <div id="search_alert"></div> 
+                <ul data-role="listview" data-inset="true" id="search_results" data-divider-theme="a"> 
+                </ul> 
+            </div> 
+        </div> 
+ 
+        <div data-role="page" id="poipage" data-theme="l"> 
+            <div data-role="header"> 
+                <h1>Points Of Interest</h1> 
+            </div> 
+ 
+            <div data-role="content" id="poiselector" data-theme="c"> 
+                <div class="ui-bar ui-bar-d">Acces</div> 
+                <fieldset data-role="controlgroup"> 
+                    <label for="information"> 
+                        <input type="checkbox" name="information" checked="checked" id="information"/> 
+                        <span class="icon information"></span><span class="ol_translate">Information</span> 
+                    </label> 
+                    <label for="entrees"> 
+                        <input type="checkbox" name="entrees"  id="entrees"/> 
+                        <span class="icon entree"></span><span class="ol_translate">Entrees</span> 
+                    </label> 
+                    <label for="parkings_publics"> 
+                        <input type="checkbox" name="parkings_publics" checked="checked" id="parkings_publics"/> 
+                        <span class="icon horodateur"></span><span class="ol_translate">Parkings publics</span> 
+                    </label> 
+                    <label for="parkings"> 
+                        <input type="checkbox" name="parkings"  id="parkings"/> 
+                        <a href="#">Légende</a> 
+                        <span class="icon parking"></span><span class="ol_translate">Parkings</span> 
+                        <p> 
+                            <span class="icon handipark"></span>Mobilite reduite<br/> 
+                            <span class="icon prive"></span>Reserves<br/> 
+                            <span class="icon pse"></span>PSE<br/> 
+                            <span class="icon mobility"></span>Mobility<br/> 
+                            <span class="icon greenmotion"></span>Prises voitures<br/> 
+                        </p> 
+                    </label> 
+                    <label for="arrets_metro"> 
+                        <input type="checkbox" name="arrets_metro" checked="checked" id="arrets_metro"/> 
+                        <span class="icon metro"></span><span class="ol_translate">Arrets metro</span> 
+                    </label> 
+                    <label for="transports_publics"> 
+                        <input type="checkbox" name="transports_publics"  id="transports_publics"/> 
+                        <a href="#">Légende</a> 
+                        <span class="icon transportpublic"></span><span class="ol_translate">Transports publics</span> 
+                        <p> 
+                            <span class="icon bus"></span>Arrets bus<br/> 
+                            <span class="icon tl"></span>Automates TL<br/> 
+                            <span class="icon cff"></span>Points de vente CFF<br/> 
+                        </p> 
+                    </label> 
+                    <label for="velo"> 
+                        <input type="checkbox" name="velo"  id="velo"/> 
+                        <a href="#">Légende</a> 
+                        <span class="icon velo"></span><span class="ol_translate">2 roues</span> 
+                        <p> 
+                            <span class="icon parking_velo"></span>Parkings 2 roues<br/> 
+                            <span class="icon prise_velo"></span>Prises velos electriques<br/> 
+                            <span class="icon point_velo"></span>Point velos<br/> 
+                            <span class="icon velos_libres"></span>Velos libres<br/> 
+                        </p> 
+                    </label> 
+                    <label for="acces_routes"> 
+                        <input type="checkbox" name="acces_routes"  id="acces_routes"/> 
+                        <a href="#">Légende</a> 
+                        <span class="icon route"></span><span class="ol_translate">Routes</span> 
+                        <p> 
+                            <span class="icon autoroute"></span>Autoroutes<br/> 
+                            <span class="icon route"></span>Routes<br/> 
+                        </p> 
+                    </label> 
+                    <label for="livraisons"> 
+                        <input type="checkbox" name="livraisons"  id="livraisons"/> 
+                        <span class="icon livraisons"></span><span class="ol_translate">Livraisons</span> 
+                    </label> 
+                    <label for="portes_handicapes"> 
+                        <input type="checkbox" name="portes_handicapes"  id="portes_handicapes"/> 
+                        <a href="#">Légende</a> 
+                        <span class="icon handicap"></span><span class="ol_translate">Mobilite reduite</span> 
+                        <p> 
+                            <span class="icon porteauto"></span>Portes automatiques<br/> 
+                            <span class="icon handiobstacle"></span>Obstacles<br/> 
+                            <span class="icon handiwc"></span>WC<br/> 
+                        </p> 
+                    </label> 
+                    <label for="rassemblement"> 
+                        <input type="checkbox" name="rassemblement"  id="rassemblement"/> 
+                        <span class="icon rassemblement"></span><span class="ol_translate">Points de rassemblement</span> 
+                    </label> 
+                </fieldset> 
+                <div class="ui-bar ui-bar-d">Enseignement</div> 
+                <fieldset data-role="controlgroup"> 
+                    <label for="facultes"> 
+                        <input type="checkbox" name="facultes"  id="facultes"/> 
+                        <span class="icon faculte"></span><span class="ol_translate">Facultes</span> 
+                    </label> 
+                    <label for="auditoires"> 
+                        <input type="checkbox" name="auditoires"  id="auditoires"/> 
+                        <span class="icon auditoire"></span><span class="ol_translate">Auditoires</span> 
+                    </label> 
+                    <label for="bibliotheques"> 
+                        <input type="checkbox" name="bibliotheques"  id="bibliotheques"/> 
+                        <span class="icon bibliotheque"></span><span class="ol_translate">Bibliotheques</span> 
+                    </label> 
+                </fieldset> 
+                <div class="ui-bar ui-bar-d">Services</div> 
+                <fieldset data-role="controlgroup"> 
+                    <label for="restauration"> 
+                        <input type="checkbox" name="restauration"  id="restauration"/> 
+                        <a href="#">Légende</a> 
+                        <span class="icon restauration"></span><span class="ol_translate">Restauration</span> 
+                        <p> 
+                            <span class="icon restaurant"></span>Restaurants<br/> 
+                            <span class="icon snackbar"></span>Snack bars<br/> 
+                            <span class="icon distributeur"></span>Distributeurs<br/> 
+                        </p> 
+                    </label> 
+                    <label for="commerces"> 
+                        <input type="checkbox" name="commerces"  id="commerces"/> 
+                        <a href="#">Légende</a> 
+                        <span class="icon commerce"></span><span class="ol_translate">Commerces</span> 
+                        <p> 
+                            <span class="icon librairie"></span>Librairies<br/> 
+                            <span class="icon negoce"></span>Epiceries<br/> 
+                            <span class="icon banque"></span>Banques<br/> 
+                            <span class="icon poste"></span>Poste<br/> 
+                            <span class="icon voyage"></span>Agences de voyage<br/> 
+                        </p> 
+                    </label> 
+                    <label for="concierges"> 
+                        <input type="checkbox" name="concierges"  id="concierges"/> 
+                        <span class="icon concierge"></span><span class="ol_translate">Concierges</span> 
+                    </label> 
+                    <label for="associations"> 
+                        <input type="checkbox" name="associations"  id="associations"/> 
+                        <a href="#">Légende</a> 
+                        <span class="icon association"></span><span class="ol_translate">Associations</span> 
+                        <p> 
+                            <span class="icon a3"></span>A3EPFL<br/> 
+                            <span class="icon agepoly"></span>AgÃ©poly<br/> 
+                            <span class="icon apc"></span>APC<br/> 
+                            <span class="icon aumc"></span>AUMC<br/> 
+                            <span class="icon balelec"></span>BalÃ©lec<br/> 
+                            <span class="icon callista"></span>CALLISTA<br/> 
+                            <span class="icon banane"></span>Radio Banane<br/> 
+                            <span class="icon idm"></span>IdM<br/> 
+                            <span class="icon junior"></span>Junior Entreprise<br/> 
+                        </p> 
+                    </label> 
+                    <label for="culture"> 
+                        <input type="checkbox" name="culture"  id="culture"/> 
+                        <span class="icon exposition"></span><span class="ol_translate">Culture</span> 
+                    </label> 
+                    <label for="services_epfl"> 
+                        <input type="checkbox" name="services_epfl"  id="services_epfl"/> 
+                        <a href="#">Légende</a> 
+                        <span class="icon soc"></span><span class="ol_translate">Services EPFL</span> 
+                        <p> 
+                            <span class="icon sos"></span>SHE<br/> 
+                            <span class="icon sae"></span>Services aux etudiant-e-s<br/> 
+                            <span class="icon langues"></span>Centre de langues<br/> 
+                            <span class="icon craft"></span>CRAFT<br/> 
+                            <span class="icon poseidon"></span>POSEIDON<br/> 
+                            <span class="icon camipro"></span>Centre cartes Camipro<br/> 
+                            <span class="icon reprographie"></span>Reprographie<br/> 
+                            <span class="icon ppur"></span>PPUR<br/> 
+                            <span class="icon save"></span>SAVE<br/> 
+                            <span class="icon spi"></span>SPI Service de presse<br/> 
+                            <span class="icon voyage"></span>Bureau de voyages<br/> 
+                            <span class="icon aumonerie"></span>LA GEODE / AGORA<br/> 
+                            <span class="icon polykids"></span>Polykids<br/> 
+                            <span class="icon garderie"></span>Garderies<br/> 
+                            <span class="icon soc"></span>Service acadÃ©mique<br/> 
+                        </p> 
+                    </label> 
+                    <label for="secretariats"> 
+                        <input type="checkbox" name="secretariats"  id="secretariats"/> 
+                        <span class="icon secretariat"></span><span class="ol_translate">Secretariats</span> 
+                    </label> 
+                    <label for="ateliers"> 
+                        <input type="checkbox" name="ateliers"  id="ateliers"/> 
+                        <a href="#">Légende</a> 
+                        <span class="icon atelier"></span><span class="ol_translate">Ateliers</span> 
+                        <p> 
+                            <span class="icon mecanique"></span>Mecanique<br/> 
+                            <span class="icon menuiserie"></span>Menuiserie<br/> 
+                            <span class="icon at_plastique"></span>Plastiques<br/> 
+                            <span class="icon electro"></span>Electro-erosion<br/> 
+                            <span class="icon tolerie"></span>Tolerie<br/> 
+                            <span class="icon chimie"></span>Usinage chimique<br/> 
+                            <span class="icon maquette"></span>Maquettes<br/> 
+                        </p> 
+                    </label> 
+                    <label for="hotel"> 
+                        <input type="checkbox" name="hotel"  id="hotel"/> 
+                        <span class="icon hotel"></span><span class="ol_translate">Hotels</span> 
+                    </label> 
+                    <label for="logements_etudiants"> 
+                        <input type="checkbox" name="logements_etudiants"  id="logements_etudiants"/> 
+                        <span class="icon logements_etudiants"></span><span class="ol_translate">Logements etudiants</span> 
+                    </label> 
+                </fieldset> 
+                <div class="ui-bar ui-bar-d">Utilitaires</div> 
+                <fieldset data-role="controlgroup"> 
+                    <label for="stations_postales"> 
+                        <input type="checkbox" name="stations_postales"  id="stations_postales"/> 
+                        <span class="icon lettre"></span><span class="ol_translate">Stations postales</span> 
+                    </label> 
+                    <label for="bornescamipro"> 
+                        <input type="checkbox" name="bornescamipro"  id="bornescamipro"/> 
+                        <span class="icon bornecamipro"></span><span class="ol_translate">Bornes Camipro</span> 
+                    </label> 
+                    <label for="chargeurs"> 
+                        <input type="checkbox" name="chargeurs"  id="chargeurs"/> 
+                        <span class="icon chargeur"></span><span class="ol_translate">Chargeurs monetiques</span> 
+                    </label> 
+                    <label for="bancomat"> 
+                        <input type="checkbox" name="bancomat"  id="bancomat"/> 
+                        <span class="icon bancomat"></span><span class="ol_translate">Bancomats</span> 
+                    </label> 
+                    <label for="photocopieuses"> 
+                        <input type="checkbox" name="photocopieuses"  id="photocopieuses"/> 
+                        <span class="icon photocopieuse"></span><span class="ol_translate">Photocopieuses</span> 
+                    </label> 
+                    <label for="myprint"> 
+                        <input type="checkbox" name="myprint"  id="myprint"/> 
+                        <span class="icon printer"></span><span class="ol_translate">Imprimantes</span> 
+                    </label> 
+                    <label for="telephones"> 
+                        <input type="checkbox" name="telephones"  id="telephones"/> 
+                        <span class="icon telephone"></span><span class="ol_translate">Telephones</span> 
+                    </label> 
+                    <label for="wifi"> 
+                        <input type="checkbox" name="wifi"  id="wifi"/> 
+                        <span class="icon wifi"></span><span class="ol_translate">WiFi</span> 
+                    </label> 
+                    <label for="douches"> 
+                        <input type="checkbox" name="douches"  id="douches"/> 
+                        <span class="icon douche"></span><span class="ol_translate">Douches</span> 
+                    </label> 
+                    <label for=""> 
+                        <input type="checkbox" name="undefined"  id=""/> 
+                        <a href="#">Légende</a> 
+                        <span class="icon recyclage"></span><span class="ol_translate">Recyclage</span> 
+                        <p> 
+                            <span class="icon papier"></span>Papier<br/> 
+                            <span class="icon carton"></span>Carton<br/> 
+                            <span class="icon plastique"></span>Plastiques divers<br/> 
+                            <span class="icon alu"></span>Aluminium<br/> 
+                            <span class="icon pet"></span>PET<br/> 
+                            <span class="icon verre"></span>Verre<br/> 
+                            <span class="icon piles"></span>Piles<br/> 
+                            <span class="icon bois"></span>Bois<br/> 
+                            <span class="icon compost"></span>Compostables<br/> 
+                        </p> 
+                    </label> 
+                </fieldset> 
+                <div class="ui-bar ui-bar-d">Vue mÃ©tier</div> 
+                <fieldset data-role="controlgroup"> 
+                    <label for="cablage"> 
+                        <input type="checkbox" name="cablage"  id="cablage"/> 
+                        <span class="icon cablage"></span><span class="ol_translate">Prises reseau</span> 
+                    </label> 
+                    <label for="cablage_yellow"> 
+                        <input type="checkbox" name="cablage_yellow"  id="cablage_yellow"/> 
+                        <span class="icon cablage_yellow"></span><span class="ol_translate">Prises jaunes</span> 
+                    </label> 
+                    <label for="cablage_802"> 
+                        <input type="checkbox" name="cablage_802"  id="cablage_802"/> 
+                        <span class="icon cablage_802"></span><span class="ol_translate">Prises 802.1x</span> 
+                    </label> 
+                    <label for="camipro"> 
+                        <input type="checkbox" name="camipro"  id="camipro"/> 
+                        <span class="icon prisecamipro"></span><span class="ol_translate">Camipro</span> 
+                    </label> 
+                    <label for="antifeu"> 
+                        <input type="checkbox" name="antifeu"  id="antifeu"/> 
+                        <span class="icon anti_feu"></span><span class="ol_translate">Anti Feu</span> 
+                    </label> 
+                </fieldset> 
+                <!--</div>[> end collapsible set <]--> 
+            </div> 
+        </div> 
+ 
+        <div id="zones" data-role="dialog"> 
+            <div data-role="header"> 
+                <h1>Zones</h1> 
+            </div> 
+ 
+            <div data-role="content"> 
+                <ul data-role="listview" data-inset="true" id="zones-list"> 
+                    <li><a href="#" id="s_campus">Campus EPFL</a></li> 
+                    <li><a href="#" id="s_neuchatel">IMT Neuchâtel</a></li> 
+                    <li><a href="#" id="s_ecal">ECAL Renens</a></li> 
+                    <li><a href="#" id="s_aula">Aula Cour</a></li> 
+                    <li><a href="#" id="s_me">Middle East</a></li> 
+                </ul> 
+            </div> 
+        </div> 
+ 
+        <div id="popup" data-role="dialog"> 
+            <div data-position="inline" data-role="header"> 
+                <h1>Details</h1> 
+            </div> 
+ 
+            <div data-theme="c" data-role="content"> 
+                <ul id="details-list" data-role="listview"> 
+                </ul> 
+            </div> 
+        </div> 
+ 
+    </body> 
+</html> 
