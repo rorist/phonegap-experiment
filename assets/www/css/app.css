@@ -1,0 +1,86 @@
+#olmap, #map {
+    height: 100%;
+    width: 100%;
+}
+#mapcontainer {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.layers {
+    position : absolute;
+    width    : 95%;
+    z-index  : 1004;
+}
+.tools {
+    left              : 0;
+    width             : auto;
+    top               : 0;
+    -moz-transform    : rotate(90deg);
+    -webkit-transform : rotate(90deg);
+    top               : 65px;
+    left              : -44px;
+}
+.tools .ui-btn-inner {
+    -moz-transform    : rotate(-90deg);
+    -webkit-transform : rotate(-90deg);
+}
+.lsw {
+    right : 10px;
+    top   : 0;
+    width : auto;
+}
+.layers .ui-select {
+    display : inline;
+}
+#layerselector-button .ui-btn-text {
+    display   : inline-block;
+    max-width : 150px;
+    overflow  : hidden;
+}
+.layers .ui-controlgroup {
+    margin-bottom : 5px;
+    text-align    : center;
+}
+.ui-overlay {
+    z-index: 1005;
+}
+.pop {
+    z-index: 1006 !important;
+}
+.layers .ui-btn-inner {
+    padding-left: 15px;
+    height: 1.3em;
+}
+.layers .icon-only .ui-btn-inner {
+    padding-left: 6px;
+}
+.icon-only .ui-btn-text{
+    width: 0;
+    display: inline-block;
+}
+.ui-icon-search {
+    background-image    : url(../images/search.png);
+    background-position : 1px 0;
+}
+.ui-icon-locate {
+    background-image: url(../images/locate.png);
+}
+#results .ui-btn-text a {
+    white-space : normal;
+    word-wrap   : break-word;
+}
+#results b {
+    color: #81A8CE;
+}
+#results i {
+    font-style: normal;
+}
+#search_alert div {
+    border        : 2px solid #FF0000;
+    border-radius : 1em;
+    font-weight   : bold;
+    margin        : 30px 5px;
+    padding       : 1.4em 0.7em;
+    text-align    : center;
+}
