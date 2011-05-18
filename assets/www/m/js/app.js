@@ -1,7 +1,6 @@
 app = window.app || {};
-
+var pinch;
 $(document).ready(function(){
-
     OpenLayers.Lang.setCode(app.lang);
     $.mobile.defaultTransition = 'flip';
 
@@ -82,5 +81,24 @@ $(document).ready(function(){
             }
         });
     }
+    
+// PhoneGap
+    
+    OpenLayers.Event.isMultiTouch = function() {
+        return true;
+    }
+/*
+    var callbacks = {
+        start: function(){},
+        move: function(){},
+        done: function(){}
+    };
+*/
+    var control = new OpenLayers.Control();
+    map.addControl(control);
+    pinch = new OpenLayers.Handler.Pinch(control);
+    pinch.activate();
+    
+// END PhoneGap
 
 });
