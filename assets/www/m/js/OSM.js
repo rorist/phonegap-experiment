@@ -23,7 +23,13 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
         if (this.map.getZoom() > 18) {
             return app.blankImageURL;
         } else {
-            return OpenLayers.Layer.OSM.prototype.getURL.apply(this, arguments);
+            var url = OpenLayers.Layer.OSM.prototype.getURL.apply(this, arguments);
+            // Check cache
+            var imageData = window.localStorage.getItem(url);
+            if(imageData != null){
+                imageData;
+            }
+            return url;
         }
     },
 

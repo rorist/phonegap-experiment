@@ -47,6 +47,33 @@ $(document).ready(function(){
         e.stopPropagation();
         e.preventDefault();
     });
+    
+    // CACHE
+    $("#cacheall .ui-btn-inner").unbind().click(function(e){
+        // Go through all the tiles in the current view and get their URL.  
+        var grid = map.layers[0].grid;
+        for (var i=0; i<grid.length; i++) { 
+            for (var j=0; j<grid[i].length; j++) {
+                //console.log(grid[i][j]);
+                cache(grid[i][j]);
+            }
+        }
+    });
+    $("#clearall .ui-btn-inner").unbind().click(function(e){
+    });
+    
+    
+    var cache = function(tile){
+        var canvas = document.createElement("canvas");
+        canvas.width = tile.size.w;
+        canvas.height = tile.size.h;
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(tile.imgDiv, 0, 0);     
+        localStorage.setItem(tile.url, canvas.toDataURL());
+    }
+    
+    
+    // END CACHE
 
     // Layer selector
     var layerSelector = new app.LayerSelector({
