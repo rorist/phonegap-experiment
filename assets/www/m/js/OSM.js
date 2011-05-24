@@ -19,17 +19,33 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
         this.attribution = "Data CC-By-SA by OpenStreetMap";
     },
 
-    getURL: function (bounds) {
+    getURL: function (bounds, imgDiv) {
         if (this.map.getZoom() > 18) {
             return app.blankImageURL;
         } else {
-            var url = OpenLayers.Layer.OSM.prototype.getURL.apply(this, arguments);
-            // Check cache
-            var imageData = window.localStorage.getItem(url);
-            if(imageData != null){
-                return imageData;
+            if(window.requestFileSystem){
+                var url = OpenLayers.Layer.OSM.prototype.getURL.apply(this, arguments);
+                window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs){
+                    fs.root.getFile("Android/com.camptocamp.phonegap/" + urlFriendly(url), {}, function(entry){
+                        entry.file(function(){
+                            var reader = new FileReader();
+                            reader.onloadend = function(e){
+                                imgDiv.src = e.target.result;
+                            }
+                            reader.readAsDataURL(file);
+                        }, function(){
+                            imgDiv.src = url;
+                        });
+                    }, function(){
+                        imgDiv.src = url;
+                    });
+                }, function(){
+                    if(imgDiv != null){
+                        imgDiv.src = url;
+                    }
+                });
             }
-            return url;
+            return app.blankImageURL;
         }
     },
 

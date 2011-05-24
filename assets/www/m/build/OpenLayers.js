@@ -21504,7 +21504,7 @@ OpenLayers.Tile.Image = OpenLayers.Class(OpenLayers.Tile, {
             // syncronous image requests get the url and position the frame immediately,
             // and don't wait for an image request to come back.
           
-            this.url = this.layer.getURL(this.bounds);
+            this.url = this.layer.getURL(this.bounds, this.imgDiv);
 
             this.initImgDiv();
           

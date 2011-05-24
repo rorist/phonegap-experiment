@@ -1,3 +1,15 @@
+
+
+var urlFriendly = function(url){
+    return url.toLowerCase()
+        .replace(/^\s+|\s+$/g, "")
+        .replace(/[_|\s]+/g, "-")
+        .replace(/[^a-z0-9-]+/g, "")
+        .replace(/[-]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+}
+
+
 app = window.app || {};
 app.Map = function(options) {
 
