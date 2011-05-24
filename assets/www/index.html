@@ -54,6 +54,16 @@
                 <a href="#zones" data-icon="zones" data-role="button" data-transition="pop">Zones</a>
             </div>
         </div>
+        
+        <div data-role="dialog" id="imageframe">
+            <div data-position="inline" data-role="header">
+                <h1>Image</h1>
+            </div>
+
+            <div data-theme="c" data-role="content">
+                <img id="myImage" width="100%" height="100%" />
+            </div>
+        </div>
        
         <div data-role="page" id="mappage" data-fullscreen="true">
             <div data-role="content">
@@ -68,6 +78,8 @@
                     data-iconpos="notext"></a>
                 <a href="#tools" data-role="button" data-icon="gear" id="more"
                     data-iconpos="notext" data-transition="pop"></a>
+                    
+                <a href="#imageframe" data-role="button" id="pic">Pic</a>
             </div>
             <div data-role="controlgroup" data-type="horizontal" id="layergroup">
                 <select name="select-choice-1" id="floorselector">
