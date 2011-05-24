@@ -27,7 +27,7 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
             // Check cache
             var imageData = window.localStorage.getItem(url);
             if(imageData != null){
-                imageData;
+                return imageData;
             }
             return url;
         }

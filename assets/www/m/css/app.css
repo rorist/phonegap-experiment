@@ -44,6 +44,12 @@ img.olTileImage {
     left: 10px;
     z-index: 1000;
 }
+#navigation2 {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    z-index: 1000;
+}
 #navigation .ui-btn-icon-notext {
     display: block;
     padding: 7px 6px 7px 8px;

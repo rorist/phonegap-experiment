@@ -49,6 +49,42 @@ $(document).ready(function(){
     });
     
     // CACHE
+    
+    // Events
+    $("#makefs .ui-btn-inner").unbind().click(function(e){
+        $.mobile.pageLoading();
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+        function onFileSystemSuccess(fs) {
+            recursiveCreateDir(fs, "Android/com.camptocamp.phonegap/tiles", 0, function(){$.mobile.pageLoading(true);});
+        }
+        function fail(evt) {
+            $.mobile.pageLoading(true);
+            console.log(evt.code);
+        }
+        e.stopPropagation();
+        e.preventDefault();
+    });
+    $("#delfs .ui-btn-inner").unbind().click(function(e){
+        $.mobile.pageLoading();
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, success, fail);
+        function success(fs) {
+            fs.root.getDirectory("Android/com.camptocamp.phonegap", 0, function(entry){
+                entry.removeRecursively(function(){
+                    $.mobile.pageLoading(true);
+                }, function(){
+                    $.mobile.pageLoading(true);
+                });
+            }, function(){
+                $.mobile.pageLoading(true);
+            });
+        } 
+        function fail(e) {
+            $.mobile.pageLoading(true);
+            console.log(e.code);
+        }
+        e.stopPropagation();
+        e.preventDefault();
+    });
     $("#cacheall .ui-btn-inner").unbind().click(function(e){
         // Go through all the tiles in the current view and get their URL.  
         var grid = map.layers[0].grid;
@@ -57,12 +93,38 @@ $(document).ready(function(){
                 cache(grid[i][j]);
             }
         }
+        e.stopPropagation();
+        e.preventDefault();
     });
-    
     $("#clearall .ui-btn-inner").unbind().click(function(e){
         window.localStorage.clear();
+        e.stopPropagation();
+        e.preventDefault();
     });
     
+    // Methods
+    var recursiveCreateDir = function(fs, dir, pos, cb){
+        pos++;
+        if(dir.indexOf("/") != -1){
+            var arr = dir.split("/");
+            var len = arr.length;
+            if(pos < len){
+                var i = len;
+                while(i > pos){
+                    arr.pop();
+                    i--;
+                }
+                console.log("pos="+pos+", 1create path="+arr.join("/"));
+                fs.root.getDirectory(arr.join("/"), {create: true}, recursiveCreateDir(fs, dir, pos, cb));
+            } else {
+                console.log("pos="+pos+", 2create path="+dir);
+                fs.root.getDirectory(dir, {create: true}, cb);
+            }
+        } else {
+            console.log("pos="+pos+", 3create path="+dir);
+            fs.root.getDirectory(dir, {create: true}, cb);
+        }
+    }
     var cache = function(tile){
         var canvas = document.createElement("canvas");
         canvas.width = tile.size.w;
