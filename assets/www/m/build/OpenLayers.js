@@ -21499,11 +21499,11 @@ OpenLayers.Tile.Image = OpenLayers.Class(OpenLayers.Tile, {
             // on the layer to fetch an image that covers 'this.bounds', in the scope of
             // 'this', setting the 'url' property of the layer itself, and running
             // the callback 'positionFrame' when the image request returns.
-            this.layer.getURLasync(this.bounds, this, "url", this.positionImage);
+            this.layer.getURLasync(this.bounds, this, "imgDiv", this.positionImage);
         } else {
             // syncronous image requests get the url and position the frame immediately,
             // and don't wait for an image request to come back.
-          
+
             this.url = this.layer.getURL(this.bounds, this.imgDiv);
 
             this.initImgDiv();

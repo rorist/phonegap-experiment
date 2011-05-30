@@ -18,71 +18,89 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
 
         this.attribution = "Data CC-By-SA by OpenStreetMap";
     },
-
-    getURL: function (bounds, imgDiv) {
-        var ctxt = this;
-        if (this.map.getZoom() > 18) {
+    
+    getURL: function (bounds) {
+    	if (this.map.getZoom() > 18) {
             return app.blankImageURL;
         } else {
-            if(window.requestFileSystem){
-                var url = OpenLayers.Layer.OSM.prototype.getURL.apply(this, arguments);
-                window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs){
-                    fs.root.getFile("Android/com.camptocamp.phonegap/tiles/" + urlFriendly(url), {}, function(entry){
-                        entry.file(function(){
-                            var reader = new FileReader();
-                            reader.onloadend = function(e){
-                                imgDiv.src = e.target.result;
-                            }
-                            reader.readAsDataURL(file);
-                        }, function(){
-                            imgDiv.onload = function(){ctxt.saveImage(imgDiv, url);};
-                            imgDiv.src = url;
-                        });
-                    }, function(){
-                        imgDiv.onload = function(){ctxt.saveImage(imgDiv, url);};
-                        imgDiv.src = url;
-                    });
-                }, function(){
-                    if(imgDiv != null){
-                        imgDiv.onload = OpenLayers.Function.bindAsEventListener(ctxt.saveImage, imgDiv);
-                        imgDiv.src = url;
-                    }
-                });
-            }
-            return app.blankImageURL;
+            return OpenLayers.Layer.OSM.prototype.getURL.apply(this, arguments);
         }
     },
     
-    saveImage: function(imgDiv){
+    getURLasync: function(bounds, scope, prop, callback){
+    	bounds = this.adjustBounds(bounds); // FIXME ?
+        var ctxt = this;
+        var imgDiv = scope[prop];
+        var url = OpenLayers.Layer.OSM.prototype.getURL.apply(this, arguments);
+        var save = function(msg){
+        	console.log("error in "+msg)
+            imgDiv.onload = function(){
+            	ctxt.saveImage(url, imgDiv)
+            };
+            imgDiv.src = url;
+            callback.apply(scope);
+	    };
+	    
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs){
+            fs.root.getFile("Android/com.camptocamp.phonegap/tiles/" + urlFriendly(url),
+            {}, 
+            function(entry){
+                entry.file(function(file){
+                    var reader = new FileReader();
+                    reader.onloadend = function(e){
+                        imgDiv.src = e.target.result;
+                        callback.apply(scope);
+                        //console.log("!!!CACHE USED!!! "+e.target.result);
+                    }
+                    reader.readAsText(file);
+                }, function(error){save("file");});
+            }, function(error){save("getFile");});
+        }, function(error){});
+    },
     
-        var error = function(e){
-            console.log("error "+e.code);
-        }
-        
-        var url = imgDiv.src;
+    saveImage: function(url, imgDiv){    	
         var cnv = document.createElement("canvas");
         cnv.width = imgDiv.offsetWidth;
         cnv.height = imgDiv.offsetHeight;
         var ctx = cnv.getContext("2d");
         ctx.drawImage(imgDiv, 0, 0);
         
-        window.plugins.canvas.toDataURL(cnv, "image/png", function(arg){
-            var data = arg.data.replace(/^data:image\/png;base64,/, "");
-            console.log(data);
-            if(data=="data:,"){
-                return;
+        var success = false;
+        try {
+            var data = cnv.toDataUrl();
+            if(data!="data:,"){
+                success = true;
+                writeFile(url, data);
             }
+        } catch(ex) {
+        } finally {
+            if(!success){
+                JSONP("http://jsonfree.appspot.com/geturl?url=" + url + "&b64=true", 
+                    function(result) {
+                    	writeFile(url, result.data);
+                    }
+                );
+            }
+        }
+        
+        var writeFile = function(url, data){
             window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs){
-                fs.root.getFile("Android/com.camptocamp.phonegap/tiles/" + urlFriendly(url), {create: true}, function(entry){
-                    entry.createWriter(function(writer){
-                        writer.onwrite = function(e){
-                            console.log("written");
-                        };
-                        writer.write(data);
-                    }, error);
-                }, error);
-            }, error);
-        }, error);
+               fs.root.getFile("Android/com.camptocamp.phonegap/tiles/" + urlFriendly(url),
+                   {create: true, exclusive: true},
+                   function(entry){
+                        if(entry.createWriter){
+                            entry.createWriter(function(writer){
+                                writer.onwrite = function(e){
+                                    console.log("written "+url);
+                                };
+                                writer.write(data);
+                            }, function(error){console.log("error createWriter");});
+                        } else {
+                        	console.log("entry is not a FileEntry path=" + entry.fullPath+", url="+url);
+                        }
+                   }, function(error){console.log("error getFile");});
+            }, function(error){console.log("error requestFileSystem");});
+        };
     },
 
     CLASS_NAME: "app.OSM"

@@ -53,6 +53,8 @@ app.Map = function(options) {
     // create OSM layer (baselayer)
     var osm = new app.OSM({
         name: 'plan',
+        async: true,
+        isBaseLayer: true,
         url: [
             'http://plan-osm-tile0.epfl.ch/${z}/${x}/${y}.png',
             'http://plan-osm-tile1.epfl.ch/${z}/${x}/${y}.png',
@@ -63,6 +65,7 @@ app.Map = function(options) {
     // create the orthophoto layer (baselayer)
     // FIXME we use plan-demo.epfl.ch, we'll need to change that
     // at some point
+    /*
     var ortho = new OpenLayers.Layer.TileCache('ortho',
         'http://plan-demo.epfl.ch/tilecache', 'ortho-merc', {
         format: 'image/jpeg',
@@ -75,11 +78,13 @@ app.Map = function(options) {
         // numZoomLevels, and maxResolution used to create
         // the grid are taken from the map
     });
-
+    */
+    
     // create EPFL buildings layer, and switch it to the
     // "all" floor
     // FIXME we use plan-demo.epfl.ch, we'll need to change that
     // at some point
+    /*
     var buildings = new app.SwitchableTileCache('background', [
         //'http://plan-epfl-tile0.epfl.ch',
         //'http://plan-epfl-tile1.epfl.ch',
@@ -98,8 +103,10 @@ app.Map = function(options) {
         // the grid are taken from the map
     });
     buildings.doSwitch('all');
+    */
 
     // EPFL POIs
+    /*
     var layerNames = Array.prototype.concat.call(
         ['parkings_publics', 'arrets_metro', 'information'],
         poiLayers);
@@ -118,13 +125,15 @@ app.Map = function(options) {
         transitionEffect: "resize"
     });
     pois.doSwitch('all');
+    */
 
     // create vector layer to display search and
     // geolocation results
     var vector = new OpenLayers.Layer.Vector('vector');
 
     // add layers to the map
-    map.addLayers([osm, ortho, buildings, pois, vector]);
+    //map.addLayers([osm, ortho, buildings, pois, vector]);
+    map.addLayers([osm, vector]);
 
     // set shadow properties on the canvas context, must be
     // done after the layer is added to the map (for some
