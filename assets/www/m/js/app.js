@@ -1,6 +1,13 @@
 app = window.app || {};
-//var pinch; // PhoneGap
 $(document).ready(function(){
+	
+	/*
+	document.addEventListener("deviceready", onDeviceReady, false);
+	function onDeviceReady(){
+		console.log("device ready");
+	}
+	*/
+			
     OpenLayers.Lang.setCode(app.lang);
     $.mobile.defaultTransition = 'flip';
 
@@ -189,7 +196,4 @@ $(document).ready(function(){
 */
     
 // END PhoneGap
-
 });
-
-

@@ -27,13 +27,14 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
         }
     },
     
+    deviceready: false,
+    
     getURLasync: function(bounds, scope, prop, callback){
     	bounds = this.adjustBounds(bounds); // FIXME ?
         var ctxt = this;
         var imgDiv = scope[prop];
         var url = OpenLayers.Layer.OSM.prototype.getURL.apply(this, arguments);
-        var save = function(msg){
-        	console.log("error in "+msg)
+        var save = function(){
             imgDiv.onload = function(){
             	ctxt.saveImage(url, imgDiv)
             };
@@ -41,21 +42,35 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
             callback.apply(scope);
 	    };
 	    
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs){
-            fs.root.getFile("Android/com.camptocamp.phonegap/tiles/" + urlFriendly(url),
-            {}, 
-            function(entry){
-                entry.file(function(file){
-                    var reader = new FileReader();
-                    reader.onloadend = function(e){
-                        imgDiv.src = e.target.result;
-                        callback.apply(scope);
-                        //console.log("!!!CACHE USED!!! "+e.target.result);
-                    }
-                    reader.readAsText(file);
-                }, function(error){save("file");});
-            }, function(error){save("getFile");});
-        }, function(error){});
+	    function onDeviceReady(){
+	    	this.deviceready = true;
+	        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs){
+	            fs.root.getFile("Android/com.camptocamp.phonegap/tiles/" + urlFriendly(url),
+	            {}, 
+	            function(entry){
+	                entry.file(function(file){
+	                    var reader = new FileReader();
+	                    reader.onloadend = function(e){
+	                    	//console.log(e.target.result);
+	                        imgDiv.src = e.target.result;
+	                        callback.apply(scope);
+	                        //console.log("!!!CACHE USED!!! "+e.target.result);
+	                    }
+	                    reader.readAsText(file);
+	                }, function(error){save();});
+	            }, function(error){save();});
+	        }, function(error){
+	        	save();
+	        	console.log("Filesystem request error");
+	        });
+        }
+        
+        if(!this.deviceready){
+        	// We need to wait PhoneGap library to be fully loaded
+           document.addEventListener("deviceready", onDeviceReady, false);
+        } else {
+           onDeviceReady();
+        }
     },
     
     saveImage: function(url, imgDiv){    	
