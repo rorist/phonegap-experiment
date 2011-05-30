@@ -45,7 +45,7 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
 	    function onDeviceReady(){
 	    	this.deviceready = true;
 	        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs){
-	            fs.root.getFile("Android/com.camptocamp.phonegap/tiles/" + urlFriendly(url),
+	            fs.root.getFile("Android/com.camptocamp.phonegap/" + urlFriendly(url),
 	            {}, 
 	            function(entry){
 	                entry.file(function(file){
@@ -100,7 +100,7 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
         
         var writeFile = function(url, data){
             window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs){
-               fs.root.getFile("Android/com.camptocamp.phonegap/tiles/" + urlFriendly(url),
+               fs.root.getFile("Android/com.camptocamp.phonegap/" + urlFriendly(url),
                    {create: true, exclusive: true},
                    function(entry){
                         if(entry.createWriter){
