@@ -57,17 +57,19 @@ $(document).ready(function(){
     }
     
     $("#makefs .ui-btn-inner").unbind().click(function(e){
+        e.stopPropagation();
+        e.preventDefault();
         $.mobile.pageLoading();
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
         function onFileSystemSuccess(fs) {
-        	fs.root.getDirectory("Android/com.camptocamp.phonegap", {create: true}, function(){
-        		$.mobile.pageLoading(true);
-        	});
+            fs.root.getDirectory("Android/com.camptocamp.phonegap", {create: true}, function(){
+                $.mobile.pageLoading(true);
+            });
         }
-        e.stopPropagation();
-        e.preventDefault();
     });
     $("#delfs .ui-btn-inner").unbind().click(function(e){
+        e.stopPropagation();
+        e.preventDefault();
         $.mobile.pageLoading();
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, success, fail);
         function success(fs) {
@@ -81,9 +83,8 @@ $(document).ready(function(){
                 $.mobile.pageLoading(true);
             });
         }
-        e.stopPropagation();
-        e.preventDefault();
     });
+    
     // END CACHE
     
     

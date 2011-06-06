@@ -51,14 +51,22 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
 	                entry.file(function(file){
 	                    var reader = new FileReader();
 	                    reader.onloadend = function(e){
-	                    	//console.log(e.target.result);
 	                        imgDiv.src = e.target.result;
 	                        callback.apply(scope);
-	                        //console.log("!!!CACHE USED!!! "+e.target.result);
+	                        console.log("!!!CACHE USED!!! "+e.target.result);
 	                    }
 	                    reader.readAsText(file);
 	                }, function(error){save();});
-	            }, function(error){save();});
+	            }, function(error){
+				    $.mobile.pageLoading();
+				    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, 
+					    function(fs) {
+					        fs.root.getDirectory("Android/com.camptocamp.phonegap", {create: true}, function(){
+					            save();
+					            $.mobile.pageLoading(true);
+					        });
+					    }, function(){});
+	            });
 	        }, function(error){
 	        	save();
 	        	console.log("Filesystem request error");
