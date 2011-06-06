@@ -71,7 +71,6 @@ $(document).ready(function(){
     
 // PhoneGap
     $("#pic .ui-btn-inner").unbind().click(function(e){
-        /*
         navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI }); 
         function onSuccess(imageURI) {
             var image = document.getElementById('myImage');
@@ -80,7 +79,20 @@ $(document).ready(function(){
         function onFail(message) {
             alert('Failed because: ' + message);
         }
-        * */
+    });
+   $('#form1').unbind().submit(function(e) {
+        var name = e.target[0].value;
+        var desc = e.target[1].value;
+        var auth = e.target[2].value;
+        var imge = $('#myImage')[0].src;
+        
+        // Get image data
+        // Send image and form info to server
+        
+        alert(imge);
+        
+        e.stopPropagation();
+        e.preventDefault();
     });
 // END PhoneGap
 

@@ -61,10 +61,25 @@
             </div>
 
             <div data-theme="c" data-role="content">
-                <input type="text" id="Picture name" />
-                <input type="text" id="Short description" />
-                <input type="text" id="Author" />
-                <img id="myImage" width="100%" height="100%" />
+	            <form id="form1" action="index.html#mappage" method="get" data-ajax="false">
+					<div data-role="fieldcontain">
+	                    <label for="picname">Name:</label>
+		                <input type="text" name="picname" id="picname" value="" />
+					</div>
+	                <div data-role="fieldcontain">
+	                    <label for="picdesc">Description:</label>
+	                    <input type="text" name="picdesc" id="picdesc" value="" />
+	                </div>
+	                <div data-role="fieldcontain">
+	                    <label for="picauthor">Author:</label>
+	                    <input type="text" name="picauthor" id="picauthor" value="" />
+	                </div>
+	                <input data-inline="true" type="reset" id="picreset" value="Reset" />
+	                <input data-inline="true" data-theme="b" type="submit" id="picsubmit" value="Submit" />
+                    <div data-role="fieldcontain">
+                        <img id="myImage" width="250" />
+                    </div>
+                </form>
             </div>
         </div>
        
@@ -80,7 +95,7 @@
             </div>
                 
             <div id="navigation2" data-role="controlgroup" data-type="vertical">
-                <a href="#imageframe" data-role="button" id="pic" data-transition="pop">Take picture</a>
+                <a href="#imageframe" data-role="button" id="pic">Take picture</a>
             </div>
             
             <div data-role="controlgroup" data-type="horizontal" id="layergroup">
