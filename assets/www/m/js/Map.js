@@ -2,6 +2,7 @@
 
 var urlFriendly = function(url){
     return url.toLowerCase()
+        .replace(/http:\/\/plan-osm-tile[0-2]?\.epfl\.ch\//, "")
         .replace(/^\s+|\s+$/g, "")
         .replace(/[_|\s]+/g, "-")
         .replace(/[^a-z0-9-]+/g, "")

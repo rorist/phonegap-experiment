@@ -55,11 +55,15 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
 	                    reader.onloadend = function(e){
 	                        imgDiv.src = e.target.result;
 	                        callback.apply(scope);
-	                        console.log("!!!CACHE USED!!! "+e.target.result);
+	                        console.log("!!!CACHE USED!!! "+url);
 	                    }
 	                    reader.readAsText(file);
-	                }, function(error){save();});
+	                }, function(error){
+	                    // file Error
+	                    save();
+	                });
 	            }, function(error){
+	            	// GetFile Error
 	            	if(!ctxt.fscreated){
 				    $.mobile.pageLoading();
 					    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, 
@@ -75,6 +79,7 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
 	            	}
 	            });
 	        }, function(error){
+	        	// requestFileSystem Error
 	        	save();
 	        	console.log("Filesystem request error");
 	        });
