@@ -85,7 +85,7 @@ $(document).ready(function(){
    	    $.mobile.pageLoading();
 		$.ajax({
 	      crossDomain: true,
-		  url: 'zuort.wrk.lsn.camptocamp.com',
+		  url: 'http://zuort.wrk.lsn.camptocamp.com:3000',
 		  type: 'POST',
 		  data: $(this).serialize(),
 		  success: function(data){
