@@ -84,31 +84,6 @@ $(document).ready(function(){
         e.stopPropagation();
         e.preventDefault();
     });
-    $("#cacheall .ui-btn-inner").unbind().click(function(e){
-        // Go through all the tiles in the current view and get their URL.  
-        var grid = map.layers[0].grid;
-        for (var i=0; i<grid.length; i++) { 
-            for (var j=0; j<grid[i].length; j++) {
-                cache(grid[i][j]);
-            }
-        }
-        e.stopPropagation();
-        e.preventDefault();
-    });
-    $("#clearall .ui-btn-inner").unbind().click(function(e){
-        window.localStorage.clear();
-        e.stopPropagation();
-        e.preventDefault();
-    });
-    
-    var cache = function(tile){
-        var canvas = document.createElement("canvas");
-        canvas.width = tile.size.w;
-        canvas.height = tile.size.h;
-        var ctx = canvas.getContext("2d");
-        ctx.drawImage(tile.imgDiv, 0, 0);     
-        window.localStorage.setItem(tile.url, canvas.toDataURL());
-    }
     // END CACHE
     
     
