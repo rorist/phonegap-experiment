@@ -68,19 +68,6 @@ $(document).ready(function(){
         list        : 'zones-list',
         mapManager  : mapManager
     });
-
-    // Geolocation
-    if (!navigator.geolocation) {
-        $('#locate').hide();
-    } else {
-        $("#locate .ui-btn-inner").unbind().click(function() {
-            if (mapManager.toggleGeolocate()) {
-                $(this).css('background', 'red');
-            } else {
-                $(this).css('background', 'inherit');
-            }
-        });
-    }
     
 // PhoneGap
 
@@ -88,46 +75,17 @@ $(document).ready(function(){
 
         //navigator.camera.getPicture(onSuccess, onFail, { quality: 50 });
         navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.FILE_URI }); 
-        
         function onSuccess(imageURI) {
             var image = document.getElementById('myImage');
             image.src = imageURI;
             
             
         }
-        
         function onFail(message) {
             alert('Failed because: ' + message);
         }
-        
-        /*
-        // Android Only
-        navigator.device.capture.captureImage(onSuccess, onFail, {limit:1});
-        function onSuccess(mediaFiles) {
-            var image = document.getElementById('myImage');
-            var i, path, len;
-            for (i = 0, len = mediaFiles.length; i < len; i += 1) {
-                image.src = mediaFiles[i].fullPath;
-            }
-        }
-        */
 
     });
-    
-/*
-    OpenLayers.Event.isMultiTouch = function() {
-        return true;
-    }
-    var callbacks = {
-        start: function(){},
-        move: function(){},
-        done: function(){}
-    };
-    var control = new OpenLayers.Control();
-    map.addControl(control);
-    pinch = new OpenLayers.Handler.Pinch(control);
-    pinch.activate();
-*/
     
 // END PhoneGap
 
