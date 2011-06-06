@@ -28,6 +28,7 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
     },
     
     deviceready: false,
+    fscreated: false,
     
     getURLasync: function(bounds, scope, prop, callback){
     	bounds = this.adjustBounds(bounds); // FIXME ?
@@ -44,6 +45,7 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
 	    
 	    function onDeviceReady(){
 	    	this.deviceready = true;
+	    	var ctxt = this;
 	        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function(fs){
 	            fs.root.getFile("Android/com.camptocamp.phonegap/" + urlFriendly(url),
 	            {}, 
@@ -58,14 +60,19 @@ app.OSM = OpenLayers.Class(OpenLayers.Layer.OSM, {
 	                    reader.readAsText(file);
 	                }, function(error){save();});
 	            }, function(error){
+	            	if(!ctxt.fscreated){
 				    $.mobile.pageLoading();
-				    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, 
-					    function(fs) {
-					        fs.root.getDirectory("Android/com.camptocamp.phonegap", {create: true}, function(){
-					            save();
-					            $.mobile.pageLoading(true);
-					        });
-					    }, function(){});
+					    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, 
+						    function(fs) {
+						        fs.root.getDirectory("Android/com.camptocamp.phonegap", {create: true}, function(){
+						            save();
+						            ctxt.fscreated = true;
+						            $.mobile.pageLoading(true);
+						        });
+						    }, function(){});
+	            	} else {
+	            		save();
+	            	}
 	            });
 	        }, function(error){
 	        	save();
