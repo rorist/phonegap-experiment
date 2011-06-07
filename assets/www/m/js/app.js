@@ -69,6 +69,19 @@ $(document).ready(function(){
         mapManager  : mapManager
     });
     
+    // Geolocation
+    if (!navigator.geolocation) {
+        $('#locate').hide();
+    } else {
+        $("#locate .ui-btn-inner").unbind().click(function() {
+            if (mapManager.toggleGeolocate()) {
+                $(this).css('background', 'red');
+            } else {
+                $(this).css('background', 'inherit');
+            }
+        });
+    }
+    
 // PhoneGap
     $("#pic .ui-btn-inner").unbind().click(function(e){
         navigator.camera.getPicture(onSuccess, onFail, { quality: 5, destinationType: Camera.DestinationType.DATA_URL }); 

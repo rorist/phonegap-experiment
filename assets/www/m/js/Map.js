@@ -51,10 +51,11 @@ app.Map = function(options) {
     // create the orthophoto layer (baselayer)
     // FIXME we use plan-demo.epfl.ch, we'll need to change that
     // at some point
+    /*
     var ortho = new OpenLayers.Layer.TileCache('ortho',
         'http://plan-demo.epfl.ch/tilecache', 'ortho-merc', {
         format: 'image/jpeg',
-        isBaseLayer: true,
+        isBaseLayer: false,
         visibility: false,
         maxExtent : new OpenLayers.Bounds(
             -20037508.3427892, -20037508.3427892,
@@ -63,6 +64,7 @@ app.Map = function(options) {
         // numZoomLevels, and maxResolution used to create
         // the grid are taken from the map
     });
+    * */
 
     // create EPFL buildings layer, and switch it to the
     // "all" floor
@@ -113,13 +115,16 @@ app.Map = function(options) {
     
 // PhoneGap
     var imgs = new OpenLayers.Layer.Text("Image POIs", {
-    	location: 'http://10.27.10.22:3000/points.txt',
-    	projection: new OpenLayers.Projection('EPSG:900913')
-    	});
+    	location: 'http://zuort.wrk.lsn.camptocamp.com:3000/points.txt',
+    	projection: new OpenLayers.Projection('EPSG:900913'),
+    	markerClick: function(evt){
+    		console.log(evt);
+    	}
+    });
 // END PhoneGap
 
     // add layers to the map
-    map.addLayers([osm, ortho, buildings, pois, imgs, vector]);
+    map.addLayers([osm, buildings, pois, imgs, vector]);
 
     // set shadow properties on the canvas context, must be
     // done after the layer is added to the map (for some
@@ -215,7 +220,7 @@ app.Map = function(options) {
             geolocWatchId = navigator.geolocation.watchPosition(geolocOnSuccess, geolocOnError, geolocOptions);
             return false;
         } else {
-            navigator.geolocation.clearWatch(watchId);
+            navigator.geolocation.clearWatch(geolocWatchId);
             vector.destroyFeatures();
             geolocWatchId = null;
             return true;
