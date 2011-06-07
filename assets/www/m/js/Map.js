@@ -110,9 +110,16 @@ app.Map = function(options) {
     // create vector layer to display search and
     // geolocation results
     var vector = new OpenLayers.Layer.Vector('vector');
+    
+// PhoneGap
+    var imgs = new OpenLayers.Layer.Text("Image POIs", {
+    	location: 'http://10.27.10.22:3000/points.txt',
+    	projection: new OpenLayers.Projection('EPSG:900913')
+    	});
+// END PhoneGap
 
     // add layers to the map
-    map.addLayers([osm, ortho, buildings, pois, vector]);
+    map.addLayers([osm, ortho, buildings, pois, imgs, vector]);
 
     // set shadow properties on the canvas context, must be
     // done after the layer is added to the map (for some

@@ -18,10 +18,19 @@ except sqlite3.OperationalError, err:
 
 class CustomHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     def do_GET(self):
-        self.send_response(404)
-        self.send_header('Content-type','text/plain')
-        self.end_headers()
-        self.wfile.write("nothing here")
+        if self.path == '/points.txt':
+            self.send_response(200)
+            self.send_header('Content-type','text/plain')
+            self.end_headers()
+            # Show images markers
+            self.wfile.write("""lat	lon	title	description	iconSize	iconOffset	icon
+5863566.8476108	730460.308913	title	description	21,25	-10,-25	http://www.openlayers.org/dev/img/marker.png
+""")
+        else:
+            self.send_response(404)
+            self.send_header('Content-type','text/plain')
+            self.end_headers()
+            self.wfile.write("nothing here")
         return
     def do_POST(self):
         self.send_response(200)
