@@ -90,37 +90,62 @@
             </div>
         </div>
        
-        <div data-role="page" id="mappage" data-fullscreen="true">
-            <div data-role="content">
-                <div id="map"></div>
-            </div>
-            <div id="navigation" data-role="controlgroup" data-type="vertical">
-                <a href="#" data-role="button" data-icon="plus" id="plus"
-                    data-iconpos="notext"></a>
-                <a href="#" data-role="button" data-icon="minus" id="minus"
-                    data-iconpos="notext"></a>
-                <a href="#" id="locate" data-icon="locate" data-role="button"
-                    data-iconpos="notext"></a>
-            </div>
-                
-            <div id="navigation2" data-role="controlgroup" data-type="vertical">
-                <a href="#imageframe" data-role="button" id="pic" data-transition="slidedown">Take picture</a>
-            </div>
+               <div data-role="page" id="mappage" data-fullscreen="true"> 
+            <div data-role="content"> 
+                <div id="map"></div> 
+            </div> 
+            <div data-role="header" data-position="fixed" data-theme="c"> 
+                <div id="layergroup" data-role="controlgroup" data-type="horizontal"> 
+                    <select name="select-choice-1" id="floorselector"> 
+                        <option value="-4">-4</option> 
+                        <option value="-3">-3</option> 
+                        <option value="-2">-2</option> 
+                        <option value="-1">-1</option> 
+                        <option value="0">0</option> 
+                        <option value="1">1</option> 
+                        <option value="2">2</option> 
+                        <option value="3">3</option> 
+                        <option value="4">4</option> 
+                        <option value="5">5</option> 
+                        <option value="6">6</option> 
+                        <option value="7">7</option> 
+                        <option value="8">8</option> 
+                        <option value="all" selected="selected">all</option> 
+                    </select> 
+                    <a href="ortho" data-role="button" id="layerselector"> 
+                        ortho
+                    </a> 
+                </div> 
+                <div id="navigation" data-role="controlgroup" data-type="horizontal"> 
+                    <a href="#" data-role="button" data-icon="plus" id="plus"
+                        data-iconpos="notext"></a> 
+                    <a href="#" data-role="button" data-icon="minus" id="minus"
+                        data-iconpos="notext"></a> 
+                    <a href="#" id="locate" data-icon="locate" data-role="button"
+                        data-iconpos="notext"></a> 
+                </div> 
+	            <div id="navigation2" data-role="controlgroup" data-type="horizontal">
+	                <a href="#imageframe" data-role="button" id="pic" data-transition="slidedown">Take picture</a>
+	            </div>
+            </div> 
+ 
                 
             <form action="http://plan-dev.epfl.ch/mobile/search"
-                data-role="footer" data-position="fixed" id="search_form" data-theme="c">
-                <input type="hidden" name="lang" value="en"/>
+                data-role="footer" data-position="fixed" id="search_form" data-theme="c"> 
+                <a href="#tools" data-role="button" data-icon="gear" id="more"
+                    data-iconpos="notext" data-transition="pop"></a> 
+                <input type="hidden" name="lang" value="fr"/> 
+                <!-- see: https://github.com/jquery/jquery-mobile/issues/785 for auto* attrs --> 
                 <input type="search" name="keyword" id="keyword"
-                    value="" placeholder="address, people…"
-                    autocomplete="off"/>
-                <button type="submit" data-role="button">Go</button>
-                <span class="toggle ui-btn">Get directions: </span>
-                <a data-role="button" class="toggle">from here</a>
-                <a data-role="button" class="toggle">to here</a>
+                    value="" placeholder="room, people…"
+                    autocomplete="off" autocapitalize="off" autocorrect="off"/> 
+                <button type="submit" data-role="button">Go</button> 
+                <a data-role="button" data-transition="pop" href="#routingpage" class="toggle"> 
+                    Get routes for “<span class="label"></span>”</a> 
                 <a data-role="button" data-icon="delete" data-iconpos="notext"
-                    class="ui-btn-right toggle"></a>
-            </form>
-        </div>
+                    class="ui-btn-right toggle"></a> 
+            </form> 
+        </div> 
 
         <div data-role="page" id="searchpage" data-theme="l">
             <div data-role="header">

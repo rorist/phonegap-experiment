@@ -10,6 +10,7 @@ $(document).ready(function(){
     }
 
     $('.toggle').hide();
+    $('#routing_form').hide();
  
     // We override OpenLayers' onImageLoadError function, not
     // to have the browser display broken images when the tile

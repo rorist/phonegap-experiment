@@ -3,6 +3,7 @@ app.Map = function(options) {
 
     var div = options.div,
         popup = $('#'+options.popup);
+    
     options = null;
 
     // list of POI layers that are always displayed on the map.
@@ -71,10 +72,10 @@ app.Map = function(options) {
     // FIXME we use plan-demo.epfl.ch, we'll need to change that
     // at some point
     var buildings = new app.SwitchableTileCache('background', [
-        //'http://plan-epfl-tile0.epfl.ch',
-        //'http://plan-epfl-tile1.epfl.ch',
-        //'http://plan-epfl-tile2.epfl.ch'
-        'http://plan-demo.epfl.ch/tilecache'
+        'http://plan-epfl-tile0.epfl.ch',
+        'http://plan-epfl-tile1.epfl.ch',
+        'http://plan-epfl-tile2.epfl.ch'
+        //'http://plan-demo.epfl.ch/tilecache'
     ], 'batiments', {
         format: 'image/png',
         isBaseLayer: false,
@@ -294,17 +295,3 @@ app.Map = function(options) {
         pois.doSwitch(floor);
     };
 };
-
-
-    //var ortho = new OpenLayers.Layer.TileCache(
-        //'ortho',
-        //tilecache_uri,
-        //'ortho-ch',
-        //{
-            //format           : 'image/jpeg',
-            //projection       : new OpenLayers.Projection('EPSG:21781'),
-            //maxExtent        : new OpenLayers.Bounds(485869.5728,76443.1884,837076.5648,299941.7864),
-            //transitionEffect : 'resize',
-            //buffer           : 0
-        //}
-    //);
