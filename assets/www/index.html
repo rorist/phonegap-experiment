@@ -29,6 +29,11 @@
         <script src="m/lib/jquery-1.5.2.min.js"></script>
         <script src="m/build/jquery.mobile-1.0a4.1.min.js"></script>
         <script src="m/build/OpenLayers.js"></script>
+        <script src="m/js/Popup.js"></script>
+        <script src="m/js/Strategy.js"></script>
+        <script src="m/js/Strategy/Fixed.js"></script>
+        <script src="m/js/Protocol.js"></script>
+        <script src="m/js/Protocol/HTTP.js"></script>
         <script src="m/js/Marker.js"></script>
         <script src="m/js/Icon.js"></script>
         <script src="m/js/Request.js"></script>
@@ -61,6 +66,15 @@
             </div>
         </div>
         
+        <div data-role="dialog" id="viewimage">
+            <div data-position="inline" data-role="header">
+                <h1>View Image</h1>
+            </div>
+
+            <div data-theme="c" data-role="content">
+            </div>
+        </div>
+        
         <div data-role="dialog" id="imageframe">
             <div data-position="inline" data-role="header">
                 <h1>Image</h1>
@@ -76,11 +90,9 @@
 	                    <label for="picdesc">Description:</label>
 	                    <input type="text" name="picdesc" id="picdesc" value="" />
 	                </div>
-	                <div data-role="fieldcontain">
-	                    <label for="picauthor">Author:</label>
-	                    <input type="text" name="picauthor" id="picauthor" value="" />
-	                </div>
                     <input type="hidden" name="picdata" id="picdata" value="" />
+                    <input type="hidden" name="piclat" id="piclat" value="" />
+                    <input type="hidden" name="piclon" id="piclon" value="" />
 	                <input data-inline="true" type="reset" id="picreset" value="Reset" />
 	                <input data-inline="true" data-theme="b" type="submit" id="picsubmit" value="Submit" />
                     <div data-role="fieldcontain">
@@ -95,27 +107,6 @@
                 <div id="map"></div> 
             </div> 
             <div data-role="header" data-position="fixed" data-theme="c"> 
-                <div id="layergroup" data-role="controlgroup" data-type="horizontal"> 
-                    <select name="select-choice-1" id="floorselector"> 
-                        <option value="-4">-4</option> 
-                        <option value="-3">-3</option> 
-                        <option value="-2">-2</option> 
-                        <option value="-1">-1</option> 
-                        <option value="0">0</option> 
-                        <option value="1">1</option> 
-                        <option value="2">2</option> 
-                        <option value="3">3</option> 
-                        <option value="4">4</option> 
-                        <option value="5">5</option> 
-                        <option value="6">6</option> 
-                        <option value="7">7</option> 
-                        <option value="8">8</option> 
-                        <option value="all" selected="selected">all</option> 
-                    </select> 
-                    <a href="ortho" data-role="button" id="layerselector"> 
-                        ortho
-                    </a> 
-                </div> 
                 <div id="navigation" data-role="controlgroup" data-type="horizontal"> 
                     <a href="#" data-role="button" data-icon="plus" id="plus"
                         data-iconpos="notext"></a> 

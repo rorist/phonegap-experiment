@@ -89,7 +89,25 @@ $(document).ready(function(){
         function onSuccess(imageData) {
         	var data = "data:image/jpeg;base64,"+imageData;
             $('#myImage')[0].src = data;
-            $('#picdata')[0].value = data;            
+            $('#picdata')[0].value = data;
+            // Get location
+            $.mobile.pageLoading();
+            navigator.geolocation.getCurrentPosition(
+                function(pos){
+                	// Success
+                	$.mobile.pageLoading(true);
+                	var nw = new OpenLayers.LonLat(pos.coords.longitude, pos.coords.latitude);
+                	var nwGoo = nw.transform(
+                	   new OpenLayers.Projection("EPSG:4326"), 
+                	   new OpenLayers.Projection("EPSG:900913"));
+                    $('#piclat')[0].value = nwGoo.lat;
+                    $('#piclon')[0].value = nwGoo.lon;
+                },
+                function(error){
+                	// Error
+                	$.mobile.pageLoading(true);
+                	alert(error.message);
+                });
         }
         function onFail(message) {
             alert('Failed because: ' + message);

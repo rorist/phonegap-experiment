@@ -115,13 +115,39 @@ app.Map = function(options) {
     var vector = new OpenLayers.Layer.Vector('vector');
     
 // PhoneGap
-    var imgs = new OpenLayers.Layer.Text("Image POIs", {
-    	location: 'http://zuort.wrk.lsn.camptocamp.com:3000/points.txt',
-    	projection: new OpenLayers.Projection('EPSG:900913'),
-    	markerClick: function(evt){
-    		console.log(evt);
-    	}
+    var imgs = new OpenLayers.Layer.Vector("Image POIs", {
+    	protocol: new OpenLayers.Protocol.HTTP({
+    		url: 'http://10.27.10.22:3000/points.txt',
+    		format: new OpenLayers.Format.Text()
+    	}),
+    	strategies: [new OpenLayers.Strategy.Fixed()]
     });
+    var imgsCtrl = new OpenLayers.Control.SelectFeature(imgs, {
+        callbacks: {
+            click: function(feature){
+            	popup = new OpenLayers.Popup("testPopup",
+            	   feature.geometry.getBounds().getCenterLonLat(), 
+            	   null,
+            	   "<b>"+feature.data.title+"</b>" +
+            	   "<p>"+feature.data.description+"</p>" +
+            	   "<p><a data-theme=\"a\" data-role=\"button\" href=\"index.html#viewimage\">View image</a></p>",
+            	   false);
+            	popup.feature = feature;
+            	feature.popup = popup; 
+            	app.map.addPopup(popup);
+            	$('#testPopup').page();
+            	popup.updateSize();
+            },
+            clickout: function(feature){
+            	popup.feature = null;
+            	app.map.removePopup(feature.popup);
+            	feature.popup.destroy();
+            	feature.popup = null;
+            }
+        }
+    });
+    map.addControl(imgsCtrl);
+    imgsCtrl.activate();
 // END PhoneGap
 
     // add layers to the map
