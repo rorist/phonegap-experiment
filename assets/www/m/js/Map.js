@@ -126,17 +126,18 @@ app.Map = function(options) {
     var imgsCtrl = new OpenLayers.Control.SelectFeature(imgs, {
         callbacks: {
             click: function(feature){
-            	if($('#testPopup').length>0){
-            	    for(var i=0; i<feature.layer.features.length; i++){
-            	    	var elem = feature.layer.features[i];
-            			if(elem.popup!=null){
-			                map.removePopup(elem.popup);
-			                elem.popup.destroy();
-			                elem.popup = null;
-            			}
-            		}
-            	}
+            	console.log('click');
             	if(feature.popup == null){
+	                if($('#testPopup').length>0){
+	                    for(var i=0; i<feature.layer.features.length; i++){
+	                        var elem = feature.layer.features[i];
+	                        if(elem.popup!=null){
+	                            map.removePopup(elem.popup);
+	                            elem.popup.destroy();
+	                            elem.popup = null;
+	                        }
+	                    }
+	                }
                     $('#viewimage_img')[0].src = feature.style.externalGraphic;
 	            	popup = new OpenLayers.Popup("testPopup",
 	            	   feature.geometry.getBounds().getCenterLonLat(), 
@@ -146,7 +147,7 @@ app.Map = function(options) {
 	            	   "<p>"+unescape(feature.data.description.replace(/\+/g, " "))+"" +
 	            	   "<a data-role=\"button\" href=\"index.html#viewimage\">View image</a></p>" +
 	            	   "</div>",
-	            	   false);
+	            	   false, null);
 	            	popup.feature = feature;
 	            	feature.popup = popup; 
 	            	map.addPopup(popup);
@@ -155,11 +156,12 @@ app.Map = function(options) {
             	}
             },
             clickout: function(feature){
-            	console.log('clickout');
-            	popup.feature = null;
-            	map.removePopup(feature.popup);
-            	feature.popup.destroy();
-            	feature.popup = null;
+            	console.log("clickout");
+            	if(feature.popup!=null){
+	            	map.removePopup(feature.popup);
+	            	feature.popup.destroy();
+	            	feature.popup = null;
+            	}
             }
         }
     });

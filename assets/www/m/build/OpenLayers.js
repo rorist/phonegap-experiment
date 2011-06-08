@@ -11942,12 +11942,14 @@ OpenLayers.Map = OpenLayers.Class({
     */
     removePopup: function(popup) {
         OpenLayers.Util.removeItem(this.popups, popup);
-        if (popup.div) {
-            try { this.layerContainerDiv.removeChild(popup.div); }
-            catch (e) { } // Popups sometimes apparently get disconnected
-                      // from the layerContainerDiv, and cause complaints.
+        if(popup != null){
+	        if (popup.div) {
+	            try { this.layerContainerDiv.removeChild(popup.div); }
+	            catch (e) { } // Popups sometimes apparently get disconnected
+	                      // from the layerContainerDiv, and cause complaints.
+	        }
+	        popup.map = null;
         }
-        popup.map = null;
     },
 
   /********************************************************/
