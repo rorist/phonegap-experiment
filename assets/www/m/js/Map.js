@@ -123,6 +123,9 @@ app.Map = function(options) {
     	strategies: [new OpenLayers.Strategy.Fixed()]
     });
     var imgsCtrl = new OpenLayers.Control.SelectFeature(imgs, {
+    	clickout: true,
+    	toggle: true,
+    	hover: false,
         callbacks: {
             click: function(feature){
             	if(feature.popup == null){
@@ -138,14 +141,15 @@ app.Map = function(options) {
 	            	   false);
 	            	popup.feature = feature;
 	            	feature.popup = popup; 
-	            	app.map.addPopup(popup);
+	            	map.addPopup(popup);
 	            	$('#testPopup').page();
 	            	popup.updateSize();
             	}
             },
             clickout: function(feature){
+            	console.log('asasd');
             	popup.feature = null;
-            	app.map.removePopup(feature.popup);
+            	map.removePopup(feature.popup);
             	feature.popup.destroy();
             	feature.popup = null;
             }
