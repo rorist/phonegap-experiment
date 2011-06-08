@@ -20,6 +20,7 @@ except sqlite3.OperationalError, err:
 
 class CustomHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     def do_GET(self):
+        # Serve Images
         if re.search("^\/[0-9]*\.jpg$", self.path)>0:
             self.send_response(200)
             self.send_header('Content-type','image/jpeg')
@@ -33,6 +34,7 @@ class CustomHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             for row in c:
                 picdata = urllib.unquote(row[0]).replace("data:image/jpeg;base64,", "")
                 self.wfile.write(base64.b64decode(picdata))
+        # Serve Points
         elif self.path == '/points.txt':
             self.send_response(200)
             self.send_header('Content-type','text/plain')
@@ -43,7 +45,7 @@ class CustomHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             c.execute("select * from img")
             self.wfile.write('lat\tlon\ttitle\tdescription\ticonSize\ticonOffset\ticon\n')
             for row in c:
-                self.wfile.write('%s\t%s\t%s\t%s\t21,25\t-10,-25\thttp://10.27.10.22:3000/%s.jpg\n'%
+                self.wfile.write('%s\t%s\t%s\t%s\t32,32\t-16,-16\thttp://10.27.10.22:3000/%s.jpg\n'%
                     (row[2],row[3],row[0],row[1],row[5]))
 
             c.close()
@@ -54,6 +56,7 @@ class CustomHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             self.wfile.write("nothing here")
         return
     def do_POST(self):
+        # Save Images
         self.send_response(200)
         self.send_header('Content-type','text/plain')
         self.end_headers()

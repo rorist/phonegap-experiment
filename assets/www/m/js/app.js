@@ -90,7 +90,7 @@ $(document).ready(function(){
         	var data = "data:image/jpeg;base64,"+imageData;
             $('#myImage')[0].src = data;
             $('#picdata')[0].value = data;
-            // Get location
+        	// Position by GPS
             $.mobile.pageLoading();
             navigator.geolocation.getCurrentPosition(
                 function(pos){
@@ -111,22 +111,48 @@ $(document).ready(function(){
         }
         function onFail(message) {
             alert('Failed because: ' + message);
+            $.mobile.changePage($('#mappage'));
         }
     });
    $('#form1').unbind().submit(function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+   	    // Some kind of validation
+        if($('#picname')[0].value == ""){
+            alert('You must provide a name!');
+            return;
+        }
+        if($('#picdata')[0].value == ""){
+            alert('There is no photo!');
+            return;
+        }
+        if($('#piclat')[0].value == "" || $('#piclon')[0].value == ""){
+        	alert('Geolocation problem!');
+        	return;
+        }
+        if($('#picdesc')[0].value == ""){
+            $('#picdesc')[0].value = "None";
+        }
+        // Position choice
+        if($('#radio-choice-2').attr('checked')){
+            // Position of the map center
+            c = app.map.getCenter();
+            $('#piclat')[0].value = c.lat;
+            $('#piclon')[0].value = c.lon;
+        }
+        // Send data
    	    $.mobile.pageLoading();
 		$.ajax({
 	      crossDomain: true,
 		  url: 'http://zuort.wrk.lsn.camptocamp.com:3000',
 		  type: 'POST',
 		  data: $(this).serialize(),
-		  success: function(data){
+		  complete: function(data){
+            alert(data);
+		  	$.mobile.changePage($('#mappage'));
 		  	$.mobile.pageLoading(true);
-		  	alert(data);
-		  }
+		  },
 		});
-        e.stopPropagation();
-        e.preventDefault();
     });
 // END PhoneGap
 

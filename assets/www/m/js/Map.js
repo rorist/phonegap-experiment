@@ -125,18 +125,23 @@ app.Map = function(options) {
     var imgsCtrl = new OpenLayers.Control.SelectFeature(imgs, {
         callbacks: {
             click: function(feature){
-            	popup = new OpenLayers.Popup("testPopup",
-            	   feature.geometry.getBounds().getCenterLonLat(), 
-            	   null,
-            	   "<b>"+feature.data.title+"</b>" +
-            	   "<p>"+feature.data.description+"</p>" +
-            	   "<p><a data-theme=\"a\" data-role=\"button\" href=\"index.html#viewimage\">View image</a></p>",
-            	   false);
-            	popup.feature = feature;
-            	feature.popup = popup; 
-            	app.map.addPopup(popup);
-            	$('#testPopup').page();
-            	popup.updateSize();
+            	if(feature.popup == null){
+                    $('#viewimage_img')[0].src = feature.style.externalGraphic;
+	            	popup = new OpenLayers.Popup("testPopup",
+	            	   feature.geometry.getBounds().getCenterLonLat(), 
+	            	   null,
+	            	   "<div id=\"testPopup_cc\" data-role=\"content\" data-theme=\"a\">"+
+	            	   "<b>"+unescape(feature.data.title.replace("+", " "))+"</b>" +
+	            	   "<p>"+unescape(feature.data.description.replace("+", " "))+"" +
+	            	   "<a data-role=\"button\" href=\"index.html#viewimage\">View image</a></p>" +
+	            	   "</div>",
+	            	   false);
+	            	popup.feature = feature;
+	            	feature.popup = popup; 
+	            	app.map.addPopup(popup);
+	            	$('#testPopup').page();
+	            	popup.updateSize();
+            	}
             },
             clickout: function(feature){
             	popup.feature = null;
