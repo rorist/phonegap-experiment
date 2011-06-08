@@ -85,7 +85,7 @@ $(document).ready(function(){
     
 // PhoneGap
     $("#pic .ui-btn-inner").unbind().click(function(e){
-        navigator.camera.getPicture(onSuccess, onFail, { quality: 5, destinationType: Camera.DestinationType.DATA_URL }); 
+        navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.DATA_URL }); 
         function onSuccess(imageData) {
         	var data = "data:image/jpeg;base64,"+imageData;
             $('#myImage')[0].src = data;
