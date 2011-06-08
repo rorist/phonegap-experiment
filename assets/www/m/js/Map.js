@@ -131,8 +131,8 @@ app.Map = function(options) {
 	            	   feature.geometry.getBounds().getCenterLonLat(), 
 	            	   null,
 	            	   "<div id=\"testPopup_cc\" data-role=\"content\" data-theme=\"a\">"+
-	            	   "<b>"+unescape(feature.data.title.replace("+", " "))+"</b>" +
-	            	   "<p>"+unescape(feature.data.description.replace("+", " "))+"" +
+	            	   "<b>"+unescape(feature.data.title.replace(/\+/g, " "))+"</b>" +
+	            	   "<p>"+unescape(feature.data.description.replace(/\+/g, " "))+"" +
 	            	   "<a data-role=\"button\" href=\"index.html#viewimage\">View image</a></p>" +
 	            	   "</div>",
 	            	   false);

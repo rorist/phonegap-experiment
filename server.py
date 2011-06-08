@@ -45,7 +45,7 @@ class CustomHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             c.execute("select * from img")
             self.wfile.write('lat\tlon\ttitle\tdescription\ticonSize\ticonOffset\ticon\n')
             for row in c:
-                self.wfile.write('%s\t%s\t%s\t%s\t32,32\t-16,-16\thttp://10.27.10.22:3000/%s.jpg\n'%
+                self.wfile.write('%s\t%s\t%s\t%s\t64,64\t-32,-32\thttp://10.27.10.22:3000/%s.jpg\n'%
                     (row[2],row[3],row[0],row[1],row[5]))
 
             c.close()
