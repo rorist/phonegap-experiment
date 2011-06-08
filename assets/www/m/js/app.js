@@ -136,7 +136,7 @@ $(document).ready(function(){
         // Position choice
         if($('#radio-choice-2').attr('checked')){
             // Position of the map center
-            c = app.map.getCenter();
+            c = map.getCenter();
             $('#piclat')[0].value = c.lat;
             $('#piclon')[0].value = c.lon;
         }
