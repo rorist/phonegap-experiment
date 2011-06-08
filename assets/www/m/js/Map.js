@@ -115,6 +115,7 @@ app.Map = function(options) {
     var vector = new OpenLayers.Layer.Vector('vector');
     
 // PhoneGap
+    var popup;
     var imgs = new OpenLayers.Layer.Vector("Image POIs", {
     	protocol: new OpenLayers.Protocol.HTTP({
     		url: 'http://10.27.10.22:3000/points.txt',
@@ -123,11 +124,18 @@ app.Map = function(options) {
     	strategies: [new OpenLayers.Strategy.Fixed()]
     });
     var imgsCtrl = new OpenLayers.Control.SelectFeature(imgs, {
-    	clickout: true,
-    	toggle: true,
-    	hover: false,
         callbacks: {
             click: function(feature){
+            	if($('#testPopup').length>0){
+            	    for(var i=0; i<feature.layer.features.length; i++){
+            	    	var elem = feature.layer.features[i];
+            			if(elem.popup!=null){
+			                map.removePopup(elem.popup);
+			                elem.popup.destroy();
+			                elem.popup = null;
+            			}
+            		}
+            	}
             	if(feature.popup == null){
                     $('#viewimage_img')[0].src = feature.style.externalGraphic;
 	            	popup = new OpenLayers.Popup("testPopup",
@@ -147,7 +155,7 @@ app.Map = function(options) {
             	}
             },
             clickout: function(feature){
-            	console.log('asasd');
+            	console.log('clickout');
             	popup.feature = null;
             	map.removePopup(feature.popup);
             	feature.popup.destroy();
