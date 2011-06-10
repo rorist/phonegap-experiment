@@ -68,7 +68,7 @@ img.olTileImage {
 #navigation2 .ui-btn-text{
     padding: 3px 2px 3px 4px;
 }
-#navigation2 a .ui-btn-text{
+#navigation2 .ui-btn-text{
     display: inline-block;
 }
 .ui-icon-check {

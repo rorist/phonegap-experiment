@@ -84,6 +84,10 @@ $(document).ready(function(){
     }
     
 // PhoneGap
+    $("#refresh .ui-btn-inner").unbind().click(function(e){
+        map.layers[3].refresh({force: true});
+    });
+    
     $("#pic .ui-btn-inner").unbind().click(function(e){
     	// Clean form
         $('#picname')[0].value = '';
