@@ -85,7 +85,8 @@ $(document).ready(function(){
     
 // PhoneGap
     $("#refresh .ui-btn-inner").unbind().click(function(e){
-        map.layers[3].refresh({force: true});
+    	map.layers[3].events.triggerEvent("refresh", {force: true});
+        //map.layers[3].refresh({force: true});
     });
     
     $("#pic .ui-btn-inner").unbind().click(function(e){
