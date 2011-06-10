@@ -126,38 +126,33 @@ app.Map = function(options) {
     var imgsCtrl = new OpenLayers.Control.SelectFeature(imgs, {
         callbacks: {
             click: function(feature){
-            	console.log('click');
-            	if(feature.popup == null){
-	                if($('#testPopup').length>0){
-	                    for(var i=0; i<feature.layer.features.length; i++){
-	                        var elem = feature.layer.features[i];
-	                        if(elem.popup!=null){
-	                            map.removePopup(elem.popup);
-	                            elem.popup.destroy();
-	                            elem.popup = null;
-	                        }
-	                    }
-	                }
-                    $('#viewimage_img')[0].src = feature.style.externalGraphic;
-	            	popup = new OpenLayers.Popup("testPopup",
-	            	   feature.geometry.getBounds().getCenterLonLat(), 
-	            	   null,
-	            	   "<div id=\"testPopup_cc\" data-role=\"content\" data-theme=\"a\">"+
-	            	   "<b>"+unescape(feature.data.title.replace(/\+/g, " "))+"</b>" +
-	            	   "<p>"+unescape(feature.data.description.replace(/\+/g, " "))+"" +
-	            	   "<a data-role=\"button\" href=\"index.html#viewimage\">View image</a></p>" +
-	            	   "</div>",
-	            	   false, null);
-	            	popup.feature = feature;
-	            	feature.popup = popup; 
-	            	map.addPopup(popup);
-	            	$('#testPopup').page();
-	            	popup.updateSize();
-            	}
+                for(var i=0; i<feature.layer.features.length; i++){
+                    var elem = feature.layer.features[i];
+                    if(elem.popup!=null){
+                        map.removePopup(elem.popup);
+                        elem.popup.destroy();
+                        elem.popup = null;
+                    }
+                }
+                $('#viewimage_img')[0].src = feature.style.externalGraphic;
+            	popup = new OpenLayers.Popup(null,
+            	   feature.geometry.getBounds().getCenterLonLat(), 
+            	   null,
+            	   "<div data-role=\"content\" data-theme=\"a\">"+
+            	   "<b>"+unescape(feature.data.title.replace(/\+/g, " "))+"</b>" +
+            	   "<p>"+unescape(feature.data.description.replace(/\+/g, " "))+"" +
+            	   "<a data-role=\"button\" href=\"index.html#viewimage\">View image</a></p>" +
+            	   "</div>",
+            	   false, null);
+            	popup.feature = feature;
+            	feature.popup = popup; 
+            	map.addPopup(popup);
+                $("#mappage").page('destroy').page();
+                popup.setBorder('1px solid black');
+            	popup.updateSize();
             },
             clickout: function(feature){
-            	console.log("clickout");
-            	if(feature.popup!=null){
+            	if(feature.popup != null){
 	            	map.removePopup(feature.popup);
 	            	feature.popup.destroy();
 	            	feature.popup = null;

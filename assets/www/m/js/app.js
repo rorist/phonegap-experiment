@@ -85,13 +85,13 @@ $(document).ready(function(){
     
 // PhoneGap
     $("#pic .ui-btn-inner").unbind().click(function(e){
+        $.mobile.pageLoading();
         navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.DATA_URL }); 
         function onSuccess(imageData) {
         	var data = "data:image/jpeg;base64,"+imageData;
             $('#myImage')[0].src = data;
             $('#picdata')[0].value = data;
         	// Position by GPS
-            $.mobile.pageLoading();
             navigator.geolocation.getCurrentPosition(
                 function(pos){
                 	// Success
@@ -111,6 +111,7 @@ $(document).ready(function(){
         }
         function onFail(message) {
             alert('Failed because: ' + message);
+            $.mobile.pageLoading(true);
             $.mobile.changePage($('#mappage'));
         }
     });

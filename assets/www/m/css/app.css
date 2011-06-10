@@ -171,10 +171,3 @@ img.olTileImage {
     bottom   : 0.7em;
     right    : 20px;
 }
-#testPopup {
-    border: 1px solid black;
-}
-#testPopup_cc {
-    padding: 5px;
-    width: auto !important;
-}
