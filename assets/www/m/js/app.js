@@ -2,7 +2,7 @@ app = window.app || {};
 //var pinch; // PhoneGap
 $(document).ready(function(){
     OpenLayers.Lang.setCode(app.lang);
-    $.mobile.defaultTransition = 'flip';
+    $.mobile.defaultTransition = 'pop';
 
     // Start with the map page
     if (window.location.hash && window.location.hash!='#mappage') {

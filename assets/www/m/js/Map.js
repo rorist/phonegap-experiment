@@ -126,37 +126,19 @@ app.Map = function(options) {
     var imgsCtrl = new OpenLayers.Control.SelectFeature(imgs, {
         callbacks: {
             click: function(feature){
-                for(var i=0; i<feature.layer.features.length; i++){
-                    var elem = feature.layer.features[i];
-                    if(elem.popup!=null){
-                        map.removePopup(elem.popup);
-                        elem.popup.destroy();
-                        elem.popup = null;
-                    }
-                }
+                $('#viewimage_title').html(unescape(feature.data.title.replace(/\+/g, " ")));
+                $('#viewimage_desc').html(unescape(feature.data.description.replace(/\+/g, " ")));
                 $('#viewimage_img')[0].src = feature.style.externalGraphic;
-            	popup = new OpenLayers.Popup(null,
-            	   feature.geometry.getBounds().getCenterLonLat(), 
-            	   null,
-            	   "<div data-role=\"content\" data-theme=\"a\">"+
-            	   "<b>"+unescape(feature.data.title.replace(/\+/g, " "))+"</b>" +
-            	   "<p>"+unescape(feature.data.description.replace(/\+/g, " "))+"" +
-            	   "<a data-role=\"button\" href=\"index.html#viewimage\">View image</a></p>" +
-            	   "</div>",
-            	   false, null);
-            	popup.feature = feature;
-            	feature.popup = popup; 
-            	map.addPopup(popup);
-                $("#mappage").page('destroy').page();
-                popup.setBorder('1px solid black');
-            	popup.updateSize();
+                $('#imageview_close').unbind().click(function(e){
+                    $.mobile.changePage('mappage', 'pop');
+	                $('#viewimage_title')[0].html('');
+	                $('#viewimage_desc')[0].html('');
+	                $('#viewimage_img')[0].src = '';
+                });
+                $.mobile.changePage('viewimage', 'pop');
             },
             clickout: function(feature){
-            	if(feature.popup != null){
-	            	map.removePopup(feature.popup);
-	            	feature.popup.destroy();
-	            	feature.popup = null;
-            	}
+            	console.log('clickout');
             }
         }
     });
