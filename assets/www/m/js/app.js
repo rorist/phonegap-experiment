@@ -131,7 +131,7 @@ $(document).ready(function(){
             alert('You must provide a name!');
             return;
         }
-        if($('#picdata')[0].value == ""){
+        if($('#picdata')[0].value == "" || $('#picdata')[0].value == "0"){
             alert('There is no photo!');
             return;
         }
@@ -153,11 +153,11 @@ $(document).ready(function(){
    	    $.mobile.pageLoading();
 		$.ajax({
 	      crossDomain: true,
-		  url: 'http://zuort.wrk.lsn.camptocamp.com:3000',
+		  url: 'http://10.27.10.22:3000',
 		  type: 'POST',
 		  data: $(this).serialize(),
-		  complete: function(data){
-            alert(data);
+		  complete: function(res){
+            alert(res.responseText);
 		  	$.mobile.changePage($('#mappage'));
 		  	$.mobile.pageLoading(true);
 		  },

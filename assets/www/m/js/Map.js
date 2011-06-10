@@ -130,7 +130,7 @@ app.Map = function(options) {
                 $('#viewimage_desc').html(unescape(feature.data.description.replace(/\+/g, " ")));
                 $('#viewimage_img')[0].src = feature.style.externalGraphic;
                 $('#imageview_close').unbind().click(function(e){
-                    $.mobile.changePage('mappage', 'pop');
+                    $('.ui-dialog').dialog('close')
 	                $('#viewimage_title')[0].html('');
 	                $('#viewimage_desc')[0].html('');
 	                $('#viewimage_img')[0].src = '';
