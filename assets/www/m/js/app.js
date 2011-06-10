@@ -85,6 +85,14 @@ $(document).ready(function(){
     
 // PhoneGap
     $("#pic .ui-btn-inner").unbind().click(function(e){
+    	// Clean form
+        $('#picname')[0].value = '';
+        $('#picdesc')[0].value = '';
+        $('#piclat')[0].value = 0;
+        $('#piclon')[0].value = 0;
+        $('#picdata')[0].value = 0;
+        $('#myImage')[0].src = '';
+    	// Load data
         $.mobile.pageLoading();
         navigator.camera.getPicture(onSuccess, onFail, { quality: 50, destinationType: Camera.DestinationType.DATA_URL }); 
         function onSuccess(imageData) {
