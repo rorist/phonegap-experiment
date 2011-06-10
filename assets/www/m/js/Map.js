@@ -121,7 +121,9 @@ app.Map = function(options) {
     		url: 'http://10.27.10.22:3000/points.txt',
     		format: new OpenLayers.Format.Text()
     	}),
-    	strategies: [new OpenLayers.Strategy.Fixed()]
+    	strategies: [
+    	   new OpenLayers.Strategy.Fixed(),
+    	   new OpenLayers.Strategy.Refresh()]
     });
     var imgsCtrl = new OpenLayers.Control.SelectFeature(imgs, {
         callbacks: {

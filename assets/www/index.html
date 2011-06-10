@@ -31,6 +31,7 @@
         <script src="m/build/OpenLayers.js"></script>
         <script src="m/js/Popup.js"></script>
         <script src="m/js/Strategy.js"></script>
+        <script src="m/js/Strategy/Refresh.js"></script>
         <script src="m/js/Strategy/Fixed.js"></script>
         <script src="m/js/Protocol.js"></script>
         <script src="m/js/Protocol/HTTP.js"></script>
@@ -71,8 +72,10 @@
                 <h1 id="viewimage_title"></h1>
             </div>
             <div data-theme="c" data-role="content">
-                <p id="viewimage_desc"></p>
-                <img id="viewimage_img" width="100%" />
+                <div style="width:85%; text-align:center; margin: 0 auto;">
+	                <p id="viewimage_desc"></p>
+	                <img id="viewimage_img" width="100%" />
+                </div>
                 <div data-role="button" id="imageview_close">Close</div>
             </div>
         </div>

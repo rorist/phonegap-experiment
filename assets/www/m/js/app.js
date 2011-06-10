@@ -124,6 +124,7 @@ $(document).ready(function(){
         }
     });
    $('#form1').unbind().submit(function(e) {
+   	    var ctxt = map;
         e.stopPropagation();
         e.preventDefault();
    	    // Some kind of validation
@@ -145,7 +146,7 @@ $(document).ready(function(){
         // Position choice
         if($('#radio-choice-2').attr('checked')){
             // Position of the map center
-            c = map.getCenter();
+            c = ctxt.getCenter();
             $('#piclat')[0].value = c.lat;
             $('#piclon')[0].value = c.lon;
         }
@@ -157,9 +158,10 @@ $(document).ready(function(){
 		  type: 'POST',
 		  data: $(this).serialize(),
 		  complete: function(res){
+            $.mobile.pageLoading(true);
+            ctxt.layers[3].refresh({force: true});
             alert(res.responseText);
 		  	$.mobile.changePage($('#mappage'));
-		  	$.mobile.pageLoading(true);
 		  },
 		});
     });
