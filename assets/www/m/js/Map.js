@@ -133,9 +133,9 @@ app.Map = function(options) {
                 $('#viewimage_img')[0].src = feature.style.externalGraphic;
                 $('#imageview_close').unbind().click(function(e){
                     $('.ui-dialog').dialog('close')
-	                $('#viewimage_title')[0].html('');
-	                $('#viewimage_desc')[0].html('');
-	                $('#viewimage_img')[0].src = '';
+	                //$('#viewimage_title')[0].html('');
+	                //$('#viewimage_desc')[0].html('');
+	                //$('#viewimage_img')[0].src = '';
                 });
                 $.mobile.changePage('viewimage', 'pop');
             },

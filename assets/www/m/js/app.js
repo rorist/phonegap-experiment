@@ -84,10 +84,11 @@ $(document).ready(function(){
     }
     
 // PhoneGap
+    
     $("#refresh .ui-btn-inner").unbind().click(function(e){
-    	map.layers[3].events.triggerEvent("refresh", {force: true});
-        //map.layers[3].refresh({force: true});
+        map.layers[3].events.triggerEvent("refresh", {force: true});
     });
+    
     
     $("#pic .ui-btn-inner").unbind().click(function(e){
     	// Clean form
@@ -164,7 +165,22 @@ $(document).ready(function(){
 		  data: $(this).serialize(),
 		  complete: function(res){
             $.mobile.pageLoading(true);
-            ctxt.layers[3].refresh({force: true});
+            // FIXME: Doesn't work
+            ctxt.layers[3].events.triggerEvent("refresh", {force: true});
+            // Add point to map
+            /*
+            var style = {
+            	externalGraphics: $('#picdata')[0].value,
+                graphicHeight: 64,
+                graphicWidth: 64,
+                graphicXOffset: -32,
+                graphicYOffset: -32,
+            };
+            var point = new OpenLayers.Geometry.Point($('#piclon')[0].value, $('#piclat')[0].value);
+            var pointFeature = new OpenLayers.Feature.Vector(point, null, style);
+            ctxt.layers[3].addFeatures([pointFeature]);
+            */
+            // Feedback to user
             alert(res.responseText);
 		  	$.mobile.changePage($('#mappage'));
 		  },
