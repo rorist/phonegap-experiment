@@ -118,7 +118,7 @@ app.Map = function(options) {
     var popup;
     var imgs = new OpenLayers.Layer.Vector("Image POIs", {
     	protocol: new OpenLayers.Protocol.HTTP({
-    		url: 'http://10.27.10.22:3000/points.txt',
+    		url: 'http://plan-dev.epfl.ch/android/points.txt',
     		format: new OpenLayers.Format.Text()
     	}),
     	strategies: [

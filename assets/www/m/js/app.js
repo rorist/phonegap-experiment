@@ -164,7 +164,7 @@ $(document).ready(function(){
    	    $.mobile.pageLoading();
 		$.ajax({
 	      crossDomain: true,
-		  url: 'http://10.27.10.22:3000',
+		  url: 'http://plan-dev.epfl.ch/android/',
 		  type: 'POST',
 		  data: $(this).serialize(),
 		  complete: function(res){
