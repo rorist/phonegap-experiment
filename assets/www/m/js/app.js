@@ -170,19 +170,6 @@ $(document).ready(function(){
 		  complete: function(res){
             $.mobile.pageLoading(true);
             refresh();
-            // Add point to map
-            /*
-            var style = {
-            	externalGraphics: $('#picdata')[0].value,
-                graphicHeight: 64,
-                graphicWidth: 64,
-                graphicXOffset: -32,
-                graphicYOffset: -32,
-            };
-            var point = new OpenLayers.Geometry.Point($('#piclon')[0].value, $('#piclat')[0].value);
-            var pointFeature = new OpenLayers.Feature.Vector(point, null, style);
-            ctxt.layers[3].addFeatures([pointFeature]);
-            */
             // Feedback to user
             alert(res.responseText);
 		  	$.mobile.changePage($('#mappage'));
