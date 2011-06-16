@@ -197,6 +197,7 @@ OpenLayers.Protocol.HTTP = OpenLayers.Class(OpenLayers.Protocol, {
                 }
             });
         } else {
+            console.log('read with GET '+options.url);
             resp.priv = OpenLayers.Request.GET({
                 url: options.url,
                 callback: this.createCallback(this.handleRead, resp, options),

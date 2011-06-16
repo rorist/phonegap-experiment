@@ -18919,6 +18919,7 @@ OpenLayers.Layer.Vector = OpenLayers.Class(OpenLayers.Layer, {
      *     the refresh event.
      */
     refresh: function(obj) {
+        console.log('refresh Vector');
         if(this.calculateInRange() && this.visibility) {
             this.events.triggerEvent("refresh", obj);
         }

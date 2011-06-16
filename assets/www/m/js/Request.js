@@ -115,7 +115,7 @@ OpenLayers.Request = {
      * {XMLHttpRequest} Request object.  To abort the request before a response
      *     is received, call abort() on the request object.
      */
-    issue: function(config) {        
+    issue: function(config) {    
         // apply default config - proxy host may have changed
         var defaultConfig = OpenLayers.Util.extend(
             this.DEFAULT_CONFIG,
@@ -181,6 +181,7 @@ OpenLayers.Request = {
         // send request (optionally with data) and return
         // call in a timeout for asynchronous requests so the return is
         // available before readyState == 4 for cached docs
+        
         if(config.async === false) {
             request.send(config.data);
         } else {

@@ -84,9 +84,13 @@ $(document).ready(function(){
     }
     
 // PhoneGap
+
+    var refresh = function(){
+    	map.layers[3].events.triggerEvent("refresh", {force: true});
+    }
     
     $("#refresh .ui-btn-inner").unbind().click(function(e){
-        map.layers[3].events.triggerEvent("refresh", {force: true});
+        refresh();
     });
     
     
@@ -165,8 +169,7 @@ $(document).ready(function(){
 		  data: $(this).serialize(),
 		  complete: function(res){
             $.mobile.pageLoading(true);
-            // FIXME: Doesn't work
-            ctxt.layers[3].events.triggerEvent("refresh", {force: true});
+            refresh();
             // Add point to map
             /*
             var style = {

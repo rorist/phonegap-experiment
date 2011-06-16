@@ -123,7 +123,8 @@ app.Map = function(options) {
     	}),
     	strategies: [
     	   new OpenLayers.Strategy.Fixed(),
-    	   new OpenLayers.Strategy.Refresh()]
+    	   new OpenLayers.Strategy.Refresh() //{interval: 1000})
+        ]
     });
     var imgsCtrl = new OpenLayers.Control.SelectFeature(imgs, {
         callbacks: {
