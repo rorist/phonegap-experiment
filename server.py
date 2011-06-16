@@ -38,6 +38,9 @@ class CustomHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         elif self.path == '/points.txt':
             self.send_response(200)
             self.send_header('Content-type','text/plain')
+            self.send_header('Cache-Control','must-revalidate')
+            self.send_header('Expires','Mon, 26 Jul 1997 00:00:00 GMT')
+            self.send_header('Pragma','public')
             self.end_headers()
             # Show images markers
             db = sqlite3.connect(db_file)
