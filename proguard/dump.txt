@@ -7372,7 +7372,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 201):
+Constant Pool (count = 179):
   - String []
   - String [)]
   - String [,]
@@ -7385,7 +7385,6 @@ Constant Pool (count = 201):
   - String [exitApp]
   - String [isBackbuttonOverridden]
   - String [loadUrl]
-  - String [loadUrl(]
   - String [overrideBackbutton]
   - String [wait]
   - Class [android/content/Intent]
@@ -7395,8 +7394,6 @@ Constant Pool (count = 201):
   - Class [com/phonegap/api/Plugin]
   - Class [com/phonegap/api/PluginResult]
   - Class [com/phonegap/api/PluginResult$Status]
-  - Class [com/phonegap/p]
-  - Class [com/phonegap/q]
   - Class [java/io/PrintStream]
   - Class [java/lang/Boolean]
   - Class [java/lang/Integer]
@@ -7404,7 +7401,6 @@ Constant Pool (count = 201):
   - Class [java/lang/String]
   - Class [java/lang/StringBuilder]
   - Class [java/lang/System]
-  - Class [java/lang/Thread]
   - Class [org/json/JSONArray]
   - Class [org/json/JSONException]
   - Class [org/json/JSONObject]
@@ -7415,31 +7411,26 @@ Constant Pool (count = 201):
   - Fieldref [java/lang/System.out Ljava/io/PrintStream;]
   - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;]
   - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
-  - Methodref [com/phonegap/DroidGap.a ()V]
+  - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;I)V]
   - Methodref [com/phonegap/DroidGap.b ()V]
   - Methodref [com/phonegap/DroidGap.b (Ljava/lang/String;)V]
   - Methodref [com/phonegap/DroidGap.c ()V]
+  - Methodref [com/phonegap/DroidGap.d ()V]
   - Methodref [com/phonegap/DroidGap.finish ()V]
-  - Methodref [com/phonegap/DroidGap.runOnUiThread (Ljava/lang/Runnable;)V]
   - Methodref [com/phonegap/api/PhonegapActivity.a (Ljava/lang/String;Ljava/lang/String;)V]
   - Methodref [com/phonegap/api/PhonegapActivity.getIntent ()Landroid/content/Intent;]
   - Methodref [com/phonegap/api/Plugin.<init> ()V]
   - Methodref [com/phonegap/api/PluginResult.<init> (Lcom/phonegap/api/PluginResult$Status;)V]
   - Methodref [com/phonegap/api/PluginResult.<init> (Lcom/phonegap/api/PluginResult$Status;Ljava/lang/String;)V]
   - Methodref [com/phonegap/api/PluginResult.<init> (Lcom/phonegap/api/PluginResult$Status;Z)V]
-  - Methodref [com/phonegap/p.<init> (Lcom/phonegap/DroidGap;ILcom/phonegap/DroidGap;Ljava/lang/String;)V]
-  - Methodref [com/phonegap/q.<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V]
   - Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
   - Methodref [java/lang/Object.equals (Ljava/lang/Object;)Z]
   - Methodref [java/lang/Object.getClass ()Ljava/lang/Class;]
   - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
   - Methodref [java/lang/StringBuilder.<init> ()V]
-  - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
   - Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-  - Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
-  - Methodref [java/lang/Thread.start ()V]
   - Methodref [org/json/JSONArray.getBoolean (I)Z]
   - Methodref [org/json/JSONArray.getString (I)Ljava/lang/String;]
   - Methodref [org/json/JSONArray.length ()I]
@@ -7448,15 +7439,11 @@ Constant Pool (count = 201):
   - Methodref [org/json/JSONObject.getInt (Ljava/lang/String;)I]
   - Methodref [org/json/JSONObject.names ()Lorg/json/JSONArray;]
   + NameAndType [<init> ()V]
-  + NameAndType [<init> (Lcom/phonegap/DroidGap;ILcom/phonegap/DroidGap;Ljava/lang/String;)V]
-  + NameAndType [<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V]
   + NameAndType [<init> (Lcom/phonegap/api/PluginResult$Status;)V]
   + NameAndType [<init> (Lcom/phonegap/api/PluginResult$Status;Ljava/lang/String;)V]
   + NameAndType [<init> (Lcom/phonegap/api/PluginResult$Status;Z)V]
-  + NameAndType [<init> (Ljava/lang/Runnable;)V]
-  + NameAndType [a ()V]
+  + NameAndType [a (Ljava/lang/String;I)V]
   + NameAndType [a (Ljava/lang/String;Ljava/lang/String;)V]
-  + NameAndType [append (I)Ljava/lang/StringBuilder;]
   + NameAndType [append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + NameAndType [b ()V]
@@ -7465,6 +7452,7 @@ Constant Pool (count = 201):
   + NameAndType [b Lcom/phonegap/api/PluginResult$Status;]
   + NameAndType [c ()V]
   + NameAndType [c Z]
+  + NameAndType [d ()V]
   + NameAndType [equals (Ljava/lang/Object;)Z]
   + NameAndType [f Lcom/phonegap/api/PluginResult$Status;]
   + NameAndType [finish ()V]
@@ -7481,8 +7469,6 @@ Constant Pool (count = 201):
   + NameAndType [println (Ljava/lang/String;)V]
   + NameAndType [putExtra (Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;]
   + NameAndType [putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
-  + NameAndType [runOnUiThread (Ljava/lang/Runnable;)V]
-  + NameAndType [start ()V]
   + NameAndType [toString ()Ljava/lang/String;]
   + Utf8 []
   + Utf8 [()I]
@@ -7492,21 +7478,18 @@ Constant Pool (count = 201):
   + Utf8 [()Lorg/json/JSONArray;]
   + Utf8 [()V]
   + Utf8 [(I)Ljava/lang/String;]
-  + Utf8 [(I)Ljava/lang/StringBuilder;]
   + Utf8 [(I)Lorg/json/JSONObject;]
   + Utf8 [(I)Z]
-  + Utf8 [(Lcom/phonegap/DroidGap;ILcom/phonegap/DroidGap;Ljava/lang/String;)V]
-  + Utf8 [(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V]
   + Utf8 [(Lcom/phonegap/api/PluginResult$Status;)V]
   + Utf8 [(Lcom/phonegap/api/PluginResult$Status;Ljava/lang/String;)V]
   + Utf8 [(Lcom/phonegap/api/PluginResult$Status;Z)V]
   + Utf8 [(Ljava/lang/Object;)Ljava/lang/StringBuilder;]
   + Utf8 [(Ljava/lang/Object;)Z]
-  + Utf8 [(Ljava/lang/Runnable;)V]
   + Utf8 [(Ljava/lang/String;)I]
   + Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
   + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;I)V]
   + Utf8 [(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;]
   + Utf8 [(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
   + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
@@ -7536,8 +7519,7 @@ Constant Pool (count = 201):
   + Utf8 [com/phonegap/api/Plugin]
   + Utf8 [com/phonegap/api/PluginResult]
   + Utf8 [com/phonegap/api/PluginResult$Status]
-  + Utf8 [com/phonegap/p]
-  + Utf8 [com/phonegap/q]
+  + Utf8 [d]
   + Utf8 [equals]
   + Utf8 [exitApp]
   + Utf8 [f]
@@ -7556,10 +7538,8 @@ Constant Pool (count = 201):
   + Utf8 [java/lang/String]
   + Utf8 [java/lang/StringBuilder]
   + Utf8 [java/lang/System]
-  + Utf8 [java/lang/Thread]
   + Utf8 [length]
   + Utf8 [loadUrl]
-  + Utf8 [loadUrl(]
   + Utf8 [names]
   + Utf8 [optJSONObject]
   + Utf8 [org/json/JSONArray]
@@ -7569,8 +7549,6 @@ Constant Pool (count = 201):
   + Utf8 [overrideBackbutton]
   + Utf8 [println]
   + Utf8 [putExtra]
-  + Utf8 [runOnUiThread]
-  + Utf8 [start]
   + Utf8 [toString]
   + Utf8 [wait]
 
@@ -7583,7 +7561,7 @@ Methods (count = 2):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #51
+      [1] invokespecial #47
         - Methodref [com/phonegap/api/Plugin.<init> ()V]
       [4] return
       Code attribute exceptions (count = 0):
@@ -7592,8 +7570,8 @@ Methods (count = 2):
     Access flags: 0x11
       = public final com.phonegap.api.PluginResult a(java.lang.String,org.json.JSONArray,java.lang.String)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 578, locals = 11, stack = 6):
-      [0] getstatic #38
+    + Code attribute instructions (code length = 495, locals = 11, stack = 4):
+      [0] getstatic #34
         - Fieldref [com/phonegap/api/PluginResult$Status.b Lcom/phonegap/api/PluginResult$Status;]
       [3] astore_3 v3
       [4] ldc #1
@@ -7602,384 +7580,324 @@ Methods (count = 2):
       [8] aload_1 v1
       [9] ldc #8
         - String [clearCache]
-      [11] invokevirtual #60
+      [11] invokevirtual #54
         - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [14] ifeq +16 (target=30)
       [17] aload_0 v0
-      [18] getfield #36
+      [18] getfield #32
         - Fieldref [com/phonegap/App.b Lcom/phonegap/api/PhonegapActivity;]
-      [21] checkcast #18
+      [21] checkcast #17
         - Class [com/phonegap/DroidGap]
-      [24] invokevirtual #44
-        - Methodref [com/phonegap/DroidGap.b ()V]
-      [27] goto +528 (target=555)
+      [24] invokevirtual #42
+        - Methodref [com/phonegap/DroidGap.c ()V]
+      [27] goto +445 (target=472)
       [30] aload_1 v1
       [31] ldc #12
         - String [loadUrl]
-      [33] invokevirtual #60
+      [33] invokevirtual #54
         - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [36] ifeq +352 (target=388)
+      [36] ifeq +269 (target=305)
       [39] aload_0 v0
       [40] aload_2 v2
       [41] iconst_0
-      [42] invokevirtual #69
+      [42] invokevirtual #60
         - Methodref [org/json/JSONArray.getString (I)Ljava/lang/String;]
       [45] aload_2 v2
       [46] iconst_1
-      [47] invokevirtual #71
+      [47] invokevirtual #62
         - Methodref [org/json/JSONArray.optJSONObject (I)Lorg/json/JSONObject;]
       [50] astore v5
       [52] astore_2 v2
       [53] astore_1 v1
-      [54] getstatic #40
+      [54] getstatic #36
         - Fieldref [java/lang/System.out Ljava/io/PrintStream;]
-      [57] new #30
+      [57] new #27
         - Class [java/lang/StringBuilder]
       [60] dup
-      [61] invokespecial #61
+      [61] invokespecial #55
         - Methodref [java/lang/StringBuilder.<init> ()V]
       [64] ldc #4
         - String [App.loadUrl(]
-      [66] invokevirtual #64
+      [66] invokevirtual #57
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [69] aload_2 v2
-      [70] invokevirtual #64
+      [70] invokevirtual #57
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [73] ldc #3
         - String [,]
-      [75] invokevirtual #64
+      [75] invokevirtual #57
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [78] aload v5
-      [80] invokevirtual #63
+      [80] invokevirtual #56
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;]
       [83] ldc #2
         - String [)]
-      [85] invokevirtual #64
+      [85] invokevirtual #57
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [88] invokevirtual #65
+      [88] invokevirtual #58
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [91] invokevirtual #57
+      [91] invokevirtual #51
         - Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
       [94] iconst_0
       [95] istore v6
       [97] aload v5
       [99] ifnull +171 (target=270)
       [102] aload v5
-      [104] invokevirtual #74
+      [104] invokevirtual #65
         - Methodref [org/json/JSONObject.names ()Lorg/json/JSONArray;]
       [107] astore v7
       [109] iconst_0
       [110] istore v8
       [112] iload v8
       [114] aload v7
-      [116] invokevirtual #70
+      [116] invokevirtual #61
         - Methodref [org/json/JSONArray.length ()I]
       [119] ificmpge +151 (target=270)
       [122] aload v7
       [124] iload v8
-      [126] invokevirtual #69
+      [126] invokevirtual #60
         - Methodref [org/json/JSONArray.getString (I)Ljava/lang/String;]
       [129] dup
       [130] astore v9
-      [132] ldc #15
+      [132] ldc #14
         - String [wait]
-      [134] invokevirtual #60
+      [134] invokevirtual #54
         - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [137] ifeq +15 (target=152)
       [140] aload v5
       [142] aload v9
-      [144] invokevirtual #73
+      [144] invokevirtual #64
         - Methodref [org/json/JSONObject.getInt (Ljava/lang/String;)I]
       [147] istore v6
       [149] goto +115 (target=264)
       [152] aload v5
       [154] aload v9
-      [156] invokevirtual #72
+      [156] invokevirtual #63
         - Methodref [org/json/JSONObject.get (Ljava/lang/String;)Ljava/lang/Object;]
       [159] dup
       [160] astore v10
       [162] ifnull +102 (target=264)
       [165] aload v10
-      [167] invokevirtual #59
+      [167] invokevirtual #53
         - Methodref [java/lang/Object.getClass ()Ljava/lang/Class;]
-      [170] ldc #29
+      [170] ldc #26
         - Class [java/lang/String]
-      [172] invokevirtual #58
+      [172] invokevirtual #52
         - Methodref [java/lang/Object.equals (Ljava/lang/Object;)Z]
       [175] ifeq +24 (target=199)
       [178] aload_1 v1
-      [179] getfield #36
+      [179] getfield #32
         - Fieldref [com/phonegap/App.b Lcom/phonegap/api/PhonegapActivity;]
-      [182] invokevirtual #50
+      [182] invokevirtual #46
         - Methodref [com/phonegap/api/PhonegapActivity.getIntent ()Landroid/content/Intent;]
       [185] aload v9
       [187] aload v10
-      [189] checkcast #29
+      [189] checkcast #26
         - Class [java/lang/String]
-      [192] invokevirtual #42
+      [192] invokevirtual #38
         - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
       [195] pop
       [196] goto +68 (target=264)
       [199] aload v10
-      [201] invokevirtual #59
+      [201] invokevirtual #53
         - Methodref [java/lang/Object.getClass ()Ljava/lang/Class;]
-      [204] ldc #26
+      [204] ldc #23
         - Class [java/lang/Boolean]
-      [206] invokevirtual #58
+      [206] invokevirtual #52
         - Methodref [java/lang/Object.equals (Ljava/lang/Object;)Z]
       [209] ifeq +24 (target=233)
       [212] aload_1 v1
-      [213] getfield #36
+      [213] getfield #32
         - Fieldref [com/phonegap/App.b Lcom/phonegap/api/PhonegapActivity;]
-      [216] invokevirtual #50
+      [216] invokevirtual #46
         - Methodref [com/phonegap/api/PhonegapActivity.getIntent ()Landroid/content/Intent;]
       [219] aload v9
       [221] aload v10
-      [223] checkcast #26
+      [223] checkcast #23
         - Class [java/lang/Boolean]
-      [226] invokevirtual #41
+      [226] invokevirtual #37
         - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;]
       [229] pop
       [230] goto +34 (target=264)
       [233] aload v10
-      [235] invokevirtual #59
+      [235] invokevirtual #53
         - Methodref [java/lang/Object.getClass ()Ljava/lang/Class;]
-      [238] ldc #27
+      [238] ldc #24
         - Class [java/lang/Integer]
-      [240] invokevirtual #58
+      [240] invokevirtual #52
         - Methodref [java/lang/Object.equals (Ljava/lang/Object;)Z]
       [243] ifeq +21 (target=264)
       [246] aload_1 v1
-      [247] getfield #36
+      [247] getfield #32
         - Fieldref [com/phonegap/App.b Lcom/phonegap/api/PhonegapActivity;]
-      [250] invokevirtual #50
+      [250] invokevirtual #46
         - Methodref [com/phonegap/api/PhonegapActivity.getIntent ()Landroid/content/Intent;]
       [253] aload v9
       [255] aload v10
-      [257] checkcast #27
+      [257] checkcast #24
         - Class [java/lang/Integer]
-      [260] invokevirtual #41
+      [260] invokevirtual #37
         - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;]
       [263] pop
       [264] iinc v8, 1
       [267] goto -155 (target=112)
       [270] iload v6
-      [272] ifle +102 (target=374)
+      [272] ifle +19 (target=291)
       [275] aload_1 v1
-      [276] getfield #36
+      [276] getfield #32
         - Fieldref [com/phonegap/App.b Lcom/phonegap/api/PhonegapActivity;]
-      [279] checkcast #18
+      [279] checkcast #17
         - Class [com/phonegap/DroidGap]
       [282] aload_2 v2
       [283] iload v6
-      [285] istore v5
-      [287] astore_2 v2
-      [288] astore_1 v1
-      [289] getstatic #40
-        - Fieldref [java/lang/System.out Ljava/io/PrintStream;]
-      [292] new #30
-        - Class [java/lang/StringBuilder]
-      [295] dup
-      [296] invokespecial #61
-        - Methodref [java/lang/StringBuilder.<init> ()V]
-      [299] ldc #13
-        - String [loadUrl(]
-      [301] invokevirtual #64
-        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [304] aload_2 v2
-      [305] invokevirtual #64
-        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [308] ldc #3
-        - String [,]
-      [310] invokevirtual #64
-        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [313] iload v5
-      [315] invokevirtual #62
-        - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
-      [318] ldc #2
-        - String [)]
-      [320] invokevirtual #64
-        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [323] invokevirtual #65
-        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [326] invokevirtual #57
-        - Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
-      [329] aload_1 v1
-      [330] astore v6
-      [332] aload_1 v1
-      [333] new #24
-        - Class [com/phonegap/q]
-      [336] dup
-      [337] aload_1 v1
-      [338] aload v6
-      [340] invokespecial #56
-        - Methodref [com/phonegap/q.<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V]
-      [343] invokevirtual #48
-        - Methodref [com/phonegap/DroidGap.runOnUiThread (Ljava/lang/Runnable;)V]
-      [346] new #23
-        - Class [com/phonegap/p]
-      [349] dup
-      [350] aload_1 v1
-      [351] iload v5
-      [353] aload v6
-      [355] aload_2 v2
-      [356] invokespecial #55
-        - Methodref [com/phonegap/p.<init> (Lcom/phonegap/DroidGap;ILcom/phonegap/DroidGap;Ljava/lang/String;)V]
-      [359] astore_1 v1
-      [360] new #32
-        - Class [java/lang/Thread]
-      [363] dup
-      [364] aload_1 v1
-      [365] invokespecial #66
-        - Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
-      [368] invokevirtual #67
-        - Methodref [java/lang/Thread.start ()V]
-      [371] goto +184 (target=555)
-      [374] aload_1 v1
-      [375] getfield #36
+      [285] invokevirtual #39
+        - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;I)V]
+      [288] goto +184 (target=472)
+      [291] aload_1 v1
+      [292] getfield #32
         - Fieldref [com/phonegap/App.b Lcom/phonegap/api/PhonegapActivity;]
-      [378] checkcast #18
+      [295] checkcast #17
         - Class [com/phonegap/DroidGap]
-      [381] aload_2 v2
-      [382] invokevirtual #45
+      [298] aload_2 v2
+      [299] invokevirtual #41
         - Methodref [com/phonegap/DroidGap.b (Ljava/lang/String;)V]
-      [385] goto +170 (target=555)
-      [388] aload_1 v1
-      [389] ldc #7
+      [302] goto +170 (target=472)
+      [305] aload_1 v1
+      [306] ldc #7
         - String [cancelLoadUrl]
-      [391] invokevirtual #60
+      [308] invokevirtual #54
         - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [394] ifeq +16 (target=410)
-      [397] aload_0 v0
-      [398] getfield #36
+      [311] ifeq +16 (target=327)
+      [314] aload_0 v0
+      [315] getfield #32
         - Fieldref [com/phonegap/App.b Lcom/phonegap/api/PhonegapActivity;]
-      [401] checkcast #18
+      [318] checkcast #17
         - Class [com/phonegap/DroidGap]
-      [404] invokevirtual #43
-        - Methodref [com/phonegap/DroidGap.a ()V]
-      [407] goto +148 (target=555)
-      [410] aload_1 v1
-      [411] ldc #9
+      [321] invokevirtual #40
+        - Methodref [com/phonegap/DroidGap.b ()V]
+      [324] goto +148 (target=472)
+      [327] aload_1 v1
+      [328] ldc #9
         - String [clearHistory]
-      [413] invokevirtual #60
+      [330] invokevirtual #54
         - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [416] ifeq +16 (target=432)
-      [419] aload_0 v0
-      [420] getfield #36
+      [333] ifeq +16 (target=349)
+      [336] aload_0 v0
+      [337] getfield #32
         - Fieldref [com/phonegap/App.b Lcom/phonegap/api/PhonegapActivity;]
-      [423] checkcast #18
+      [340] checkcast #17
         - Class [com/phonegap/DroidGap]
-      [426] invokevirtual #46
-        - Methodref [com/phonegap/DroidGap.c ()V]
-      [429] goto +126 (target=555)
-      [432] aload_1 v1
-      [433] ldc #6
+      [343] invokevirtual #43
+        - Methodref [com/phonegap/DroidGap.d ()V]
+      [346] goto +126 (target=472)
+      [349] aload_1 v1
+      [350] ldc #6
         - String [addService]
-      [435] invokevirtual #60
+      [352] invokevirtual #54
         - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [438] ifeq +29 (target=467)
-      [441] aload_0 v0
-      [442] aload_2 v2
-      [443] iconst_0
-      [444] invokevirtual #69
+      [355] ifeq +29 (target=384)
+      [358] aload_0 v0
+      [359] aload_2 v2
+      [360] iconst_0
+      [361] invokevirtual #60
         - Methodref [org/json/JSONArray.getString (I)Ljava/lang/String;]
-      [447] aload_2 v2
-      [448] iconst_1
-      [449] invokevirtual #69
+      [364] aload_2 v2
+      [365] iconst_1
+      [366] invokevirtual #60
         - Methodref [org/json/JSONArray.getString (I)Ljava/lang/String;]
-      [452] astore v5
-      [454] astore_2 v2
-      [455] getfield #36
+      [369] astore v5
+      [371] astore_2 v2
+      [372] getfield #32
         - Fieldref [com/phonegap/App.b Lcom/phonegap/api/PhonegapActivity;]
-      [458] aload_2 v2
-      [459] aload v5
-      [461] invokevirtual #49
+      [375] aload_2 v2
+      [376] aload v5
+      [378] invokevirtual #45
         - Methodref [com/phonegap/api/PhonegapActivity.a (Ljava/lang/String;Ljava/lang/String;)V]
-      [464] goto +91 (target=555)
-      [467] aload_1 v1
-      [468] ldc #14
+      [381] goto +91 (target=472)
+      [384] aload_1 v1
+      [385] ldc #13
         - String [overrideBackbutton]
-      [470] invokevirtual #60
+      [387] invokevirtual #54
         - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [473] ifeq +33 (target=506)
-      [476] aload_0 v0
-      [477] aload_2 v2
-      [478] iconst_0
-      [479] invokevirtual #68
+      [390] ifeq +33 (target=423)
+      [393] aload_0 v0
+      [394] aload_2 v2
+      [395] iconst_0
+      [396] invokevirtual #59
         - Methodref [org/json/JSONArray.getBoolean (I)Z]
-      [482] istore_2 v2
-      [483] astore_1 v1
-      [484] getstatic #40
+      [399] istore_2 v2
+      [400] astore_1 v1
+      [401] getstatic #36
         - Fieldref [java/lang/System.out Ljava/io/PrintStream;]
-      [487] ldc #5
+      [404] ldc #5
         - String [WARNING: Back Button Default Behaviour will be overridden.  The backbutton event will be fired!]
-      [489] invokevirtual #57
+      [406] invokevirtual #51
         - Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
-      [492] aload_1 v1
-      [493] getfield #36
+      [409] aload_1 v1
+      [410] getfield #32
         - Fieldref [com/phonegap/App.b Lcom/phonegap/api/PhonegapActivity;]
-      [496] checkcast #18
+      [413] checkcast #17
         - Class [com/phonegap/DroidGap]
-      [499] iload_2 v2
-      [500] putfield #37
+      [416] iload_2 v2
+      [417] putfield #33
         - Fieldref [com/phonegap/DroidGap.c Z]
-      [503] goto +52 (target=555)
-      [506] aload_1 v1
-      [507] ldc #11
+      [420] goto +52 (target=472)
+      [423] aload_1 v1
+      [424] ldc #11
         - String [isBackbuttonOverridden]
-      [509] invokevirtual #60
+      [426] invokevirtual #54
         - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [512] ifeq +24 (target=536)
-      [515] aload_0 v0
-      [516] getfield #36
+      [429] ifeq +24 (target=453)
+      [432] aload_0 v0
+      [433] getfield #32
         - Fieldref [com/phonegap/App.b Lcom/phonegap/api/PhonegapActivity;]
-      [519] checkcast #18
+      [436] checkcast #17
         - Class [com/phonegap/DroidGap]
-      [522] getfield #37
+      [439] getfield #33
         - Fieldref [com/phonegap/DroidGap.c Z]
-      [525] istore_1 v1
-      [526] new #21
+      [442] istore_1 v1
+      [443] new #20
         - Class [com/phonegap/api/PluginResult]
-      [529] dup
-      [530] aload_3 v3
-      [531] iload_1 v1
-      [532] invokespecial #54
+      [446] dup
+      [447] aload_3 v3
+      [448] iload_1 v1
+      [449] invokespecial #50
         - Methodref [com/phonegap/api/PluginResult.<init> (Lcom/phonegap/api/PluginResult$Status;Z)V]
-      [535] areturn
-      [536] aload_1 v1
-      [537] ldc #10
+      [452] areturn
+      [453] aload_1 v1
+      [454] ldc #10
         - String [exitApp]
-      [539] invokevirtual #60
+      [456] invokevirtual #54
         - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [542] ifeq +13 (target=555)
-      [545] aload_0 v0
-      [546] getfield #36
+      [459] ifeq +13 (target=472)
+      [462] aload_0 v0
+      [463] getfield #32
         - Fieldref [com/phonegap/App.b Lcom/phonegap/api/PhonegapActivity;]
-      [549] checkcast #18
+      [466] checkcast #17
         - Class [com/phonegap/DroidGap]
-      [552] invokevirtual #47
+      [469] invokevirtual #44
         - Methodref [com/phonegap/DroidGap.finish ()V]
-      [555] new #21
+      [472] new #20
         - Class [com/phonegap/api/PluginResult]
-      [558] dup
-      [559] aload_3 v3
-      [560] aload v4
-      [562] invokespecial #53
+      [475] dup
+      [476] aload_3 v3
+      [477] aload v4
+      [479] invokespecial #49
         - Methodref [com/phonegap/api/PluginResult.<init> (Lcom/phonegap/api/PluginResult$Status;Ljava/lang/String;)V]
-      [565] areturn
-      [566] pop
-      [567] new #21
+      [482] areturn
+      [483] pop
+      [484] new #20
         - Class [com/phonegap/api/PluginResult]
-      [570] dup
-      [571] getstatic #39
+      [487] dup
+      [488] getstatic #35
         - Fieldref [com/phonegap/api/PluginResult$Status.f Lcom/phonegap/api/PluginResult$Status;]
-      [574] invokespecial #52
+      [491] invokespecial #48
         - Methodref [com/phonegap/api/PluginResult.<init> (Lcom/phonegap/api/PluginResult$Status;)V]
-      [577] areturn
+      [494] areturn
       Code attribute exceptions (count = 2):
-      - ExceptionInfo (8 -> 535: 566):
+      - ExceptionInfo (8 -> 452: 483):
       - Class [org/json/JSONException]
-      - ExceptionInfo (536 -> 565: 566):
+      - ExceptionInfo (453 -> 482: 483):
       - Class [org/json/JSONException]
       Code attribute attributes (attribute count = 0):
 
@@ -8386,11 +8304,12 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 538):
+Constant Pool (count = 555):
   - Integer [-16777216]
   - String [ (]
   - String [ baseUrl=]
   - String [)]
+  - String [,]
   - String [/app_database/]
   - String [/data/data/]
   - String [1.]
@@ -8485,6 +8404,7 @@ Constant Pool (count = 538):
   - Class [java/lang/String]
   - Class [java/lang/StringBuilder]
   - Class [java/lang/System]
+  - Class [java/lang/Thread]
   - Fieldref [android/os/Build$VERSION.RELEASE Ljava/lang/String;]
   - Fieldref [android/webkit/WebSettings$LayoutAlgorithm.NORMAL Landroid/webkit/WebSettings$LayoutAlgorithm;]
   - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
@@ -8507,6 +8427,7 @@ Constant Pool (count = 538):
   - Fieldref [com/phonegap/DroidGap.r Z]
   - Fieldref [java/lang/System.out Ljava/io/PrintStream;]
   - Methodref [android/content/Intent.getExtras ()Landroid/os/Bundle;]
+  - Methodref [android/content/Intent.putExtra (Ljava/lang/String;I)Landroid/content/Intent;]
   - Methodref [android/os/Bundle.get (Ljava/lang/String;)Ljava/lang/Object;]
   - Methodref [android/os/Bundle.getString (Ljava/lang/String;)Ljava/lang/String;]
   - Methodref [android/view/Window.requestFeature (I)Z]
@@ -8538,11 +8459,11 @@ Constant Pool (count = 538):
   - Methodref [android/widget/LinearLayout.setLayoutParams (Landroid/view/ViewGroup$LayoutParams;)V]
   - Methodref [android/widget/LinearLayout.setOrientation (I)V]
   - Methodref [android/widget/LinearLayout$LayoutParams.<init> (IIF)V]
+  - Methodref [com/phonegap/DroidGap.a ()V]
   - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
   - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Z)Z]
   - Methodref [com/phonegap/DroidGap.b (Ljava/lang/String;)V]
   - Methodref [com/phonegap/DroidGap.c (Ljava/lang/String;)Ljava/lang/String;]
-  - Methodref [com/phonegap/DroidGap.d ()V]
   - Methodref [com/phonegap/DroidGap.d (Ljava/lang/String;)I]
   - Methodref [com/phonegap/DroidGap.getIntent ()Landroid/content/Intent;]
   - Methodref [com/phonegap/DroidGap.getWindow ()Landroid/view/Window;]
@@ -8575,6 +8496,8 @@ Constant Pool (count = 538):
   - Methodref [com/phonegap/e.b (Landroid/webkit/WebSettings;)V]
   - Methodref [com/phonegap/m.<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
   - Methodref [com/phonegap/n.<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V]
+  - Methodref [com/phonegap/p.<init> (Lcom/phonegap/DroidGap;ILcom/phonegap/DroidGap;Ljava/lang/String;)V]
+  - Methodref [com/phonegap/q.<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V]
   - Methodref [com/phonegap/r.<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V]
   - Methodref [com/phonegap/y.<init> (Lcom/phonegap/DroidGap;Landroid/content/Context;)V]
   - Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
@@ -8592,14 +8515,18 @@ Constant Pool (count = 538):
   - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
   - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+  - Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
+  - Methodref [java/lang/Thread.start ()V]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (IIF)V]
   + NameAndType [<init> (Landroid/content/Context;)V]
   + NameAndType [<init> (Landroid/webkit/WebView;Lcom/phonegap/api/PhonegapActivity;)V]
+  + NameAndType [<init> (Lcom/phonegap/DroidGap;ILcom/phonegap/DroidGap;Ljava/lang/String;)V]
   + NameAndType [<init> (Lcom/phonegap/DroidGap;Landroid/content/Context;)V]
   + NameAndType [<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V]
   + NameAndType [<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V]
   + NameAndType [<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [<init> (Ljava/lang/Runnable;)V]
   + NameAndType [<init> (Ljava/lang/String;)V]
   + NameAndType [NORMAL Landroid/webkit/WebSettings$LayoutAlgorithm;]
   + NameAndType [RELEASE Ljava/lang/String;]
@@ -8624,7 +8551,6 @@ Constant Pool (count = 538):
   + NameAndType [canGoBack ()Z]
   + NameAndType [clearCache (Z)V]
   + NameAndType [clearHistory ()V]
-  + NameAndType [d ()V]
   + NameAndType [d (Ljava/lang/String;)I]
   + NameAndType [d Lcom/phonegap/ad;]
   + NameAndType [e ()V]
@@ -8664,6 +8590,7 @@ Constant Pool (count = 538):
   + NameAndType [p I]
   + NameAndType [pauseTimers ()V]
   + NameAndType [println (Ljava/lang/String;)V]
+  + NameAndType [putExtra (Ljava/lang/String;I)Landroid/content/Intent;]
   + NameAndType [q I]
   + NameAndType [r Z]
   + NameAndType [requestFeature (I)Z]
@@ -8686,6 +8613,7 @@ Constant Pool (count = 538):
   + NameAndType [setVolumeControlStream (I)V]
   + NameAndType [setWebChromeClient (Landroid/webkit/WebChromeClient;)V]
   + NameAndType [setWebViewClient (Landroid/webkit/WebViewClient;)V]
+  + NameAndType [start ()V]
   + NameAndType [startActivityForResult (Landroid/content/Intent;I)V]
   + NameAndType [startsWith (Ljava/lang/String;)Z]
   + NameAndType [substring (II)Ljava/lang/String;]
@@ -8726,6 +8654,7 @@ Constant Pool (count = 538):
   + Utf8 [(Lcom/phonegap/DroidGap;)I]
   + Utf8 [(Lcom/phonegap/DroidGap;)Ljava/lang/String;]
   + Utf8 [(Lcom/phonegap/DroidGap;)V]
+  + Utf8 [(Lcom/phonegap/DroidGap;ILcom/phonegap/DroidGap;Ljava/lang/String;)V]
   + Utf8 [(Lcom/phonegap/DroidGap;Landroid/content/Context;)V]
   + Utf8 [(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V]
   + Utf8 [(Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V]
@@ -8739,10 +8668,13 @@ Constant Pool (count = 538):
   + Utf8 [(Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + Utf8 [(Ljava/lang/String;)V]
   + Utf8 [(Ljava/lang/String;)Z]
+  + Utf8 [(Ljava/lang/String;I)Landroid/content/Intent;]
+  + Utf8 [(Ljava/lang/String;I)V]
   + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
   + Utf8 [(Ljava/lang/String;Z)Z]
   + Utf8 [(Z)V]
   + Utf8 [)]
+  + Utf8 [,]
   + Utf8 [/app_database/]
   + Utf8 [/data/data/]
   + Utf8 [1.]
@@ -8866,6 +8798,7 @@ Constant Pool (count = 538):
   + Utf8 [java/lang/String]
   + Utf8 [java/lang/StringBuilder]
   + Utf8 [java/lang/System]
+  + Utf8 [java/lang/Thread]
   + Utf8 [javascript:PhoneGap.fireEvent('backbutton');]
   + Utf8 [javascript:PhoneGap.fireEvent('menubutton');]
   + Utf8 [javascript:PhoneGap.fireEvent('searchbutton');]
@@ -8894,6 +8827,7 @@ Constant Pool (count = 538):
   + Utf8 [p]
   + Utf8 [pauseTimers]
   + Utf8 [println]
+  + Utf8 [putExtra]
   + Utf8 [q]
   + Utf8 [r]
   + Utf8 [requestFeature]
@@ -8917,6 +8851,7 @@ Constant Pool (count = 538):
   + Utf8 [setWebChromeClient]
   + Utf8 [setWebViewClient]
   + Utf8 [splashscreen]
+  + Utf8 [start]
   + Utf8 [startActivityForResult]
   + Utf8 [startActivityForResult(intent,]
   + Utf8 [startsWith]
@@ -8981,54 +8916,54 @@ Fields (count = 18):
     Access flags: 0x2
       = private boolean r
 
-Methods (count = 25):
+Methods (count = 27):
   - Method:       <init>()V
     Access flags: 0x1
       = public DroidGap()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 57, locals = 1, stack = 2):
       [0] aload_0 v0
-      [1] invokespecial #168
+      [1] invokespecial #171
         - Methodref [com/phonegap/api/PhonegapActivity.<init> ()V]
       [4] aload_0 v0
       [5] iconst_0
-      [6] putfield #103
+      [6] putfield #105
         - Fieldref [com/phonegap/DroidGap.c Z]
       [9] aload_0 v0
       [10] iconst_0
-      [11] putfield #106
+      [11] putfield #108
         - Fieldref [com/phonegap/DroidGap.f Z]
       [14] aload_0 v0
       [15] iconst_0
-      [16] putfield #107
+      [16] putfield #109
         - Fieldref [com/phonegap/DroidGap.g Z]
       [19] aload_0 v0
       [20] aconst_null
-      [21] putfield #114
+      [21] putfield #116
         - Fieldref [com/phonegap/DroidGap.n Lcom/phonegap/api/Plugin;]
       [24] aload_0 v0
       [25] iconst_0
-      [26] putfield #116
+      [26] putfield #118
         - Fieldref [com/phonegap/DroidGap.p I]
       [29] aload_0 v0
       [30] iconst_0
-      [31] putfield #108
+      [31] putfield #110
         - Fieldref [com/phonegap/DroidGap.h Z]
       [34] aload_0 v0
       [35] iconst_0
-      [36] putfield #109
+      [36] putfield #111
         - Fieldref [com/phonegap/DroidGap.i Z]
       [39] aload_0 v0
       [40] iconst_0
-      [41] putfield #117
+      [41] putfield #119
         - Fieldref [com/phonegap/DroidGap.q I]
       [44] aload_0 v0
       [45] sipush 20000
-      [48] putfield #110
+      [48] putfield #112
         - Fieldref [com/phonegap/DroidGap.j I]
       [51] aload_0 v0
       [52] iconst_1
-      [53] putfield #118
+      [53] putfield #120
         - Fieldref [com/phonegap/DroidGap.r Z]
       [56] return
       Code attribute exceptions (count = 0):
@@ -9040,436 +8975,436 @@ Methods (count = 25):
     + Code attribute instructions (code length = 104, locals = 2, stack = 6):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #171
+      [2] invokespecial #174
         - Methodref [com/phonegap/api/PhonegapActivity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
-      [6] invokevirtual #159
+      [6] invokevirtual #162
         - Methodref [com/phonegap/DroidGap.getWindow ()Landroid/view/Window;]
       [9] iconst_1
-      [10] invokevirtual #123
+      [10] invokevirtual #126
         - Methodref [android/view/Window.requestFeature (I)Z]
       [13] pop
       [14] aload_0 v0
-      [15] invokevirtual #159
+      [15] invokevirtual #162
         - Methodref [com/phonegap/DroidGap.getWindow ()Landroid/view/Window;]
       [18] sipush 2048
       [21] sipush 2048
-      [24] invokevirtual #124
+      [24] invokevirtual #127
         - Methodref [android/view/Window.setFlags (II)V]
       [27] aload_0 v0
-      [28] new #73
+      [28] new #74
         - Class [android/widget/LinearLayout]
       [31] dup
       [32] aload_0 v0
-      [33] invokespecial #145
+      [33] invokespecial #148
         - Methodref [android/widget/LinearLayout.<init> (Landroid/content/Context;)V]
-      [36] putfield #111
+      [36] putfield #113
         - Fieldref [com/phonegap/DroidGap.k Landroid/widget/LinearLayout;]
       [39] aload_0 v0
-      [40] getfield #111
+      [40] getfield #113
         - Fieldref [com/phonegap/DroidGap.k Landroid/widget/LinearLayout;]
       [43] iconst_1
-      [44] invokevirtual #150
+      [44] invokevirtual #153
         - Methodref [android/widget/LinearLayout.setOrientation (I)V]
       [47] aload_0 v0
-      [48] getfield #111
+      [48] getfield #113
         - Fieldref [com/phonegap/DroidGap.k Landroid/widget/LinearLayout;]
       [51] ldc #1
         - Integer [-16777216]
-      [53] invokevirtual #147
+      [53] invokevirtual #150
         - Methodref [android/widget/LinearLayout.setBackgroundColor (I)V]
       [56] aload_0 v0
-      [57] getfield #111
+      [57] getfield #113
         - Fieldref [com/phonegap/DroidGap.k Landroid/widget/LinearLayout;]
-      [60] new #74
+      [60] new #75
         - Class [android/widget/LinearLayout$LayoutParams]
       [63] dup
       [64] iconst_m1
       [65] iconst_m1
       [66] fconst_0
-      [67] invokespecial #151
+      [67] invokespecial #154
         - Methodref [android/widget/LinearLayout$LayoutParams.<init> (IIF)V]
-      [70] invokevirtual #149
+      [70] invokevirtual #152
         - Methodref [android/widget/LinearLayout.setLayoutParams (Landroid/view/ViewGroup$LayoutParams;)V]
       [73] aload_0 v0
-      [74] invokevirtual #158
+      [74] invokevirtual #161
         - Methodref [com/phonegap/DroidGap.getIntent ()Landroid/content/Intent;]
-      [77] invokevirtual #120
+      [77] invokevirtual #122
         - Methodref [android/content/Intent.getExtras ()Landroid/os/Bundle;]
       [80] dup
       [81] astore_1 v1
       [82] ifnull +16 (target=98)
       [85] aload_1 v1
-      [86] ldc #61
+      [86] ldc #62
         - String [url]
-      [88] invokevirtual #122
+      [88] invokevirtual #125
         - Methodref [android/os/Bundle.getString (Ljava/lang/String;)Ljava/lang/String;]
       [91] ifnull +7 (target=98)
       [94] aload_0 v0
-      [95] invokespecial #156
-        - Methodref [com/phonegap/DroidGap.d ()V]
+      [95] invokevirtual #155
+        - Methodref [com/phonegap/DroidGap.a ()V]
       [98] aload_0 v0
       [99] iconst_3
-      [100] invokevirtual #162
+      [100] invokevirtual #165
         - Methodref [com/phonegap/DroidGap.setVolumeControlStream (I)V]
       [103] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       d()V
-    Access flags: 0x2
-      = private void d()
+  + Method:       a()V
+    Access flags: 0x11
+      = public final void a()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 450, locals = 3, stack = 6):
       [0] aload_0 v0
-      [1] new #72
+      [1] new #73
         - Class [android/webkit/WebView]
       [4] dup
       [5] aload_0 v0
-      [6] invokespecial #128
+      [6] invokespecial #131
         - Methodref [android/webkit/WebView.<init> (Landroid/content/Context;)V]
-      [9] putfield #101
+      [9] putfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
       [12] aload_0 v0
-      [13] getfield #101
+      [13] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
       [16] bipush 100
-      [18] invokevirtual #138
+      [18] invokevirtual #141
         - Methodref [android/webkit/WebView.setId (I)V]
       [21] aload_0 v0
-      [22] getfield #101
+      [22] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [25] new #74
+      [25] new #75
         - Class [android/widget/LinearLayout$LayoutParams]
       [28] dup
       [29] iconst_m1
       [30] iconst_m1
       [31] fconst_1
-      [32] invokespecial #151
+      [32] invokespecial #154
         - Methodref [android/widget/LinearLayout$LayoutParams.<init> (IIF)V]
-      [35] invokevirtual #140
+      [35] invokevirtual #143
         - Methodref [android/webkit/WebView.setLayoutParams (Landroid/view/ViewGroup$LayoutParams;)V]
-      [38] invokestatic #183
+      [38] invokestatic #186
         - Methodref [com/phonegap/e.a ()V]
-      [41] getstatic #99
+      [41] getstatic #101
         - Fieldref [android/os/Build$VERSION.RELEASE Ljava/lang/String;]
-      [44] ldc #7
+      [44] ldc #8
         - String [1.]
-      [46] invokevirtual #200
+      [46] invokevirtual #205
         - Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
       [49] ifeq +22 (target=71)
       [52] aload_0 v0
-      [53] getfield #101
+      [53] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [56] new #88
+      [56] new #89
         - Class [com/phonegap/y]
       [59] dup
       [60] aload_0 v0
       [61] aload_0 v0
-      [62] invokespecial #190
+      [62] invokespecial #195
         - Methodref [com/phonegap/y.<init> (Lcom/phonegap/DroidGap;Landroid/content/Context;)V]
-      [65] invokevirtual #143
+      [65] invokevirtual #146
         - Methodref [android/webkit/WebView.setWebChromeClient (Landroid/webkit/WebChromeClient;)V]
       [68] goto +19 (target=87)
       [71] aload_0 v0
-      [72] getfield #101
+      [72] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [75] new #78
+      [75] new #79
         - Class [com/phonegap/al]
       [78] dup
       [79] aload_0 v0
       [80] aload_0 v0
-      [81] invokespecial #167
+      [81] invokespecial #170
         - Methodref [com/phonegap/al.<init> (Lcom/phonegap/DroidGap;Landroid/content/Context;)V]
-      [84] invokevirtual #143
+      [84] invokevirtual #146
         - Methodref [android/webkit/WebView.setWebChromeClient (Landroid/webkit/WebChromeClient;)V]
       [87] aload_0 v0
       [88] aload_0 v0
-      [89] getfield #101
+      [89] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [92] new #76
+      [92] new #77
         - Class [com/phonegap/ac]
       [95] dup
       [96] aload_0 v0
       [97] aload_0 v0
-      [98] invokespecial #163
+      [98] invokespecial #166
         - Methodref [com/phonegap/ac.<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V]
       [101] astore_1 v1
       [102] astore_2 v2
       [103] aload_1 v1
-      [104] putfield #102
+      [104] putfield #104
         - Fieldref [com/phonegap/DroidGap.b Landroid/webkit/WebViewClient;]
       [107] aload_2 v2
       [108] aload_1 v1
-      [109] invokevirtual #144
+      [109] invokevirtual #147
         - Methodref [android/webkit/WebView.setWebViewClient (Landroid/webkit/WebViewClient;)V]
       [112] aload_0 v0
-      [113] getfield #101
+      [113] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
       [116] bipush 100
-      [118] invokevirtual #139
+      [118] invokevirtual #142
         - Methodref [android/webkit/WebView.setInitialScale (I)V]
       [121] aload_0 v0
-      [122] getfield #101
+      [122] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
       [125] iconst_0
-      [126] invokevirtual #141
+      [126] invokevirtual #144
         - Methodref [android/webkit/WebView.setVerticalScrollBarEnabled (Z)V]
       [129] aload_0 v0
-      [130] getfield #101
+      [130] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [133] invokevirtual #136
+      [133] invokevirtual #139
         - Methodref [android/webkit/WebView.requestFocusFromTouch ()Z]
       [136] pop
       [137] aload_0 v0
-      [138] getfield #101
+      [138] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [141] invokevirtual #132
+      [141] invokevirtual #135
         - Methodref [android/webkit/WebView.getSettings ()Landroid/webkit/WebSettings;]
       [144] dup
       [145] astore_1 v1
       [146] iconst_1
-      [147] invokevirtual #126
+      [147] invokevirtual #129
         - Methodref [android/webkit/WebSettings.setJavaScriptEnabled (Z)V]
       [150] aload_1 v1
       [151] iconst_1
-      [152] invokevirtual #125
+      [152] invokevirtual #128
         - Methodref [android/webkit/WebSettings.setJavaScriptCanOpenWindowsAutomatically (Z)V]
       [155] aload_1 v1
-      [156] getstatic #100
+      [156] getstatic #102
         - Fieldref [android/webkit/WebSettings$LayoutAlgorithm.NORMAL Landroid/webkit/WebSettings$LayoutAlgorithm;]
-      [159] invokevirtual #127
+      [159] invokevirtual #130
         - Methodref [android/webkit/WebSettings.setLayoutAlgorithm (Landroid/webkit/WebSettings$LayoutAlgorithm;)V]
       [162] aload_0 v0
-      [163] invokevirtual #195
+      [163] invokevirtual #200
         - Methodref [java/lang/Object.getClass ()Ljava/lang/Class;]
-      [166] invokevirtual #193
+      [166] invokevirtual #198
         - Methodref [java/lang/Class.getPackage ()Ljava/lang/Package;]
-      [169] invokevirtual #196
+      [169] invokevirtual #201
         - Methodref [java/lang/Package.getName ()Ljava/lang/String;]
       [172] astore_2 v2
       [173] aload_1 v1
-      [174] new #97
+      [174] new #98
         - Class [java/lang/StringBuilder]
       [177] dup
-      [178] invokespecial #202
+      [178] invokespecial #207
         - Methodref [java/lang/StringBuilder.<init> ()V]
-      [181] ldc #6
+      [181] ldc #7
         - String [/data/data/]
-      [183] invokevirtual #204
+      [183] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [186] aload_2 v2
-      [187] invokevirtual #204
+      [187] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [190] ldc #5
+      [190] ldc #6
         - String [/app_database/]
-      [192] invokevirtual #204
+      [192] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [195] invokevirtual #205
+      [195] invokevirtual #210
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [198] invokestatic #185
+      [198] invokestatic #188
         - Methodref [com/phonegap/e.a (Landroid/webkit/WebSettings;Ljava/lang/String;)V]
       [201] aload_1 v1
-      [202] invokestatic #186
+      [202] invokestatic #189
         - Methodref [com/phonegap/e.b (Landroid/webkit/WebSettings;)V]
       [205] aload_1 v1
-      [206] invokestatic #184
+      [206] invokestatic #187
         - Methodref [com/phonegap/e.a (Landroid/webkit/WebSettings;)V]
       [209] aload_0 v0
       [210] aload_0 v0
-      [211] getfield #101
+      [211] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
       [214] astore_2 v2
       [215] dup
       [216] astore_1 v1
-      [217] new #77
+      [217] new #78
         - Class [com/phonegap/ad]
       [220] dup
-      [221] invokespecial #164
+      [221] invokespecial #167
         - Methodref [com/phonegap/ad.<init> ()V]
-      [224] putfield #104
+      [224] putfield #106
         - Fieldref [com/phonegap/DroidGap.d Lcom/phonegap/ad;]
       [227] aload_1 v1
-      [228] new #81
+      [228] new #82
         - Class [com/phonegap/api/PluginManager]
       [231] dup
       [232] aload_2 v2
       [233] aload_1 v1
-      [234] invokespecial #178
+      [234] invokespecial #181
         - Methodref [com/phonegap/api/PluginManager.<init> (Landroid/webkit/WebView;Lcom/phonegap/api/PhonegapActivity;)V]
-      [237] putfield #105
+      [237] putfield #107
         - Fieldref [com/phonegap/DroidGap.e Lcom/phonegap/api/PluginManager;]
       [240] aload_1 v1
-      [241] ldc #9
+      [241] ldc #10
         - String [App]
-      [243] ldc #31
+      [243] ldc #32
         - String [com.phonegap.App]
-      [245] invokevirtual #152
+      [245] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [248] aload_1 v1
-      [249] ldc #19
+      [249] ldc #20
         - String [Geolocation]
-      [251] ldc #41
+      [251] ldc #42
         - String [com.phonegap.GeoBroker]
-      [253] invokevirtual #152
+      [253] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [256] aload_1 v1
-      [257] ldc #16
+      [257] ldc #17
         - String [Device]
-      [259] ldc #38
+      [259] ldc #39
         - String [com.phonegap.Device]
-      [261] invokevirtual #152
+      [261] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [264] aload_1 v1
-      [265] ldc #8
+      [265] ldc #9
         - String [Accelerometer]
-      [267] ldc #30
+      [267] ldc #31
         - String [com.phonegap.AccelListener]
-      [269] invokevirtual #152
+      [269] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [272] aload_1 v1
-      [273] ldc #13
+      [273] ldc #14
         - String [Compass]
-      [275] ldc #35
+      [275] ldc #36
         - String [com.phonegap.CompassListener]
-      [277] invokevirtual #152
+      [277] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [280] aload_1 v1
-      [281] ldc #22
+      [281] ldc #23
         - String [Media]
-      [283] ldc #32
+      [283] ldc #33
         - String [com.phonegap.AudioHandler]
-      [285] invokevirtual #152
+      [285] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [288] aload_1 v1
-      [289] ldc #11
+      [289] ldc #12
         - String [Camera]
-      [291] ldc #33
+      [291] ldc #34
         - String [com.phonegap.CameraLauncher]
-      [293] invokevirtual #152
+      [293] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [296] aload_1 v1
-      [297] ldc #14
+      [297] ldc #15
         - String [Contacts]
-      [299] ldc #36
+      [299] ldc #37
         - String [com.phonegap.ContactManager]
-      [301] invokevirtual #152
+      [301] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [304] aload_1 v1
-      [305] ldc #15
+      [305] ldc #16
         - String [Crypto]
-      [307] ldc #37
+      [307] ldc #38
         - String [com.phonegap.CryptoHandler]
-      [309] invokevirtual #152
+      [309] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [312] aload_1 v1
-      [313] ldc #17
+      [313] ldc #18
         - String [File]
-      [315] ldc #40
+      [315] ldc #41
         - String [com.phonegap.FileUtils]
-      [317] invokevirtual #152
+      [317] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [320] aload_1 v1
-      [321] ldc #21
+      [321] ldc #22
         - String [Location]
-      [323] ldc #41
+      [323] ldc #42
         - String [com.phonegap.GeoBroker]
-      [325] invokevirtual #152
+      [325] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [328] aload_1 v1
-      [329] ldc #23
+      [329] ldc #24
         - String [Network Status]
-      [331] ldc #42
+      [331] ldc #43
         - String [com.phonegap.NetworkManager]
-      [333] invokevirtual #152
+      [333] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [336] aload_1 v1
-      [337] ldc #24
+      [337] ldc #25
         - String [Notification]
-      [339] ldc #43
+      [339] ldc #44
         - String [com.phonegap.Notification]
-      [341] invokevirtual #152
+      [341] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [344] aload_1 v1
-      [345] ldc #27
+      [345] ldc #28
         - String [Storage]
-      [347] ldc #44
+      [347] ldc #45
         - String [com.phonegap.Storage]
-      [349] invokevirtual #152
+      [349] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [352] aload_1 v1
-      [353] ldc #28
+      [353] ldc #29
         - String [Temperature]
-      [355] ldc #45
+      [355] ldc #46
         - String [com.phonegap.TempListener]
-      [357] invokevirtual #152
+      [357] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [360] aload_1 v1
-      [361] ldc #18
+      [361] ldc #19
         - String [FileTransfer]
-      [363] ldc #39
+      [363] ldc #40
         - String [com.phonegap.FileTransfer]
-      [365] invokevirtual #152
+      [365] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [368] aload_1 v1
-      [369] ldc #12
+      [369] ldc #13
         - String [Capture]
-      [371] ldc #34
+      [371] ldc #35
         - String [com.phonegap.Capture]
-      [373] invokevirtual #152
+      [373] invokevirtual #156
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Ljava/lang/String;)V]
       [376] aload_0 v0
-      [377] getfield #101
+      [377] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
       [380] iconst_4
-      [381] invokevirtual #142
+      [381] invokevirtual #145
         - Methodref [android/webkit/WebView.setVisibility (I)V]
       [384] aload_0 v0
-      [385] getfield #111
+      [385] getfield #113
         - Fieldref [com/phonegap/DroidGap.k Landroid/widget/LinearLayout;]
       [388] aload_0 v0
-      [389] getfield #101
+      [389] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [392] invokevirtual #146
+      [392] invokevirtual #149
         - Methodref [android/widget/LinearLayout.addView (Landroid/view/View;)V]
       [395] aload_0 v0
       [396] aload_0 v0
-      [397] getfield #111
+      [397] getfield #113
         - Fieldref [com/phonegap/DroidGap.k Landroid/widget/LinearLayout;]
-      [400] invokevirtual #161
+      [400] invokevirtual #164
         - Methodref [com/phonegap/DroidGap.setContentView (Landroid/view/View;)V]
       [403] aload_0 v0
       [404] iconst_0
-      [405] putfield #106
+      [405] putfield #108
         - Fieldref [com/phonegap/DroidGap.f Z]
       [408] aload_0 v0
-      [409] ldc #61
+      [409] ldc #62
         - String [url]
-      [411] invokevirtual #155
+      [411] invokevirtual #159
         - Methodref [com/phonegap/DroidGap.c (Ljava/lang/String;)Ljava/lang/String;]
       [414] dup
       [415] astore_1 v1
       [416] ifnull +33 (target=449)
-      [419] getstatic #119
+      [419] getstatic #121
         - Fieldref [java/lang/System.out Ljava/io/PrintStream;]
-      [422] new #97
+      [422] new #98
         - Class [java/lang/StringBuilder]
       [425] dup
-      [426] invokespecial #202
+      [426] invokespecial #207
         - Methodref [java/lang/StringBuilder.<init> ()V]
-      [429] ldc #20
+      [429] ldc #21
         - String [Loading initial URL=]
-      [431] invokevirtual #204
+      [431] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [434] aload_1 v1
-      [435] invokevirtual #204
+      [435] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [438] invokevirtual #205
+      [438] invokevirtual #210
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [441] invokevirtual #191
+      [441] invokevirtual #196
         - Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
       [444] aload_0 v0
       [445] aload_1 v1
-      [446] invokevirtual #154
+      [446] invokevirtual #158
         - Methodref [com/phonegap/DroidGap.b (Ljava/lang/String;)V]
       [449] return
       Code attribute exceptions (count = 0):
@@ -9479,35 +9414,35 @@ Methods (count = 25):
       = public final void b(java.lang.String)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 121, locals = 3, stack = 6):
-      [0] getstatic #119
+      [0] getstatic #121
         - Fieldref [java/lang/System.out Ljava/io/PrintStream;]
-      [3] new #97
+      [3] new #98
         - Class [java/lang/StringBuilder]
       [6] dup
-      [7] invokespecial #202
+      [7] invokespecial #207
         - Methodref [java/lang/StringBuilder.<init> ()V]
-      [10] ldc #57
+      [10] ldc #58
         - String [loadUrl(]
-      [12] invokevirtual #204
+      [12] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [15] aload_1 v1
-      [16] invokevirtual #204
+      [16] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [19] ldc #4
         - String [)]
-      [21] invokevirtual #204
+      [21] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [24] invokevirtual #205
+      [24] invokevirtual #210
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [27] invokevirtual #191
+      [27] invokevirtual #196
         - Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
       [30] aload_0 v0
       [31] aload_1 v1
-      [32] putfield #112
+      [32] putfield #114
         - Fieldref [com/phonegap/DroidGap.l Ljava/lang/String;]
       [35] aload_1 v1
       [36] bipush 47
-      [38] invokevirtual #199
+      [38] invokevirtual #204
         - Methodref [java/lang/String.lastIndexOf (I)I]
       [41] dup
       [42] istore_2 v2
@@ -9516,91 +9451,137 @@ Methods (count = 25):
       [47] aload_1 v1
       [48] iconst_0
       [49] iload_2 v2
-      [50] invokevirtual #201
+      [50] invokevirtual #206
         - Methodref [java/lang/String.substring (II)Ljava/lang/String;]
-      [53] putfield #113
+      [53] putfield #115
         - Fieldref [com/phonegap/DroidGap.m Ljava/lang/String;]
       [56] goto +11 (target=67)
       [59] aload_0 v0
       [60] aload_0 v0
-      [61] getfield #112
+      [61] getfield #114
         - Fieldref [com/phonegap/DroidGap.l Ljava/lang/String;]
-      [64] putfield #113
+      [64] putfield #115
         - Fieldref [com/phonegap/DroidGap.m Ljava/lang/String;]
-      [67] getstatic #119
+      [67] getstatic #121
         - Fieldref [java/lang/System.out Ljava/io/PrintStream;]
-      [70] new #97
+      [70] new #98
         - Class [java/lang/StringBuilder]
       [73] dup
-      [74] invokespecial #202
+      [74] invokespecial #207
         - Methodref [java/lang/StringBuilder.<init> ()V]
-      [77] ldc #62
+      [77] ldc #63
         - String [url=]
-      [79] invokevirtual #204
+      [79] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [82] aload_1 v1
-      [83] invokevirtual #204
+      [83] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [86] ldc #3
         - String [ baseUrl=]
-      [88] invokevirtual #204
+      [88] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [91] aload_0 v0
-      [92] getfield #113
+      [92] getfield #115
         - Fieldref [com/phonegap/DroidGap.m Ljava/lang/String;]
-      [95] invokevirtual #204
+      [95] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [98] invokevirtual #205
+      [98] invokevirtual #210
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [101] invokevirtual #191
+      [101] invokevirtual #196
         - Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
       [104] aload_0 v0
       [105] astore_2 v2
       [106] aload_0 v0
-      [107] new #87
+      [107] new #88
         - Class [com/phonegap/r]
       [110] dup
       [111] aload_0 v0
       [112] aload_2 v2
       [113] aload_1 v1
-      [114] invokespecial #189
+      [114] invokespecial #194
         - Methodref [com/phonegap/r.<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V]
-      [117] invokevirtual #160
+      [117] invokevirtual #163
         - Methodref [com/phonegap/DroidGap.runOnUiThread (Ljava/lang/Runnable;)V]
       [120] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
-  + Method:       a()V
+  + Method:       a(Ljava/lang/String;I)V
     Access flags: 0x11
-      = public final void a()
+      = public final void a(java.lang.String,int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 6, locals = 1, stack = 2):
-      [0] aload_0 v0
-      [1] iconst_1
-      [2] putfield #106
-        - Fieldref [com/phonegap/DroidGap.f Z]
-      [5] return
+    + Code attribute instructions (code length = 78, locals = 4, stack = 6):
+      [0] getstatic #121
+        - Fieldref [java/lang/System.out Ljava/io/PrintStream;]
+      [3] new #98
+        - Class [java/lang/StringBuilder]
+      [6] dup
+      [7] invokespecial #207
+        - Methodref [java/lang/StringBuilder.<init> ()V]
+      [10] ldc #58
+        - String [loadUrl(]
+      [12] invokevirtual #209
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [15] aload_1 v1
+      [16] invokevirtual #209
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [19] ldc #5
+        - String [,]
+      [21] invokevirtual #209
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [24] iload_2 v2
+      [25] invokevirtual #208
+        - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
+      [28] ldc #4
+        - String [)]
+      [30] invokevirtual #209
+        - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [33] invokevirtual #210
+        - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [36] invokevirtual #196
+        - Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
+      [39] aload_0 v0
+      [40] astore_3 v3
+      [41] aload_0 v0
+      [42] new #87
+        - Class [com/phonegap/q]
+      [45] dup
+      [46] aload_0 v0
+      [47] aload_3 v3
+      [48] invokespecial #193
+        - Methodref [com/phonegap/q.<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;)V]
+      [51] invokevirtual #163
+        - Methodref [com/phonegap/DroidGap.runOnUiThread (Ljava/lang/Runnable;)V]
+      [54] new #86
+        - Class [com/phonegap/p]
+      [57] dup
+      [58] aload_0 v0
+      [59] iload_2 v2
+      [60] aload_3 v3
+      [61] aload_1 v1
+      [62] invokespecial #192
+        - Methodref [com/phonegap/p.<init> (Lcom/phonegap/DroidGap;ILcom/phonegap/DroidGap;Ljava/lang/String;)V]
+      [65] astore_1 v1
+      [66] new #100
+        - Class [java/lang/Thread]
+      [69] dup
+      [70] aload_1 v1
+      [71] invokespecial #211
+        - Methodref [java/lang/Thread.<init> (Ljava/lang/Runnable;)V]
+      [74] invokevirtual #212
+        - Methodref [java/lang/Thread.start ()V]
+      [77] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       b()V
     Access flags: 0x11
       = public final void b()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 20, locals = 1, stack = 2):
+    + Code attribute instructions (code length = 6, locals = 1, stack = 2):
       [0] aload_0 v0
-      [1] getfield #101
-        - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [4] ifnonnull +7 (target=11)
-      [7] aload_0 v0
-      [8] invokespecial #156
-        - Methodref [com/phonegap/DroidGap.d ()V]
-      [11] aload_0 v0
-      [12] getfield #101
-        - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [15] iconst_1
-      [16] invokevirtual #130
-        - Methodref [android/webkit/WebView.clearCache (Z)V]
-      [19] return
+      [1] iconst_1
+      [2] putfield #108
+        - Fieldref [com/phonegap/DroidGap.f Z]
+      [5] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       c()V
@@ -9609,17 +9590,38 @@ Methods (count = 25):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 20, locals = 1, stack = 2):
       [0] aload_0 v0
+      [1] getfield #103
+        - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
+      [4] ifnonnull +7 (target=11)
+      [7] aload_0 v0
+      [8] invokevirtual #155
+        - Methodref [com/phonegap/DroidGap.a ()V]
+      [11] aload_0 v0
+      [12] getfield #103
+        - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
+      [15] iconst_1
+      [16] invokevirtual #133
+        - Methodref [android/webkit/WebView.clearCache (Z)V]
+      [19] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       d()V
+    Access flags: 0x11
+      = public final void d()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 20, locals = 1, stack = 2):
+      [0] aload_0 v0
       [1] iconst_1
-      [2] putfield #107
+      [2] putfield #109
         - Fieldref [com/phonegap/DroidGap.g Z]
       [5] aload_0 v0
-      [6] getfield #101
+      [6] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
       [9] ifnull +10 (target=19)
       [12] aload_0 v0
-      [13] getfield #101
+      [13] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [16] invokevirtual #131
+      [16] invokevirtual #134
         - Methodref [android/webkit/WebView.clearHistory ()V]
       [19] return
       Code attribute exceptions (count = 0):
@@ -9631,7 +9633,7 @@ Methods (count = 25):
     + Code attribute instructions (code length = 6, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #170
+      [2] invokespecial #173
         - Methodref [com/phonegap/api/PhonegapActivity.onConfigurationChanged (Landroid/content/res/Configuration;)V]
       [5] return
       Code attribute exceptions (count = 0):
@@ -9642,9 +9644,9 @@ Methods (count = 25):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 34, locals = 4, stack = 2):
       [0] aload_0 v0
-      [1] invokevirtual #158
+      [1] invokevirtual #161
         - Methodref [com/phonegap/DroidGap.getIntent ()Landroid/content/Intent;]
-      [4] invokevirtual #120
+      [4] invokevirtual #122
         - Methodref [android/content/Intent.getExtras ()Landroid/os/Bundle;]
       [7] dup
       [8] astore_3 v3
@@ -9653,9 +9655,9 @@ Methods (count = 25):
       [13] ireturn
       [14] aload_3 v3
       [15] aload_1 v1
-      [16] invokevirtual #121
+      [16] invokevirtual #124
         - Methodref [android/os/Bundle.get (Ljava/lang/String;)Ljava/lang/Object;]
-      [19] checkcast #90
+      [19] checkcast #91
         - Class [java/lang/Boolean]
       [22] dup
       [23] astore_1 v1
@@ -9663,7 +9665,7 @@ Methods (count = 25):
       [27] iload_2 v2
       [28] ireturn
       [29] aload_1 v1
-      [30] invokevirtual #192
+      [30] invokevirtual #197
         - Methodref [java/lang/Boolean.booleanValue ()Z]
       [33] ireturn
       Code attribute exceptions (count = 0):
@@ -9674,9 +9676,9 @@ Methods (count = 25):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 34, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] invokevirtual #158
+      [1] invokevirtual #161
         - Methodref [com/phonegap/DroidGap.getIntent ()Landroid/content/Intent;]
-      [4] invokevirtual #120
+      [4] invokevirtual #122
         - Methodref [android/content/Intent.getExtras ()Landroid/os/Bundle;]
       [7] dup
       [8] astore_2 v2
@@ -9685,9 +9687,9 @@ Methods (count = 25):
       [13] ireturn
       [14] aload_2 v2
       [15] aload_1 v1
-      [16] invokevirtual #121
+      [16] invokevirtual #124
         - Methodref [android/os/Bundle.get (Ljava/lang/String;)Ljava/lang/Object;]
-      [19] checkcast #92
+      [19] checkcast #93
         - Class [java/lang/Integer]
       [22] dup
       [23] astore_1 v1
@@ -9695,7 +9697,7 @@ Methods (count = 25):
       [27] iconst_0
       [28] ireturn
       [29] aload_1 v1
-      [30] invokevirtual #194
+      [30] invokevirtual #199
         - Methodref [java/lang/Integer.intValue ()I]
       [33] ireturn
       Code attribute exceptions (count = 0):
@@ -9706,9 +9708,9 @@ Methods (count = 25):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 28, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] invokevirtual #158
+      [1] invokevirtual #161
         - Methodref [com/phonegap/DroidGap.getIntent ()Landroid/content/Intent;]
-      [4] invokevirtual #120
+      [4] invokevirtual #122
         - Methodref [android/content/Intent.getExtras ()Landroid/os/Bundle;]
       [7] dup
       [8] astore_2 v2
@@ -9717,7 +9719,7 @@ Methods (count = 25):
       [13] areturn
       [14] aload_2 v2
       [15] aload_1 v1
-      [16] invokevirtual #122
+      [16] invokevirtual #125
         - Methodref [android/os/Bundle.getString (Ljava/lang/String;)Ljava/lang/String;]
       [19] dup
       [20] astore_1 v1
@@ -9728,39 +9730,55 @@ Methods (count = 25):
       [27] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
+  + Method:       b(Ljava/lang/String;I)V
+    Access flags: 0x11
+      = public final void b(java.lang.String,int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 11, locals = 3, stack = 3):
+      [0] aload_0 v0
+      [1] invokevirtual #161
+        - Methodref [com/phonegap/DroidGap.getIntent ()Landroid/content/Intent;]
+      [4] aload_1 v1
+      [5] iload_2 v2
+      [6] invokevirtual #123
+        - Methodref [android/content/Intent.putExtra (Ljava/lang/String;I)Landroid/content/Intent;]
+      [9] pop
+      [10] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
   + Method:       onPause()V
     Access flags: 0x4
       = protected void onPause()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 43, locals = 1, stack = 2):
       [0] aload_0 v0
-      [1] invokespecial #174
+      [1] invokespecial #177
         - Methodref [com/phonegap/api/PhonegapActivity.onPause ()V]
       [4] aload_0 v0
-      [5] getfield #101
+      [5] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
       [8] ifnonnull +4 (target=12)
       [11] return
       [12] aload_0 v0
-      [13] getfield #101
+      [13] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [16] ldc #53
+      [16] ldc #54
         - String [javascript:try{PhoneGap.onPause.fire();}catch(e){};]
-      [18] invokevirtual #134
+      [18] invokevirtual #137
         - Methodref [android/webkit/WebView.loadUrl (Ljava/lang/String;)V]
       [21] aload_0 v0
-      [22] getfield #118
+      [22] getfield #120
         - Fieldref [com/phonegap/DroidGap.r Z]
       [25] ifne +17 (target=42)
       [28] aload_0 v0
-      [29] getfield #105
+      [29] getfield #107
         - Fieldref [com/phonegap/DroidGap.e Lcom/phonegap/api/PluginManager;]
-      [32] invokevirtual #179
+      [32] invokevirtual #182
         - Methodref [com/phonegap/api/PluginManager.a ()V]
       [35] aload_0 v0
-      [36] getfield #101
+      [36] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [39] invokevirtual #135
+      [39] invokevirtual #138
         - Methodref [android/webkit/WebView.pauseTimers ()V]
       [42] return
       Code attribute exceptions (count = 0):
@@ -9771,51 +9789,51 @@ Methods (count = 25):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 70, locals = 1, stack = 2):
       [0] aload_0 v0
-      [1] invokespecial #175
+      [1] invokespecial #178
         - Methodref [com/phonegap/api/PhonegapActivity.onResume ()V]
       [4] aload_0 v0
-      [5] getfield #101
+      [5] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
       [8] ifnonnull +4 (target=12)
       [11] return
       [12] aload_0 v0
-      [13] getfield #101
+      [13] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [16] ldc #54
+      [16] ldc #55
         - String [javascript:try{PhoneGap.onResume.fire();}catch(e){};]
-      [18] invokevirtual #134
+      [18] invokevirtual #137
         - Methodref [android/webkit/WebView.loadUrl (Ljava/lang/String;)V]
       [21] aload_0 v0
-      [22] getfield #118
+      [22] getfield #120
         - Fieldref [com/phonegap/DroidGap.r Z]
       [25] ifeq +10 (target=35)
       [28] aload_0 v0
-      [29] getfield #115
+      [29] getfield #117
         - Fieldref [com/phonegap/DroidGap.o Z]
       [32] ifeq +37 (target=69)
       [35] aload_0 v0
-      [36] getfield #115
+      [36] getfield #117
         - Fieldref [com/phonegap/DroidGap.o Z]
       [39] ifeq +16 (target=55)
       [42] aload_0 v0
       [43] aload_0 v0
-      [44] getfield #115
+      [44] getfield #117
         - Fieldref [com/phonegap/DroidGap.o Z]
-      [47] putfield #118
+      [47] putfield #120
         - Fieldref [com/phonegap/DroidGap.r Z]
       [50] aload_0 v0
       [51] iconst_0
-      [52] putfield #115
+      [52] putfield #117
         - Fieldref [com/phonegap/DroidGap.o Z]
       [55] aload_0 v0
-      [56] getfield #105
+      [56] getfield #107
         - Fieldref [com/phonegap/DroidGap.e Lcom/phonegap/api/PluginManager;]
-      [59] invokevirtual #181
+      [59] invokevirtual #184
         - Methodref [com/phonegap/api/PluginManager.b ()V]
       [62] aload_0 v0
-      [63] getfield #101
+      [63] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [66] invokevirtual #137
+      [66] invokevirtual #140
         - Methodref [android/webkit/WebView.resumeTimers ()V]
       [69] return
       Code attribute exceptions (count = 0):
@@ -9826,46 +9844,46 @@ Methods (count = 25):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 60, locals = 1, stack = 2):
       [0] aload_0 v0
-      [1] invokespecial #172
+      [1] invokespecial #175
         - Methodref [com/phonegap/api/PhonegapActivity.onDestroy ()V]
       [4] aload_0 v0
-      [5] getfield #101
+      [5] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
       [8] ifnull +51 (target=59)
       [11] aload_0 v0
-      [12] getfield #101
+      [12] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [15] ldc #53
+      [15] ldc #54
         - String [javascript:try{PhoneGap.onPause.fire();}catch(e){};]
-      [17] invokevirtual #134
+      [17] invokevirtual #137
         - Methodref [android/webkit/WebView.loadUrl (Ljava/lang/String;)V]
       [20] aload_0 v0
-      [21] getfield #101
+      [21] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [24] ldc #52
+      [24] ldc #53
         - String [javascript:try{PhoneGap.onDestroy.fire();}catch(e){};]
-      [26] invokevirtual #134
+      [26] invokevirtual #137
         - Methodref [android/webkit/WebView.loadUrl (Ljava/lang/String;)V]
       [29] aload_0 v0
-      [30] getfield #101
+      [30] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [33] ldc #29
+      [33] ldc #30
         - String [about:blank]
-      [35] invokevirtual #134
+      [35] invokevirtual #137
         - Methodref [android/webkit/WebView.loadUrl (Ljava/lang/String;)V]
       [38] aload_0 v0
-      [39] getfield #105
+      [39] getfield #107
         - Fieldref [com/phonegap/DroidGap.e Lcom/phonegap/api/PluginManager;]
-      [42] invokevirtual #182
+      [42] invokevirtual #185
         - Methodref [com/phonegap/api/PluginManager.c ()V]
       [45] aload_0 v0
-      [46] getfield #104
+      [46] getfield #106
         - Fieldref [com/phonegap/DroidGap.d Lcom/phonegap/ad;]
       [49] ifnull +10 (target=59)
       [52] aload_0 v0
-      [53] getfield #104
+      [53] getfield #106
         - Fieldref [com/phonegap/DroidGap.d Lcom/phonegap/ad;]
-      [56] invokevirtual #166
+      [56] invokevirtual #169
         - Methodref [com/phonegap/ad.e ()V]
       [59] return
       Code attribute exceptions (count = 0):
@@ -9876,11 +9894,11 @@ Methods (count = 25):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 10, locals = 3, stack = 3):
       [0] aload_0 v0
-      [1] getfield #105
+      [1] getfield #107
         - Fieldref [com/phonegap/DroidGap.e Lcom/phonegap/api/PluginManager;]
       [4] aload_1 v1
       [5] aload_2 v2
-      [6] invokevirtual #180
+      [6] invokevirtual #183
         - Methodref [com/phonegap/api/PluginManager.a (Ljava/lang/String;Ljava/lang/String;)V]
       [9] return
       Code attribute exceptions (count = 0):
@@ -9891,10 +9909,10 @@ Methods (count = 25):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 9, locals = 2, stack = 2):
       [0] aload_0 v0
-      [1] getfield #104
+      [1] getfield #106
         - Fieldref [com/phonegap/DroidGap.d Lcom/phonegap/ad;]
       [4] aload_1 v1
-      [5] invokevirtual #165
+      [5] invokevirtual #168
         - Methodref [com/phonegap/ad.b (Ljava/lang/String;)V]
       [8] return
       Code attribute exceptions (count = 0):
@@ -9905,68 +9923,68 @@ Methods (count = 25):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 100, locals = 3, stack = 3):
       [0] aload_0 v0
-      [1] getfield #101
+      [1] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
       [4] ifnonnull +10 (target=14)
       [7] aload_0 v0
       [8] iload_1 v1
       [9] aload_2 v2
-      [10] invokespecial #173
+      [10] invokespecial #176
         - Methodref [com/phonegap/api/PhonegapActivity.onKeyDown (ILandroid/view/KeyEvent;)Z]
       [13] ireturn
       [14] iload_1 v1
       [15] iconst_4
       [16] ificmpne +49 (target=65)
       [19] aload_0 v0
-      [20] getfield #103
+      [20] getfield #105
         - Fieldref [com/phonegap/DroidGap.c Z]
       [23] ifeq +15 (target=38)
       [26] aload_0 v0
-      [27] getfield #101
+      [27] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [30] ldc #49
+      [30] ldc #50
         - String [javascript:PhoneGap.fireEvent('backbutton');]
-      [32] invokevirtual #134
+      [32] invokevirtual #137
         - Methodref [android/webkit/WebView.loadUrl (Ljava/lang/String;)V]
       [35] goto +63 (target=98)
       [38] aload_0 v0
-      [39] getfield #101
+      [39] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [42] invokevirtual #129
+      [42] invokevirtual #132
         - Methodref [android/webkit/WebView.canGoBack ()Z]
       [45] ifeq +13 (target=58)
       [48] aload_0 v0
-      [49] getfield #101
+      [49] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [52] invokevirtual #133
+      [52] invokevirtual #136
         - Methodref [android/webkit/WebView.goBack ()V]
       [55] goto +43 (target=98)
       [58] aload_0 v0
       [59] iload_1 v1
       [60] aload_2 v2
-      [61] invokespecial #173
+      [61] invokespecial #176
         - Methodref [com/phonegap/api/PhonegapActivity.onKeyDown (ILandroid/view/KeyEvent;)Z]
       [64] ireturn
       [65] iload_1 v1
       [66] bipush 82
       [68] ificmpne +15 (target=83)
       [71] aload_0 v0
-      [72] getfield #101
+      [72] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [75] ldc #50
+      [75] ldc #51
         - String [javascript:PhoneGap.fireEvent('menubutton');]
-      [77] invokevirtual #134
+      [77] invokevirtual #137
         - Methodref [android/webkit/WebView.loadUrl (Ljava/lang/String;)V]
       [80] goto +18 (target=98)
       [83] iload_1 v1
       [84] bipush 84
       [86] ificmpne +12 (target=98)
       [89] aload_0 v0
-      [90] getfield #101
+      [90] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [93] ldc #51
+      [93] ldc #52
         - String [javascript:PhoneGap.fireEvent('searchbutton');]
-      [95] invokevirtual #134
+      [95] invokevirtual #137
         - Methodref [android/webkit/WebView.loadUrl (Ljava/lang/String;)V]
       [98] iconst_0
       [99] ireturn
@@ -9977,27 +9995,27 @@ Methods (count = 25):
       = public void startActivityForResult(android.content.Intent,int)
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 52, locals = 3, stack = 3):
-      [0] getstatic #119
+      [0] getstatic #121
         - Fieldref [java/lang/System.out Ljava/io/PrintStream;]
-      [3] new #97
+      [3] new #98
         - Class [java/lang/StringBuilder]
       [6] dup
-      [7] invokespecial #202
+      [7] invokespecial #207
         - Methodref [java/lang/StringBuilder.<init> ()V]
-      [10] ldc #60
+      [10] ldc #61
         - String [startActivityForResult(intent,]
-      [12] invokevirtual #204
+      [12] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [15] iload_2 v2
-      [16] invokevirtual #203
+      [16] invokevirtual #208
         - Methodref [java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;]
       [19] ldc #4
         - String [)]
-      [21] invokevirtual #204
+      [21] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [24] invokevirtual #205
+      [24] invokevirtual #210
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [27] invokevirtual #191
+      [27] invokevirtual #196
         - Methodref [java/io/PrintStream.println (Ljava/lang/String;)V]
       [30] iload_2 v2
       [31] iconst_m1
@@ -10005,15 +10023,15 @@ Methods (count = 25):
       [35] aload_0 v0
       [36] aload_1 v1
       [37] iload_2 v2
-      [38] invokespecial #176
+      [38] invokespecial #179
         - Methodref [com/phonegap/api/PhonegapActivity.startActivityForResult (Landroid/content/Intent;I)V]
       [41] return
-      [42] new #95
+      [42] new #96
         - Class [java/lang/RuntimeException]
       [45] dup
-      [46] ldc #26
+      [46] ldc #27
         - String [PhoneGap Exception: Call startActivityForResult(Command, Intent) instead.]
-      [48] invokespecial #197
+      [48] invokespecial #202
         - Methodref [java/lang/RuntimeException.<init> (Ljava/lang/String;)V]
       [51] athrow
       Code attribute exceptions (count = 0):
@@ -10025,24 +10043,24 @@ Methods (count = 25):
     + Code attribute instructions (code length = 29, locals = 4, stack = 3):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #114
+      [2] putfield #116
         - Fieldref [com/phonegap/DroidGap.n Lcom/phonegap/api/Plugin;]
       [5] aload_0 v0
       [6] aload_0 v0
-      [7] getfield #118
+      [7] getfield #120
         - Fieldref [com/phonegap/DroidGap.r Z]
-      [10] putfield #115
+      [10] putfield #117
         - Fieldref [com/phonegap/DroidGap.o Z]
       [13] aload_1 v1
       [14] ifnull +8 (target=22)
       [17] aload_0 v0
       [18] iconst_0
-      [19] putfield #118
+      [19] putfield #120
         - Fieldref [com/phonegap/DroidGap.r Z]
       [22] aload_0 v0
       [23] aload_2 v2
       [24] iload_3 v3
-      [25] invokespecial #176
+      [25] invokespecial #179
         - Methodref [com/phonegap/api/PhonegapActivity.startActivityForResult (Landroid/content/Intent;I)V]
       [28] return
       Code attribute exceptions (count = 0):
@@ -10056,10 +10074,10 @@ Methods (count = 25):
       [1] iload_1 v1
       [2] iload_2 v2
       [3] aload_3 v3
-      [4] invokespecial #169
+      [4] invokespecial #172
         - Methodref [com/phonegap/api/PhonegapActivity.onActivityResult (IILandroid/content/Intent;)V]
       [7] aload_0 v0
-      [8] getfield #114
+      [8] getfield #116
         - Fieldref [com/phonegap/DroidGap.n Lcom/phonegap/api/Plugin;]
       [11] dup
       [12] astore v4
@@ -10068,7 +10086,7 @@ Methods (count = 25):
       [19] iload_1 v1
       [20] iload_2 v2
       [21] aload_3 v3
-      [22] invokevirtual #177
+      [22] invokevirtual #180
         - Methodref [com/phonegap/api/Plugin.a (IILandroid/content/Intent;)V]
       [25] return
       Code attribute exceptions (count = 0):
@@ -10081,68 +10099,68 @@ Methods (count = 25):
       [0] aload_0 v0
       [1] dup
       [2] astore_3 v3
-      [3] ldc #46
+      [3] ldc #47
         - String [errorUrl]
-      [5] invokevirtual #155
+      [5] invokevirtual #159
         - Methodref [com/phonegap/DroidGap.c (Ljava/lang/String;)Ljava/lang/String;]
       [8] dup
       [9] astore v4
       [11] ifnull +38 (target=49)
       [14] aload v4
-      [16] ldc #47
+      [16] ldc #48
         - String [file://]
-      [18] invokevirtual #200
+      [18] invokevirtual #205
         - Methodref [java/lang/String.startsWith (Ljava/lang/String;)Z]
       [21] ifeq +28 (target=49)
       [24] aload_2 v2
       [25] aload v4
-      [27] invokevirtual #198
+      [27] invokevirtual #203
         - Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
       [30] ifne +19 (target=49)
       [33] aload_3 v3
-      [34] new #84
+      [34] new #85
         - Class [com/phonegap/n]
       [37] dup
       [38] aload_0 v0
       [39] aload_3 v3
       [40] aload v4
-      [42] invokespecial #188
+      [42] invokespecial #191
         - Methodref [com/phonegap/n.<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;)V]
-      [45] invokevirtual #160
+      [45] invokevirtual #163
         - Methodref [com/phonegap/DroidGap.runOnUiThread (Ljava/lang/Runnable;)V]
       [48] return
       [49] aload_3 v3
-      [50] getfield #101
+      [50] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
-      [53] ldc #29
+      [53] ldc #30
         - String [about:blank]
-      [55] invokevirtual #134
+      [55] invokevirtual #137
         - Methodref [android/webkit/WebView.loadUrl (Ljava/lang/String;)V]
       [58] aload_3 v3
-      [59] ldc #10
+      [59] ldc #11
         - String [Application Error]
-      [61] new #97
+      [61] new #98
         - Class [java/lang/StringBuilder]
       [64] dup
-      [65] invokespecial #202
+      [65] invokespecial #207
         - Methodref [java/lang/StringBuilder.<init> ()V]
       [68] aload_1 v1
-      [69] invokevirtual #204
+      [69] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [72] ldc #2
         - String [ (]
-      [74] invokevirtual #204
+      [74] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [77] aload_2 v2
-      [78] invokevirtual #204
+      [78] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [81] ldc #4
         - String [)]
-      [83] invokevirtual #204
+      [83] invokevirtual #209
         - Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [86] invokevirtual #205
+      [86] invokevirtual #210
         - Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [89] ldc #25
+      [89] ldc #26
         - String [OK]
       [91] astore v4
       [93] astore_3 v3
@@ -10151,7 +10169,7 @@ Methods (count = 25):
       [96] astore_1 v1
       [97] dup
       [98] astore v5
-      [100] new #83
+      [100] new #84
         - Class [com/phonegap/m]
       [103] dup
       [104] aload_1 v1
@@ -10159,9 +10177,9 @@ Methods (count = 25):
       [107] aload_3 v3
       [108] aload_2 v2
       [109] aload v4
-      [111] invokespecial #187
+      [111] invokespecial #190
         - Methodref [com/phonegap/m.<init> (Lcom/phonegap/DroidGap;Lcom/phonegap/DroidGap;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V]
-      [114] invokevirtual #160
+      [114] invokevirtual #163
         - Methodref [com/phonegap/DroidGap.runOnUiThread (Ljava/lang/Runnable;)V]
       [117] return
       Code attribute exceptions (count = 0):
@@ -10174,70 +10192,70 @@ Methods (count = 25):
       [0] aload_0 v0
       [1] dup
       [2] astore_0 v0
-      [3] getfield #101
+      [3] getfield #103
         - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
       [6] ifnonnull +7 (target=13)
       [9] aload_0 v0
-      [10] invokespecial #156
-        - Methodref [com/phonegap/DroidGap.d ()V]
+      [10] invokevirtual #155
+        - Methodref [com/phonegap/DroidGap.a ()V]
       [13] aload_0 v0
       [14] aload_0 v0
-      [15] ldc #59
+      [15] ldc #60
         - String [splashscreen]
-      [17] invokespecial #157
+      [17] invokespecial #160
         - Methodref [com/phonegap/DroidGap.d (Ljava/lang/String;)I]
-      [20] putfield #117
+      [20] putfield #119
         - Fieldref [com/phonegap/DroidGap.q I]
       [23] aload_0 v0
-      [24] getfield #117
+      [24] getfield #119
         - Fieldref [com/phonegap/DroidGap.q I]
       [27] ifeq +14 (target=41)
       [30] aload_0 v0
-      [31] getfield #111
+      [31] getfield #113
         - Fieldref [com/phonegap/DroidGap.k Landroid/widget/LinearLayout;]
       [34] aload_0 v0
-      [35] getfield #117
+      [35] getfield #119
         - Fieldref [com/phonegap/DroidGap.q I]
-      [38] invokevirtual #148
+      [38] invokevirtual #151
         - Methodref [android/widget/LinearLayout.setBackgroundResource (I)V]
       [41] aload_0 v0
       [42] aload_0 v0
-      [43] ldc #48
+      [43] ldc #49
         - String [hideLoadingDialogOnPageLoad]
       [45] iconst_0
-      [46] invokespecial #153
+      [46] invokespecial #157
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Z)Z]
-      [49] putfield #108
+      [49] putfield #110
         - Fieldref [com/phonegap/DroidGap.h Z]
       [52] aload_0 v0
       [53] aload_0 v0
-      [54] ldc #56
+      [54] ldc #57
         - String [loadInWebView]
       [56] iconst_0
-      [57] invokespecial #153
+      [57] invokespecial #157
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Z)Z]
-      [60] putfield #109
+      [60] putfield #111
         - Fieldref [com/phonegap/DroidGap.i Z]
       [63] aload_0 v0
-      [64] ldc #58
+      [64] ldc #59
         - String [loadUrlTimeoutValue]
-      [66] invokespecial #157
+      [66] invokespecial #160
         - Methodref [com/phonegap/DroidGap.d (Ljava/lang/String;)I]
       [69] dup
       [70] istore_1 v1
       [71] ifle +8 (target=79)
       [74] aload_0 v0
       [75] iload_1 v1
-      [76] putfield #110
+      [76] putfield #112
         - Fieldref [com/phonegap/DroidGap.j I]
       [79] aload_0 v0
       [80] aload_0 v0
-      [81] ldc #55
+      [81] ldc #56
         - String [keepRunning]
       [83] iconst_1
-      [84] invokespecial #153
+      [84] invokespecial #157
         - Methodref [com/phonegap/DroidGap.a (Ljava/lang/String;Z)Z]
-      [87] putfield #118
+      [87] putfield #120
         - Fieldref [com/phonegap/DroidGap.r Z]
       [90] return
       Code attribute exceptions (count = 0):
@@ -10248,7 +10266,7 @@ Methods (count = 25):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #116
+      [1] getfield #118
         - Fieldref [com/phonegap/DroidGap.p I]
       [4] ireturn
       Code attribute exceptions (count = 0):
@@ -10259,7 +10277,7 @@ Methods (count = 25):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #113
+      [1] getfield #115
         - Fieldref [com/phonegap/DroidGap.m Ljava/lang/String;]
       [4] areturn
       Code attribute exceptions (count = 0):
@@ -10271,12 +10289,12 @@ Methods (count = 25):
     + Code attribute instructions (code length = 12, locals = 1, stack = 4):
       [0] aload_0 v0
       [1] dup
-      [2] getfield #116
+      [2] getfield #118
         - Fieldref [com/phonegap/DroidGap.p I]
       [5] dup_x1
       [6] iconst_1
       [7] iadd
-      [8] putfield #116
+      [8] putfield #118
         - Fieldref [com/phonegap/DroidGap.p I]
       [11] ireturn
       Code attribute exceptions (count = 0):
@@ -20927,28 +20945,58 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 22):
+Constant Pool (count = 52):
+  - Integer [60000]
+  - Integer [2130837505]
   - String [file:///android_asset/www/index.html]
+  - String [keepRunning]
+  - String [loadUrlTimeoutValue]
+  - String [splashscreen]
+  - Class [android/content/Intent]
+  - Class [android/webkit/WebView]
   - Class [com/camptocamp/gis/phonegap/piclayer/App]
   - Class [com/phonegap/DroidGap]
-  - Methodref [com/camptocamp/gis/phonegap/piclayer/App.b ()V]
-  - Methodref [com/camptocamp/gis/phonegap/piclayer/App.b (Ljava/lang/String;)V]
+  - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
+  - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Z)Landroid/content/Intent;]
+  - Methodref [android/webkit/WebView.clearCache (Z)V]
+  - Methodref [com/camptocamp/gis/phonegap/piclayer/App.a (Ljava/lang/String;I)V]
   - Methodref [com/phonegap/DroidGap.<init> ()V]
+  - Methodref [com/phonegap/DroidGap.a ()V]
+  - Methodref [com/phonegap/DroidGap.b (Ljava/lang/String;I)V]
+  - Methodref [com/phonegap/DroidGap.getIntent ()Landroid/content/Intent;]
   - Methodref [com/phonegap/DroidGap.onCreate (Landroid/os/Bundle;)V]
   + NameAndType [<init> ()V]
-  + NameAndType [b ()V]
-  + NameAndType [b (Ljava/lang/String;)V]
+  + NameAndType [a ()V]
+  + NameAndType [a (Ljava/lang/String;I)V]
+  + NameAndType [a Landroid/webkit/WebView;]
+  + NameAndType [b (Ljava/lang/String;I)V]
+  + NameAndType [clearCache (Z)V]
+  + NameAndType [getIntent ()Landroid/content/Intent;]
   + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [putExtra (Ljava/lang/String;Z)Landroid/content/Intent;]
+  + Utf8 [()Landroid/content/Intent;]
   + Utf8 [()V]
   + Utf8 [(Landroid/os/Bundle;)V]
-  + Utf8 [(Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;I)V]
+  + Utf8 [(Ljava/lang/String;Z)Landroid/content/Intent;]
+  + Utf8 [(Z)V]
   + Utf8 [<init>]
   + Utf8 [Code]
+  + Utf8 [Landroid/webkit/WebView;]
+  + Utf8 [a]
+  + Utf8 [android/content/Intent]
+  + Utf8 [android/webkit/WebView]
   + Utf8 [b]
+  + Utf8 [clearCache]
   + Utf8 [com/camptocamp/gis/phonegap/piclayer/App]
   + Utf8 [com/phonegap/DroidGap]
   + Utf8 [file:///android_asset/www/index.html]
+  + Utf8 [getIntent]
+  + Utf8 [keepRunning]
+  + Utf8 [loadUrlTimeoutValue]
   + Utf8 [onCreate]
+  + Utf8 [putExtra]
+  + Utf8 [splashscreen]
 
 Fields (count = 0):
 
@@ -20959,7 +21007,7 @@ Methods (count = 2):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #6
+      [1] invokespecial #15
         - Methodref [com/phonegap/DroidGap.<init> ()V]
       [4] return
       Code attribute exceptions (count = 0):
@@ -20968,20 +21016,52 @@ Methods (count = 2):
     Access flags: 0x1
       = public void onCreate(android.os.Bundle)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 16, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 56, locals = 2, stack = 3):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #7
+      [2] invokespecial #19
         - Methodref [com/phonegap/DroidGap.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
-      [6] invokevirtual #4
-        - Methodref [com/camptocamp/gis/phonegap/piclayer/App.b ()V]
+      [6] invokespecial #16
+        - Methodref [com/phonegap/DroidGap.a ()V]
       [9] aload_0 v0
-      [10] ldc #1
+      [10] getfield #11
+        - Fieldref [com/phonegap/DroidGap.a Landroid/webkit/WebView;]
+      [13] iconst_1
+      [14] invokevirtual #13
+        - Methodref [android/webkit/WebView.clearCache (Z)V]
+      [17] aload_0 v0
+      [18] ldc #6
+        - String [splashscreen]
+      [20] ldc #2
+        - Integer [2130837505]
+      [22] invokespecial #17
+        - Methodref [com/phonegap/DroidGap.b (Ljava/lang/String;I)V]
+      [25] aload_0 v0
+      [26] ldc #5
+        - String [loadUrlTimeoutValue]
+      [28] ldc #1
+        - Integer [60000]
+      [30] invokespecial #17
+        - Methodref [com/phonegap/DroidGap.b (Ljava/lang/String;I)V]
+      [33] aload_0 v0
+      [34] ldc #4
+        - String [keepRunning]
+      [36] astore_1 v1
+      [37] invokevirtual #18
+        - Methodref [com/phonegap/DroidGap.getIntent ()Landroid/content/Intent;]
+      [40] aload_1 v1
+      [41] iconst_0
+      [42] invokevirtual #12
+        - Methodref [android/content/Intent.putExtra (Ljava/lang/String;Z)Landroid/content/Intent;]
+      [45] pop
+      [46] aload_0 v0
+      [47] ldc #3
         - String [file:///android_asset/www/index.html]
-      [12] invokevirtual #5
-        - Methodref [com/camptocamp/gis/phonegap/piclayer/App.b (Ljava/lang/String;)V]
-      [15] return
+      [49] sipush 1000
+      [52] invokevirtual #14
+        - Methodref [com/camptocamp/gis/phonegap/piclayer/App.a (Ljava/lang/String;I)V]
+      [55] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
 

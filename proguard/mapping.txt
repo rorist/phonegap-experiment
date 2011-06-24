@@ -171,15 +171,17 @@ com.phonegap.DroidGap -> com.phonegap.DroidGap:
     int loadUrlTimeoutValue -> j
     boolean keepRunning -> r
     void onCreate(android.os.Bundle) -> onCreate
-    void init() -> d
+    void init() -> a
     void loadUrl(java.lang.String) -> b
-    void cancelLoadUrl() -> a
-    void clearCache() -> b
-    void clearHistory() -> c
+    void loadUrl(java.lang.String,int) -> a
+    void cancelLoadUrl() -> b
+    void clearCache() -> c
+    void clearHistory() -> d
     void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
     boolean getBooleanProperty(java.lang.String,boolean) -> a
     int getIntegerProperty$505cff29(java.lang.String) -> d
     java.lang.String getStringProperty$7157d249(java.lang.String) -> c
+    void setIntegerProperty(java.lang.String,int) -> b
     void onPause() -> onPause
     void onResume() -> onResume
     void onDestroy() -> onDestroy

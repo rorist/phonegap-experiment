@@ -48,40 +48,6 @@ $(document).ready(function(){
         e.stopPropagation();
         e.preventDefault();
     });
-
-    // Layer selector
-    var layerSelector = new app.LayerSelector({
-        layerselector: 'layerselector',
-        layergroup: 'layergroup',
-        floorselector: 'floorselector',
-        switchFloor: mapManager.switchFloor,
-        switchBaseLayer: mapManager.switchBaseLayer
-    });
-
-    // POI selector
-    var poiSelector = new app.POISelector({
-        poiselector   : 'poiselector',
-        mapManager    : mapManager
-    });
-
-    // Zone selector
-    var zoneSelector = new app.ZoneSelector({
-        list        : 'zones-list',
-        mapManager  : mapManager
-    });
-    
-    // Geolocation
-    if (!navigator.geolocation) {
-        $('#locate').hide();
-    } else {
-        $("#locate .ui-btn-inner").unbind().click(function() {
-            if (mapManager.toggleGeolocate()) {
-                $(this).css('background', 'red');
-            } else {
-                $(this).css('background', 'inherit');
-            }
-        });
-    }
     
 // PhoneGap
 
