@@ -1,0 +1,558 @@
+com.camptocamp.gis.phonegap.piclayer.App -> com.camptocamp.gis.phonegap.piclayer.App:
+    void onCreate(android.os.Bundle) -> onCreate
+com.phonegap.AccelListener -> com.phonegap.AccelListener:
+    int STOPPED -> d
+    int STARTING -> e
+    int RUNNING -> f
+    int ERROR_FAILED_TO_START -> c
+    float TIMEOUT -> g
+    float x -> h
+    float y -> i
+    float z -> j
+    long timestamp -> k
+    int status -> l
+    long lastAccessTime -> m
+    android.hardware.SensorManager sensorManager -> n
+    android.hardware.Sensor mSensor -> o
+    void setContext(com.phonegap.api.PhonegapActivity) -> a
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void onDestroy() -> a
+    int start() -> b
+    void stop() -> c
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+com.phonegap.App -> com.phonegap.App:
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+com.phonegap.AudioHandler -> com.phonegap.AudioHandler:
+    java.util.HashMap players -> c
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void onDestroy() -> a
+com.phonegap.AudioPlayer -> com.phonegap.f:
+    int MEDIA_NONE -> a
+    int MEDIA_STARTING -> b
+    int MEDIA_RUNNING -> c
+    int MEDIA_PAUSED -> d
+    int MEDIA_STOPPED -> e
+    int MEDIA_STATE -> f
+    int MEDIA_DURATION -> g
+    int MEDIA_ERROR -> h
+    int MEDIA_ERROR_PLAY_MODE_SET -> i
+    int MEDIA_ERROR_ALREADY_RECORDING -> j
+    int MEDIA_ERROR_STARTING_RECORDING -> k
+    int MEDIA_ERROR_RECORD_MODE_SET -> l
+    int MEDIA_ERROR_STARTING_PLAYBACK -> m
+    int MEDIA_ERROR_RESUME_STATE -> n
+    int MEDIA_ERROR_PAUSE_STATE -> o
+    int MEDIA_ERROR_STOP_STATE -> p
+    com.phonegap.AudioHandler handler -> q
+    java.lang.String id -> r
+    int state -> s
+    java.lang.String audioFile -> t
+    long duration -> u
+    android.media.MediaRecorder recorder -> v
+    java.lang.String tempFile -> w
+    android.media.MediaPlayer mPlayer -> x
+    boolean prepareOnly -> y
+    void destroy() -> a
+    void startRecording(java.lang.String) -> a
+    void stopRecording() -> b
+    void startPlaying(java.lang.String) -> b
+    void seekToPlaying(int) -> a
+    void pausePlaying() -> c
+    void stopPlaying() -> d
+    void onCompletion(android.media.MediaPlayer) -> onCompletion
+    long getCurrentPosition() -> e
+    long getDuration(java.lang.String) -> c
+    void onPrepared(android.media.MediaPlayer) -> onPrepared
+    boolean onError(android.media.MediaPlayer,int,int) -> onError
+    void setState(int) -> b
+com.phonegap.CallbackServer -> com.phonegap.ad:
+    java.util.LinkedList javascript -> a
+    int port -> b
+    java.lang.Thread serverThread -> c
+    boolean active -> d
+    boolean empty -> e
+    boolean usePolling -> f
+    java.lang.String token -> g
+    void init(java.lang.String) -> a
+    boolean usePolling() -> a
+    int getPort() -> b
+    java.lang.String getToken() -> c
+    void startServer() -> d
+    void run() -> run
+    void stopServer() -> e
+    java.lang.String getJavascript() -> f
+    void sendJavascript(java.lang.String) -> b
+com.phonegap.CameraLauncher -> com.phonegap.CameraLauncher:
+    int mQuality -> c
+    android.net.Uri imageUri -> d
+    java.lang.String callbackId -> e
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    void onActivityResult(int,int,android.content.Intent) -> a
+    void processPicture(android.graphics.Bitmap) -> a
+    void failPicture(java.lang.String) -> c
+com.phonegap.Capture -> com.phonegap.Capture:
+    java.lang.String callbackId -> c
+    long limit -> d
+    double duration -> e
+    org.json.JSONArray results -> f
+    android.net.Uri imageUri -> g
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    org.json.JSONObject getFormatData(java.lang.String,java.lang.String) -> a
+    org.json.JSONObject getAudioVideoData(java.lang.String,org.json.JSONObject,boolean) -> a
+    void captureAudio() -> b
+    void captureImage() -> c
+    void captureVideo$133369() -> d
+    void onActivityResult(int,int,android.content.Intent) -> a
+    org.json.JSONObject createMediaFile(android.net.Uri) -> a
+    void fail(java.lang.String) -> c
+com.phonegap.CompassListener -> com.phonegap.CompassListener:
+    int STOPPED -> c
+    int STARTING -> d
+    int RUNNING -> e
+    int ERROR_FAILED_TO_START -> f
+    long TIMEOUT -> g
+    int status -> h
+    float heading -> i
+    long timeStamp -> j
+    long lastAccessTime -> k
+    android.hardware.SensorManager sensorManager -> l
+    android.hardware.Sensor mSensor -> m
+    void setContext(com.phonegap.api.PhonegapActivity) -> a
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void onDestroy() -> a
+    int start() -> b
+    void stop() -> c
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+com.phonegap.ContactAccessor -> com.phonegap.w:
+    com.phonegap.ContactAccessor sInstance -> a
+    java.lang.String LOG_TAG -> b
+    com.phonegap.ContactAccessor getInstance(android.webkit.WebView,android.app.Activity) -> a
+    boolean save$41803e93() -> a
+    org.json.JSONArray search$4a652f3f() -> b
+    boolean remove$552c4dfd() -> c
+com.phonegap.ContactManager -> com.phonegap.ContactManager:
+    com.phonegap.ContactAccessor contactAccessor -> c
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+com.phonegap.CryptoHandler -> com.phonegap.CryptoHandler:
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+com.phonegap.Device -> com.phonegap.Device:
+    java.lang.String phonegapVersion -> c
+    java.lang.String platform -> d
+    java.lang.String uuid -> e
+    void setContext(com.phonegap.api.PhonegapActivity) -> a
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+com.phonegap.DirectoryManager -> com.phonegap.o:
+    boolean testFileExists(java.lang.String) -> a
+    long getFreeDiskSpace() -> a
+    boolean testSaveLocationExists() -> b
+com.phonegap.DroidGap -> com.phonegap.DroidGap:
+    android.webkit.WebView appView -> a
+    android.webkit.WebViewClient webViewClient -> b
+    android.widget.LinearLayout root -> k
+    boolean bound -> c
+    com.phonegap.CallbackServer callbackServer -> d
+    com.phonegap.api.PluginManager pluginManager -> e
+    boolean cancelLoadUrl -> f
+    boolean clearHistory -> g
+    java.lang.String url -> l
+    java.lang.String baseUrl -> m
+    com.phonegap.api.Plugin activityResultCallback -> n
+    boolean activityResultKeepRunning -> o
+    int loadUrlTimeout -> p
+    boolean hideLoadingDialogOnPageLoad -> h
+    boolean loadInWebView -> i
+    int splashscreen -> q
+    int loadUrlTimeoutValue -> j
+    boolean keepRunning -> r
+    void onCreate(android.os.Bundle) -> onCreate
+    void init() -> d
+    void loadUrl(java.lang.String) -> b
+    void cancelLoadUrl() -> a
+    void clearCache() -> b
+    void clearHistory() -> c
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    boolean getBooleanProperty(java.lang.String,boolean) -> a
+    int getIntegerProperty$505cff29(java.lang.String) -> d
+    java.lang.String getStringProperty$7157d249(java.lang.String) -> c
+    void onPause() -> onPause
+    void onResume() -> onResume
+    void onDestroy() -> onDestroy
+    void addService(java.lang.String,java.lang.String) -> a
+    void sendJavascript(java.lang.String) -> a
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void startActivityForResult(android.content.Intent,int) -> startActivityForResult
+    void startActivityForResult(com.phonegap.api.Plugin,android.content.Intent,int) -> a
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onReceivedError$6ef37c42(java.lang.String,java.lang.String) -> b
+    void access$000(com.phonegap.DroidGap) -> a
+    int access$100(com.phonegap.DroidGap) -> b
+    java.lang.String access$200(com.phonegap.DroidGap) -> c
+    int access$108(com.phonegap.DroidGap) -> d
+com.phonegap.DroidGap$1 -> com.phonegap.r:
+    com.phonegap.DroidGap val$me -> a
+    java.lang.String val$url -> b
+    com.phonegap.DroidGap this$0 -> c
+    void run() -> run
+com.phonegap.DroidGap$1$1 -> com.phonegap.aj:
+    int val$currentLoadUrlTimeout -> a
+    com.phonegap.DroidGap$1 this$1 -> b
+    void run() -> run
+com.phonegap.DroidGap$2 -> com.phonegap.q:
+    com.phonegap.DroidGap val$me -> a
+    com.phonegap.DroidGap this$0 -> b
+    void run() -> run
+com.phonegap.DroidGap$3 -> com.phonegap.p:
+    int val$time -> a
+    com.phonegap.DroidGap val$me -> b
+    java.lang.String val$url -> c
+    com.phonegap.DroidGap this$0 -> d
+    void run() -> run
+com.phonegap.DroidGap$4 -> com.phonegap.n:
+    com.phonegap.DroidGap val$me -> a
+    java.lang.String val$errorUrl -> b
+    com.phonegap.DroidGap this$0 -> c
+    void run() -> run
+com.phonegap.DroidGap$5 -> com.phonegap.m:
+    com.phonegap.DroidGap val$me -> a
+    java.lang.String val$message -> c
+    java.lang.String val$title -> d
+    java.lang.String val$button -> e
+    boolean val$exit -> b
+    com.phonegap.DroidGap this$0 -> f
+    void run() -> run
+com.phonegap.DroidGap$5$1 -> com.phonegap.i:
+    com.phonegap.DroidGap$5 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.DroidGap$EclairClient -> com.phonegap.al:
+    java.lang.String TAG -> a
+    long MAX_QUOTA -> b
+    com.phonegap.DroidGap this$0 -> c
+    void onExceededDatabaseQuota(java.lang.String,java.lang.String,long,long,long,android.webkit.WebStorage$QuotaUpdater) -> onExceededDatabaseQuota
+    void onConsoleMessage(java.lang.String,int,java.lang.String) -> onConsoleMessage
+    void onGeolocationPermissionsShowPrompt(java.lang.String,android.webkit.GeolocationPermissions$Callback) -> onGeolocationPermissionsShowPrompt
+com.phonegap.DroidGap$GapClient -> com.phonegap.y:
+    android.content.Context ctx -> a
+    com.phonegap.DroidGap this$0 -> b
+    boolean onJsAlert(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsAlert
+    boolean onJsConfirm(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsConfirm
+    boolean onJsPrompt(android.webkit.WebView,java.lang.String,java.lang.String,java.lang.String,android.webkit.JsPromptResult) -> onJsPrompt
+com.phonegap.DroidGap$GapClient$1 -> com.phonegap.u:
+    android.webkit.JsResult val$result -> a
+    com.phonegap.DroidGap$GapClient this$1 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.DroidGap$GapClient$2 -> com.phonegap.t:
+    android.webkit.JsResult val$result -> a
+    com.phonegap.DroidGap$GapClient this$1 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.DroidGap$GapClient$3 -> com.phonegap.s:
+    android.webkit.JsResult val$result -> a
+    com.phonegap.DroidGap$GapClient this$1 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.DroidGap$GapClient$4 -> com.phonegap.b:
+    android.widget.EditText val$input -> a
+    android.webkit.JsPromptResult val$res -> b
+    com.phonegap.DroidGap$GapClient this$1 -> c
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.DroidGap$GapClient$5 -> com.phonegap.c:
+    android.webkit.JsPromptResult val$res -> a
+    com.phonegap.DroidGap$GapClient this$1 -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.DroidGap$GapViewClient -> com.phonegap.ac:
+    com.phonegap.DroidGap ctx -> a
+    com.phonegap.DroidGap this$0 -> b
+    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+    void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String) -> onReceivedError
+com.phonegap.FileTransfer -> com.phonegap.FileTransfer:
+    int FILE_NOT_FOUND_ERR -> c
+    int INVALID_URL_ERR -> d
+    int CONNECTION_ERR -> e
+    javax.net.ssl.SSLSocketFactory defaultSSLSocketFactory -> f
+    javax.net.ssl.HostnameVerifier defaultHostnameVerifier -> g
+    javax.net.ssl.HostnameVerifier DO_NOT_VERIFY -> h
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    org.json.JSONObject createFileUploadError(int) -> a
+    java.lang.String getArgument(org.json.JSONArray,int,java.lang.String) -> a
+    com.phonegap.FileUploadResult upload(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.json.JSONObject,boolean) -> a
+com.phonegap.FileTransfer$1 -> com.phonegap.z:
+    boolean verify(java.lang.String,javax.net.ssl.SSLSession) -> verify
+com.phonegap.FileTransfer$2 -> com.phonegap.aa:
+    com.phonegap.FileTransfer this$0 -> a
+    java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+    void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
+com.phonegap.FileUploadResult -> com.phonegap.ak:
+    long bytesSent -> a
+    int responseCode -> b
+    java.lang.String response -> c
+    void setBytesSent(long) -> a
+    void setResponseCode(int) -> a
+    void setResponse(java.lang.String) -> a
+    org.json.JSONObject toJSONObject() -> a
+com.phonegap.FileUtils -> com.phonegap.FileUtils:
+    int NOT_FOUND_ERR -> c
+    int SECURITY_ERR -> d
+    int ABORT_ERR -> e
+    int NOT_READABLE_ERR -> f
+    int ENCODING_ERR -> g
+    int NO_MODIFICATION_ALLOWED_ERR -> h
+    int INVALID_STATE_ERR -> i
+    int SYNTAX_ERR -> j
+    int INVALID_MODIFICATION_ERR -> k
+    int QUOTA_EXCEEDED_ERR -> l
+    int TYPE_MISMATCH_ERR -> m
+    int PATH_EXISTS_ERR -> n
+    int TEMPORARY -> o
+    int PERSISTENT -> p
+    int RESOURCE -> q
+    int APPLICATION -> r
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    org.json.JSONArray readEntries(java.lang.String) -> d
+    org.json.JSONObject transferTo(java.lang.String,org.json.JSONObject,java.lang.String,boolean) -> a
+    org.json.JSONObject copyFile(java.io.File,java.io.File) -> a
+    org.json.JSONObject copyDirectory(java.io.File,java.io.File) -> b
+    boolean removeDirRecursively(java.io.File) -> a
+    org.json.JSONObject getFile(java.lang.String,java.lang.String,org.json.JSONObject,boolean) -> a
+    boolean atRootDirectory(java.lang.String) -> e
+    org.json.JSONObject getEntry(java.io.File) -> b
+    org.json.JSONObject getEntry(java.lang.String) -> f
+    boolean isSynch(java.lang.String) -> a
+    java.lang.String readAsDataURL(java.lang.String) -> g
+    java.lang.String getMimeType(java.lang.String) -> c
+    long truncateFile(java.lang.String,long) -> a
+    java.io.InputStream getPathFromUri(java.lang.String) -> h
+com.phonegap.GeoBroker -> com.phonegap.GeoBroker:
+    java.util.HashMap geoListeners -> c
+    com.phonegap.GeoListener global -> d
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void onDestroy() -> a
+com.phonegap.GeoListener -> com.phonegap.ae:
+    int PERMISSION_DENIED -> c
+    int POSITION_UNAVAILABLE -> a
+    int TIMEOUT -> d
+    java.lang.String id -> e
+    com.phonegap.GpsListener mGps -> b
+    com.phonegap.NetworkListener mNetwork -> f
+    android.location.LocationManager mLocMan -> g
+    com.phonegap.GeoBroker broker -> h
+    int interval -> i
+    void destroy() -> a
+    void success(android.location.Location) -> a
+    void fail(int,java.lang.String) -> a
+    void start(int) -> a
+    void stop() -> b
+com.phonegap.GpsListener -> com.phonegap.d:
+    com.phonegap.api.PhonegapActivity mCtx -> a
+    android.location.LocationManager mLocMan -> b
+    com.phonegap.GeoListener owner -> c
+    boolean hasData -> d
+    android.location.Location cLoc -> e
+    boolean running -> f
+    void onProviderDisabled(java.lang.String) -> onProviderDisabled
+    void onProviderEnabled(java.lang.String) -> onProviderEnabled
+    void onStatusChanged(java.lang.String,int,android.os.Bundle) -> onStatusChanged
+    void onLocationChanged(android.location.Location) -> onLocationChanged
+    boolean hasLocation() -> a
+    void start(int) -> a
+    void stop() -> b
+com.phonegap.NetworkListener -> com.phonegap.ab:
+    com.phonegap.api.PhonegapActivity mCtx -> a
+    android.location.LocationManager mLocMan -> b
+    com.phonegap.GeoListener owner -> c
+    boolean hasData -> d
+    android.location.Location cLoc -> e
+    boolean running -> f
+    void onProviderDisabled(java.lang.String) -> onProviderDisabled
+    void onProviderEnabled(java.lang.String) -> onProviderEnabled
+    void onStatusChanged(java.lang.String,int,android.os.Bundle) -> onStatusChanged
+    void onLocationChanged(android.location.Location) -> onLocationChanged
+    void start(int) -> a
+    void stop() -> a
+com.phonegap.NetworkManager -> com.phonegap.NetworkManager:
+    int NOT_REACHABLE -> c
+    int REACHABLE_VIA_CARRIER_DATA_NETWORK -> d
+    int REACHABLE_VIA_WIFI_NETWORK -> e
+    java.lang.String connectionCallbackId -> f
+    android.net.ConnectivityManager sockMan -> g
+    android.telephony.TelephonyManager telephonyManager -> h
+    void setContext(com.phonegap.api.PhonegapActivity) -> a
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    org.json.JSONObject getConnectionInfo(android.net.NetworkInfo) -> a
+    boolean isAvailable() -> b
+    boolean isWifiActive() -> c
+    int isReachable$505cbf58(java.lang.String) -> c
+    void access$000(com.phonegap.NetworkManager,android.net.NetworkInfo) -> a
+com.phonegap.NetworkManager$1 -> com.phonegap.h:
+    com.phonegap.NetworkManager this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.phonegap.Notification -> com.phonegap.Notification:
+    int confirmResult -> e
+    android.app.ProgressDialog spinnerDialog -> c
+    android.app.ProgressDialog progressDialog -> d
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void alert(java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
+    void confirm(java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> b
+    void activityStart(java.lang.String,java.lang.String) -> a
+    void activityStop() -> b
+    void progressStart(java.lang.String,java.lang.String) -> b
+    void progressValue(int) -> a
+    void progressStop() -> c
+com.phonegap.Notification$1 -> com.phonegap.ag:
+    com.phonegap.api.PhonegapActivity val$ctx -> c
+    java.lang.String val$message -> d
+    java.lang.String val$title -> e
+    java.lang.String val$buttonLabel -> f
+    com.phonegap.Notification val$notification -> a
+    java.lang.String val$callbackId -> b
+    com.phonegap.Notification this$0 -> g
+    void run() -> run
+com.phonegap.Notification$1$1 -> com.phonegap.g:
+    com.phonegap.Notification$1 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.Notification$2 -> com.phonegap.ai:
+    com.phonegap.api.PhonegapActivity val$ctx -> c
+    java.lang.String val$message -> d
+    java.lang.String val$title -> e
+    java.lang.String[] val$fButtons -> f
+    com.phonegap.Notification val$notification -> a
+    java.lang.String val$callbackId -> b
+    com.phonegap.Notification this$0 -> g
+    void run() -> run
+com.phonegap.Notification$2$1 -> com.phonegap.a:
+    com.phonegap.Notification$2 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.Notification$2$2 -> com.phonegap.v:
+    com.phonegap.Notification$2 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.Notification$2$3 -> com.phonegap.x:
+    com.phonegap.Notification$2 this$1 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.phonegap.Notification$3 -> com.phonegap.ah:
+    com.phonegap.Notification val$notification -> a
+    com.phonegap.api.PhonegapActivity val$ctx -> b
+    java.lang.String val$title -> c
+    java.lang.String val$message -> d
+    com.phonegap.Notification this$0 -> e
+    void run() -> run
+com.phonegap.Notification$3$1 -> com.phonegap.l:
+    com.phonegap.Notification$3 this$1 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.phonegap.Notification$4 -> com.phonegap.af:
+    com.phonegap.Notification val$notification -> a
+    com.phonegap.api.PhonegapActivity val$ctx -> b
+    java.lang.String val$title -> c
+    java.lang.String val$message -> d
+    com.phonegap.Notification this$0 -> e
+    void run() -> run
+com.phonegap.Notification$4$1 -> com.phonegap.k:
+    com.phonegap.Notification$4 this$1 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.phonegap.SimpleCrypto -> com.phonegap.j:
+    java.lang.String encrypt(java.lang.String,java.lang.String) -> a
+    java.lang.String decrypt(java.lang.String,java.lang.String) -> b
+    byte[] getRawKey(byte[]) -> a
+    java.lang.String toHex(byte[]) -> b
+com.phonegap.StandAlone -> com.phonegap.StandAlone:
+    void onCreate(android.os.Bundle) -> onCreate
+com.phonegap.Storage -> com.phonegap.Storage:
+    android.database.sqlite.SQLiteDatabase myDb -> c
+    java.lang.String path -> d
+    java.lang.String dbName -> e
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void onDestroy() -> a
+    void setStorage(java.lang.String) -> c
+    void processResults(android.database.Cursor,java.lang.String) -> a
+com.phonegap.TempListener -> com.phonegap.TempListener:
+    android.hardware.Sensor mSensor -> c
+    android.hardware.SensorManager sensorManager -> d
+    void setContext(com.phonegap.api.PhonegapActivity) -> a
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    void onDestroy() -> a
+    void stop() -> b
+    void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
+    void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
+com.phonegap.WebViewReflect -> com.phonegap.e:
+    java.lang.reflect.Method mWebSettings_setDatabaseEnabled -> a
+    java.lang.reflect.Method mWebSettings_setDatabasePath -> b
+    java.lang.reflect.Method mWebSettings_setDomStorageEnabled -> c
+    java.lang.reflect.Method mWebSettings_setGeolocationEnabled -> d
+    void checkCompatibility() -> a
+    void setStorage$250552fc(android.webkit.WebSettings,java.lang.String) -> a
+    void setGeolocationEnabled$1ffbdba(android.webkit.WebSettings) -> a
+    void setDomStorage(android.webkit.WebSettings) -> b
+com.phonegap.api.IPlugin -> com.phonegap.api.IPlugin:
+com.phonegap.api.PhonegapActivity -> com.phonegap.api.PhonegapActivity:
+    void addService(java.lang.String,java.lang.String) -> a
+    void sendJavascript(java.lang.String) -> a
+    void startActivityForResult(com.phonegap.api.Plugin,android.content.Intent,int) -> a
+com.phonegap.api.Plugin -> com.phonegap.api.Plugin:
+    android.webkit.WebView webView -> a
+    com.phonegap.api.PhonegapActivity ctx -> b
+    com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String) -> a
+    boolean isSynch(java.lang.String) -> a
+    void setContext(com.phonegap.api.PhonegapActivity) -> a
+    void onDestroy() -> a
+    void onActivityResult(int,int,android.content.Intent) -> a
+    void sendJavascript(java.lang.String) -> b
+    void success(com.phonegap.api.PluginResult,java.lang.String) -> a
+    void error(com.phonegap.api.PluginResult,java.lang.String) -> b
+com.phonegap.api.PluginManager -> com.phonegap.api.PluginManager:
+    java.util.HashMap plugins -> a
+    java.util.HashMap services -> b
+    com.phonegap.api.PhonegapActivity ctx -> c
+    android.webkit.WebView app -> d
+    java.lang.String exec(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean) -> a
+    com.phonegap.api.Plugin addPlugin(java.lang.String,java.lang.Class) -> a
+    void addService(java.lang.String,java.lang.String) -> a
+    void onPause() -> a
+    void onResume() -> b
+    void onDestroy() -> c
+com.phonegap.api.PluginManager$1 -> com.phonegap.api.a:
+    com.phonegap.api.Plugin val$plugin -> a
+    java.lang.String val$action -> b
+    org.json.JSONArray val$args -> c
+    java.lang.String val$callbackId -> d
+    com.phonegap.api.PhonegapActivity val$ctx -> e
+    com.phonegap.api.PluginManager this$0 -> f
+    void run() -> run
+com.phonegap.api.PluginResult -> com.phonegap.api.PluginResult:
+    int status -> a
+    java.lang.String message -> b
+    boolean keepCallback -> c
+    java.lang.String cast -> d
+    java.lang.String[] StatusMessages -> e
+    void setKeepCallback$1385ff() -> a
+    int getStatus() -> b
+    boolean getKeepCallback() -> c
+    java.lang.String getJSONString() -> d
+    java.lang.String toSuccessCallbackString(java.lang.String) -> a
+    java.lang.String toErrorCallbackString(java.lang.String) -> b
+com.phonegap.api.PluginResult$Status -> com.phonegap.api.PluginResult$Status:
+    com.phonegap.api.PluginResult$Status NO_RESULT -> a
+    com.phonegap.api.PluginResult$Status OK -> b
+    com.phonegap.api.PluginResult$Status CLASS_NOT_FOUND_EXCEPTION -> c
+    com.phonegap.api.PluginResult$Status ILLEGAL_ACCESS_EXCEPTION -> h
+    com.phonegap.api.PluginResult$Status INSTANTIATION_EXCEPTION -> i
+    com.phonegap.api.PluginResult$Status MALFORMED_URL_EXCEPTION -> j
+    com.phonegap.api.PluginResult$Status IO_EXCEPTION -> d
+    com.phonegap.api.PluginResult$Status INVALID_ACTION -> e
+    com.phonegap.api.PluginResult$Status JSON_EXCEPTION -> f
+    com.phonegap.api.PluginResult$Status ERROR -> g
+    com.phonegap.api.PluginResult$Status[] $VALUES -> k
+    com.phonegap.api.PluginResult$Status[] values() -> values
+    com.phonegap.api.PluginResult$Status valueOf(java.lang.String) -> valueOf
+com.phonegap.file.EncodingException -> com.phonegap.a.e:
+com.phonegap.file.FileExistsException -> com.phonegap.a.b:
+com.phonegap.file.InvalidModificationException -> com.phonegap.a.a:
+com.phonegap.file.NoModificationAllowedException -> com.phonegap.a.d:
+com.phonegap.file.TypeMismatchException -> com.phonegap.a.c:

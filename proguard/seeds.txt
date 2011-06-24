@@ -1,0 +1,29 @@
+com.phonegap.api.PluginResult$Status: com.phonegap.api.PluginResult$Status[] values()
+com.phonegap.api.PluginResult$Status: com.phonegap.api.PluginResult$Status valueOf(java.lang.String)
+com.phonegap.CompassListener
+com.phonegap.Device
+com.phonegap.Capture
+com.phonegap.Notification
+com.phonegap.App
+com.phonegap.FileTransfer
+com.phonegap.CryptoHandler
+com.phonegap.NetworkManager
+com.phonegap.FileUtils
+com.phonegap.CameraLauncher
+com.phonegap.AudioHandler
+com.phonegap.Storage
+com.phonegap.AccelListener
+com.phonegap.GeoBroker
+com.phonegap.ContactManager
+com.phonegap.TempListener
+com.phonegap.DroidGap
+com.phonegap.api.Plugin
+com.phonegap.api.PluginResult$Status
+com.phonegap.api.PhonegapActivity
+com.phonegap.api.IPlugin
+com.phonegap.api.PluginManager
+com.phonegap.api.PluginResult
+com.phonegap.api.PhonegapActivity
+com.phonegap.DroidGap
+com.phonegap.StandAlone
+com.camptocamp.gis.phonegap.piclayer.App

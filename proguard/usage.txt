@@ -1,0 +1,112 @@
+com.camptocamp.gis.phonegap.piclayer.R
+com.camptocamp.gis.phonegap.piclayer.R$attr
+com.camptocamp.gis.phonegap.piclayer.R$drawable
+com.camptocamp.gis.phonegap.piclayer.R$layout
+com.camptocamp.gis.phonegap.piclayer.R$string
+com.phonegap.AudioHandler:
+    270:280:public void setAudioOutputDevice(int)
+    288:296:public int getAudioOutputDevice()
+com.phonegap.CallbackServer:
+    286:288:public int getSize()
+com.phonegap.CameraLauncher:
+    private static final int DATA_URL
+    private static final int FILE_URI
+    private static final int PHOTOLIBRARY
+    private static final int CAMERA
+    private static final int SAVEDPHOTOALBUM
+com.phonegap.Capture:
+    private static final java.lang.String _DATA
+    private static final int CAPTURE_AUDIO
+    private static final int CAPTURE_IMAGE
+    private static final int CAPTURE_VIDEO
+    private static final java.lang.String LOG_TAG
+com.phonegap.ContactAccessor:
+    protected android.app.Activity mApp
+    protected android.webkit.WebView mView
+    103:104:protected boolean isRequired(java.lang.String,java.util.HashMap)
+    113:166:protected java.util.HashMap buildPopulationSet(org.json.JSONArray)
+    179:190:protected java.lang.String getJsonString(org.json.JSONObject,java.lang.String)
+com.phonegap.ContactAccessor$WhereOptions
+com.phonegap.ContactAccessorSdk3_4
+com.phonegap.ContactAccessorSdk5
+com.phonegap.ContactManager:
+    private static final java.lang.String LOG_TAG
+com.phonegap.Device:
+    98:98:public java.lang.String getPlatform()
+    117:117:public java.lang.String getPhonegapVersion()
+    121:122:public java.lang.String getLine1Number()
+    126:127:public java.lang.String getDeviceId()
+    131:132:public java.lang.String getSimSerialNumber()
+    136:137:public java.lang.String getSubscriberId()
+    142:143:public java.lang.String getModel()
+    163:164:public java.lang.String getSDKVersion()
+    169:170:public java.lang.String getTimeZoneID()
+com.phonegap.DirectoryManager:
+    private static final java.lang.String LOG_TAG
+com.phonegap.DroidGap:
+    547:555:public double getDoubleProperty(java.lang.String,double)
+    565:566:public void setBooleanProperty(java.lang.String,boolean)
+    575:576:public void setIntegerProperty(java.lang.String,int)
+    585:586:public void setStringProperty(java.lang.String,java.lang.String)
+    595:596:public void setDoubleProperty(java.lang.String,double)
+com.phonegap.FileTransfer:
+    private static final java.lang.String LOG_TAG
+    private static final java.lang.String LINE_START
+    private static final java.lang.String LINE_END
+    private static final java.lang.String BOUNDRY
+com.phonegap.FileUploadResult:
+    23:23:public long getBytesSent()
+    31:31:public int getResponseCode()
+    39:39:public java.lang.String getResponse()
+com.phonegap.FileUtils:
+    private static final java.lang.String LOG_TAG
+    java.io.FileReader f_in
+    java.io.FileWriter f_out
+com.phonegap.GeoListener:
+    java.lang.String successCallback
+    java.lang.String failCallback
+com.phonegap.HttpHandler
+com.phonegap.NetworkManager:
+    public static final java.lang.String WIFI
+    public static final java.lang.String WIMAX
+    public static final java.lang.String MOBILE
+    public static final java.lang.String GSM
+    public static final java.lang.String GPRS
+    public static final java.lang.String EDGE
+    public static final java.lang.String CDMA
+    public static final java.lang.String UMTS
+    public static final java.lang.String LTE
+    public static final java.lang.String UMB
+    public static final int TYPE_UNKNOWN
+    public static final int TYPE_ETHERNET
+    public static final int TYPE_WIFI
+    public static final int TYPE_2G
+    public static final int TYPE_3G
+    public static final int TYPE_4G
+    public static final int TYPE_NONE
+    private static final java.lang.String LOG_TAG
+com.phonegap.SimpleCrypto:
+    private static final java.lang.String HEX
+    59:59:public static java.lang.String toHex(java.lang.String)
+    64:64:public static java.lang.String fromHex(java.lang.String)
+com.phonegap.Storage:
+    private static final java.lang.String ALTER
+    private static final java.lang.String CREATE
+    private static final java.lang.String DROP
+    private static final java.lang.String TRUNCATE
+com.phonegap.WebViewReflect:
+    30:48:private static void setDatabaseEnabled(boolean)
+com.phonegap.api.IPlugin:
+    public abstract com.phonegap.api.PluginResult execute(java.lang.String,org.json.JSONArray,java.lang.String)
+    public abstract boolean isSynch(java.lang.String)
+    public abstract void setContext(com.phonegap.api.PhonegapActivity)
+    public abstract void setView(android.webkit.WebView)
+    public abstract void onPause()
+    public abstract void onResume()
+    public abstract void onDestroy()
+    public abstract void onActivityResult(int,int,android.content.Intent)
+com.phonegap.api.PluginManager:
+    172:177:public com.phonegap.api.Plugin addPlugin(java.lang.String)
+com.phonegap.api.PluginResult:
+    43:46:public PluginResult(com.phonegap.api.PluginResult$Status,org.json.JSONArray)
+    77:77:public java.lang.String getMessage()
