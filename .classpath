@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry kind="lib" path="libs/phonegap.jar" sourcepath="/home/jbaubort/Desktop/phonegap-0.9.5/framework/src"/>
+	<classpathentry kind="lib" path="libs/phonegap.jar" sourcepath="/home/jbaubort/Desktop/phonegap-phonegap-android-7500755/framework/src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
